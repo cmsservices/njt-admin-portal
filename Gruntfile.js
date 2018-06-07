@@ -382,9 +382,14 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
+           'scripts',
+            'styles',
+            'mock',
+            '../bower_components',    
+
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
-          ]
+          ] 
         }, {
           expand: true,
           cwd: '.tmp/images',
