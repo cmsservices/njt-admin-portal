@@ -7,19 +7,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login', {
             views: {
                 'header': {
-                  templateUrl: '../views/components/common/header.html'
+                  templateUrl: 'views/components/common/header.html'
                 },
 /*                'header-band' : {
-                    templateUrl: '../views/components/common/headerBand.html'
+                    templateUrl: 'views/components/common/headerBand.html'
                 },*/
                 'nav' : {
-                    templateUrl : '../views/components/common/login.html'
+                    templateUrl : 'views/components/common/login.html'
                 },
                 '' : {
-                    templateUrl : '../views/components/common/home.html'
+                    templateUrl : 'views/components/common/home.html'
                 },
                 'footer' : {
-                   // templateUrl : '../views/components/common/footer.html'
+                   // templateUrl : 'views/components/common/footer.html'
                 }
             },
             url : '/login'      
@@ -28,10 +28,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.forgetUsername', {
             views: {
                 'nav@': {
-                    templateUrl: '../views/components/common/login.html'              
+                    templateUrl: 'views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : '../views/components/common/forgetUserName.html' 
+                    templateUrl : 'views/components/common/forgetUserName.html' 
                 }
             },
             url : '/forgetUsername'
@@ -40,10 +40,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.forgetPassword', {
             views: {
                 'nav@': {
-                    templateUrl: '../views/components/common/login.html'              
+                    templateUrl: 'views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : '../views/components/common/forgetPassword.html' 
+                    templateUrl : 'views/components/common/forgetPassword.html' 
                 }
             },
             url : '/forgetPassword'
@@ -51,10 +51,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.securityQuestions', {
             views: {
                 'nav@': {
-                    templateUrl: '../views/components/common/login.html'              
+                    templateUrl: 'views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : '../views/components/common/securityQuestions.html' 
+                    templateUrl : 'views/components/common/securityQuestions.html' 
                 }
             },
             url : '/forgetPassword'
@@ -62,10 +62,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.resetPassword', {
             views: {
                 'nav@': {
-                    templateUrl: '../views/components/common/login.html'              
+                    templateUrl: 'views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : '../views/components/common/resetPassword.html' 
+                    templateUrl : 'views/components/common/resetPassword.html' 
                 }
             },
             url : '/forgetPassword'
@@ -73,22 +73,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('welcome', {
             views: {
                 'header': {
-                  templateUrl: '../views/components/common/header.html'
+                  templateUrl: 'views/components/common/header.html'
                 },
                'message-container': {
-                  templateUrl: '../views/components/common/messageContainer.html'
+                  templateUrl: 'views/components/common/messageContainer.html'
                 },
 /*                'header-band' : {
-                    templateUrl: '../views/components/common/headerBand.html'
+                    templateUrl: 'views/components/common/headerBand.html'
                 },*/
                 'nav@': {
-                    templateUrl: '../views/components/common/siteMenuBar.html'              
+                    templateUrl: 'views/components/common/siteMenuBar.html'              
                 },
                 '@': {
-                    templateUrl : '../views/components/common/welcome.html' 
+                    templateUrl : 'views/components/common/welcome.html' 
                 },
                 'footer' : {
-                    //templateUrl : '../views/components/common/footer.html'
+                    //templateUrl : 'views/components/common/footer.html'
                 }
             },
             url : '/welcome'
@@ -101,7 +101,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : '../views/components/user/MyAccount/paymentProfile.html'
+                    templateUrl : 'views/components/user/MyAccount/paymentProfile.html'
                 }
             }
         })
@@ -112,7 +112,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : '../views/components/user/transactions.html'
+                    templateUrl : 'views/components/user/transactions.html'
                 }
             }
         })
@@ -125,7 +125,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/common/faqs.html'           
+                     templateUrl: 'views/components/common/faqs.html'           
                  }
              }
         })
@@ -135,7 +135,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/njtDashboard/njtDashboard.html'           
+                     templateUrl: 'views/components/njtDashboard/njtDashboard.html'           
                  }
              }
         })
@@ -148,7 +148,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/requests/importRequests.html'           
+                     templateUrl: 'views/components/requests/importRequests.html'           
                  }
              }
         })
@@ -159,7 +159,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/requests/refundRequests.html'           
+                     templateUrl: 'views/components/requests/refundRequests.html'           
                  }
              }
         })
@@ -170,7 +170,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/user/devices.html'           
+                     templateUrl: 'views/components/user/devices.html'           
                  }
              }
         })
@@ -180,7 +180,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/terminalHealth.html'           
+                     templateUrl: 'views/components/dashboard/terminalHealth.html'           
                  }
              }
         })
@@ -190,7 +190,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/lastTransactions.html'           
+                     templateUrl: 'views/components/dashboard/lastTransactions.html'           
                  }
              }
         })
@@ -200,7 +200,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/lastAlarms.html'           
+                     templateUrl: 'views/components/dashboard/lastAlarms.html'           
                  }
              }
         })
@@ -210,7 +210,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/topMachinesNeedAttention.html'           
+                     templateUrl: 'views/components/dashboard/topMachinesNeedAttention.html'           
                  }
              }
         })
@@ -221,7 +221,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/tvmsNotCheckedIn.html'           
+                     templateUrl: 'views/components/dashboard/tvmsNotCheckedIn.html'           
                  }
              }
         })
@@ -232,7 +232,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/serviceCallsSnapShot.html'           
+                     templateUrl: 'views/components/dashboard/serviceCallsSnapShot.html'           
                  }
              }
         })
@@ -243,7 +243,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/supportCalender.html'           
+                     templateUrl: 'views/components/dashboard/supportCalender.html'           
                  }
              }
         })
@@ -254,7 +254,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/reports/reports.html'           
+                     templateUrl: 'views/components/reports/reports.html'           
                  }
              }
         })  
@@ -264,7 +264,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl : '../views/components/user/userDetails.html' 
+                     templateUrl : 'views/components/user/userDetails.html' 
                 }
             },
             url : '/userDetails'
@@ -276,7 +276,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : '../views/components/user/myTickets.html'
+                    templateUrl : 'views/components/user/myTickets.html'
                 }
             }
         })   
@@ -287,7 +287,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : '../views/components/user/search.html'
+                    templateUrl : 'views/components/user/search.html'
                 }
             }
         })  
@@ -298,7 +298,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/user/ticketing.html'          
+                     templateUrl: 'views/components/user/ticketing.html'          
                  }
              }
         })
@@ -308,7 +308,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl : '../views/components/user/shopping_cart.html' 
+                     templateUrl : 'views/components/user/shopping_cart.html' 
                 }
             },
             url : '/ShoppingCart'
@@ -320,7 +320,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/user/selectShipping.html'           
+                     templateUrl: 'views/components/user/selectShipping.html'           
                  }
              }
         })
@@ -331,7 +331,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/user/selectPayment.html'           
+                     templateUrl: 'views/components/user/selectPayment.html'           
                  }
              }
         })
@@ -342,7 +342,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/user/review_order.html'           
+                     templateUrl: 'views/components/user/review_order.html'           
                  }
              }
         })
@@ -353,7 +353,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/user/confirmation.html'           
+                     templateUrl: 'views/components/user/confirmation.html'           
                  }
              }
         })
@@ -365,7 +365,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/user/manageUser.html'           
+                     templateUrl: 'views/components/user/manageUser.html'           
                  }
              }
         }) 
@@ -375,7 +375,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/notifications/createNotification.html'           
+                     templateUrl: 'views/components/notifications/createNotification.html'           
                  }
              }
         })
@@ -385,7 +385,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/alerts/scheduleAlerts.html'           
+                     templateUrl: 'views/components/alerts/scheduleAlerts.html'           
                  }
              }
         })
@@ -395,7 +395,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/alerts/alertHistory.html'           
+                     templateUrl: 'views/components/alerts/alertHistory.html'           
                  }
              }
         })
@@ -405,7 +405,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: '../views/components/common/colorConfig.html'           
+                     templateUrl: 'views/components/common/colorConfig.html'           
                  }
              }
         })
@@ -417,7 +417,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/user/autoReload.html'           
+                     templateUrl: 'views/components/user/autoReload.html'           
                  }
              }
         })   
@@ -428,7 +428,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: '../views/components/dashboard/terminals.html'           
+                     templateUrl: 'views/components/dashboard/terminals.html'           
                  }
              }
         })   
