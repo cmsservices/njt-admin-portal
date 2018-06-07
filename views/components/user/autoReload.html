@@ -1,0 +1,97 @@
+<div tabindex="-1" id="myride-success-message-container" class="alert alert--info alert--dismissible message-container-notification" role="alert"
+         ng-if="subscribe === 'success'"> <button type="button" class="alert__close js-close"
+          ng-click="message = '';">
+    <span aria-hidden="true">×</span>
+    <span class="hide" ng-click="subscribe = 'fail';">Close</span>
+  </button>
+      <p>You have subscribed to automatically purchase the monthly pass between the selected stations. The subscription will be billed to card ending in -5555</p>
+    </div>
+
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Auto Subscription</h1>
+
+        <p class="spacer-bottom">It’s the ultimate in convenience. Use automatic Subscription to purchase the tickets</p>
+
+
+        <ul class="sc-products-list sc-product-auto-reload-container">
+            <li class="sc-product sc-product-cash">
+                <div class="sc-product-details clearfix" style="border-color : #2f5983;">
+                    <div class="content--grid">
+                        <div class="content__block">
+                            <div class="content__section content__section--thirty content__section--bdr-right">
+                                <div class="sc-product-padding sc-product-name">
+                                    Monthly Pass October - Adult
+                                    <div class="sc-product-name-details">
+                                        <div><strong>Jersey Avenue to Hoboken :</strong></div>
+                                        <div class="m--top"><strong>Auto subscription set up:</strong> <span class="badge badge--success-alt">Yes</span></div>
+                                        <div><a class="reload-cancel" ng-click="updateCancelAutoReload();">Cancel auto reload</a></div>
+                                    </div>
+                                    <div ng-if="cancelAutoReload" class="js-expandable" aria-hidden="false" id="expandable-5441-1" style="display: block;">
+                                    <div class="alert alert--warning alert--dismissible" role="alert">
+                                        <p><strong>Are you sure you want to Cancel the Auto Subscription?</strong></p>                                       
+                                    </div>
+                                    <a class="btn btn--primary btn--mid-block" ng-click="updateCancelAutoReload();">Yes</a>
+                                    <a class="btn btn--secondary btn--mid-block" ng-click="updateCancelAutoReload();">Cancel</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="content__section content__section--seventy content__section--bdr-left">
+                                <div class="sc-product-padding sc-product-action">
+                                    <form class="form" id="form-auto-cash" action="" novalidate="">
+                                        <fieldset class="cashvalue-dynamic-content">
+                                                                                  <div class="form__set">
+                                              <label for="form-editpayment-ccCode" class="form__label">Select Ticket Type:<i class="form__required">required</i></label>
+                                               <select id="form-auto-cashTrigger" name="form-auto-cashTrigger" class="form__input select">
+                                                           <option value="unselected">Select Value</option>
+                                                           <option value="10">Weekly Pass</option>
+                                                           <option value="15" checked="" selected="">Monthly Pass</option>                                                          
+                                                       </select>
+                                          </div>
+                                          <div class="form__set">
+                                              <label for="form-editpayment-ccCode" class="form__label">Select Origin:<i class="form__required">required</i></label>
+                                              <ng-include src="'partials/views/components/common/selectStationsTemplate.html'"> </ng-include>
+                                          </div>
+                                          <div class="form__set">
+                                              <label for="form-editpayment-ccCode" class="form__label">Select Destination:<i class="form__required">required</i></label>
+                                                  <ng-include src="'partials/views/components/common/destinationStations.html'"> </ng-include> 
+                                          </div>
+                                          <div class="form__set">
+                                              <label for="form-editpayment-ccCode" class="form__label">Select Via:<i class="form__required">required</i></label>
+                                              <select class="form__input select">
+                                                  <option value="">Select Station</option>  
+                                                  <option value="107_NEC">Newark Penn Station</option>
+                                                  <option value="38174_BNTN">Secaucus Junction</option>
+                                                  <option value="38174_BNTN">Newyork Penn Station</option>
+                                              </select>
+                                          </div>
+                                        </fieldset>
+
+                                        <fieldset class="form__group">
+                                            <label for="form-auto-cashPayment" class="form__label">Select payment method</label>
+                                            <select id="form-auto-cashPayment" name="form-auto-cashPayment" class="form__input select">
+                                               <option value="visa" checked="">Visa &nbsp;&nbsp;(XXXX-XXXX-XXXX-5555)</option>
+                                               <option value="mc">MasterCard  &nbsp;&nbsp;(XXXX-XXXX-XXXX-5556)</option>
+                                           </select>
+                                       </fieldset>
+                                       <small class="m--top"><a href="welcome.paymentMetods">Manage your payment methods</a></small>
+                                       <div class="form__optin m--top">
+                                           <input id="form-agreement-optin" name="form-agreement-optin" type="checkbox">
+                                           <label for="form-agreement-optin" class="form__label">I accept that the chosen payment method will be charged automatically every time.</label>
+                                       </div>
+                                       <input type="button" class="btn btn--primary btn--proceed m--top btn--full js-expander" data-expandable="#reload-setting-update" value="Activate Subscription" ng-click="subscribe = 'success';" aria-expanded="false" aria-controls="reload-setting-update">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <p class="notes">
+            * For Monthly Passes you will be charged automatically by 22nd of Every Month. <br>
+            * For Weekly Passes you will be charged automatically by Wednesday of Every Week.
+        </p>
+    </div>
+</main>

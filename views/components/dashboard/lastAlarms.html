@@ -1,0 +1,128 @@
+<!-- <main role="main" class="content__section content__section--seventy-five"  ng-controller="chartController" >
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Alarms</h1>
+        <div class="content--grid" ng-init="loadColumnCharts();">
+            <div class="content__block sc-box-style">
+                <h5 class="text-center no-margin" ><strong>  Alarms in Last : </strong>
+                    <select ng-model="alarmHrs" ng-change="loadColumnCharts()"> 
+                        <option value="1"> 24 Hours </option>
+                        <option value="3"> 48 Hours </option>
+                        <option value="4"> 5 Days </option>
+                        <option value="5"> 10 Days </option>
+                        <option value="5"> 20 Days </option>
+                        <option value="7"> 30 Days </option>
+                    </select>
+                </h5>
+                <div id="colChart2" class="chartStyles"></div>
+            </div>
+        </div>        
+    </div>
+</main> -->
+
+<main role="main" class="content__section content__section--seventy-five"  ng-controller="alarmsController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Alarms</h1>
+        <div class="content--grid">
+            <div class="content__block">
+            <uib-tabset id="alarms">
+            <uib-tab index="0">
+            <uib-tab-heading>  <i class="fa fa-bell" aria-hidden="true"></i> Open Alarms</uib-tab-heading>
+                <div class="xrx-margin-10">
+                    <div class="export-options export-options--right">
+                        <span>Export:</span>
+                        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+                        <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                    </div>
+                    <p class="font-smaller">Results 10 of 40</p>
+                    <br/>
+                    <div ui-grid="terminalGridOptions" ui-grid-auto-resize></div>                
+                    <div class="pagination pagination-centered">
+                        <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                           <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
+                            <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
+                            <li class="active"><a href="javascript:void(0)">1</a></li>
+                           <li><a href="javascript:void(0)">21</a></li>
+                            <li><a href="javascript:void(0)">3</a></li>
+                            <li><a href="javascript:void(0)">4</a></li>
+                         <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
+                         <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
+                          <li>  &nbsp; &nbsp;<label for="form-history-limitSelect">Show:</label>
+                            <select id="form-history-limitSelect" name="form-history-limitSelect">
+                                <option value="10" selected="">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> 
+                        </li>
+                    </ul>            
+                 </div>
+                </div>
+            </uib-tab>
+            <uib-tab index="1" ng-click="filterClosedAlarms = false;">
+                <uib-tab-heading>  <i class="fa fa-bell-slash" aria-hidden="true"></i> Closed Alarms</uib-tab-heading>
+                <div class="xrx-margin-10">
+                    <form class="form form--compact" id="form-reports" action="" novalidate="">
+                        <label for="form-compact-terminalNo" class="form__label" style="line-height: 0.5px">Alarm Category</label>
+                        <div><select id="form-compact-terminalNo" name="form-reports-terminalNo" class="form__input select" aria-required="true" required=""> 
+                            <option value="All"> ALL </option>
+                            <option value="1"> Malfunction </option>
+                            <option value="2">Revenue</option>
+                            <option value="3">Paper Stock</option>
+                            <option value="4">Security</option>
+                            <option value="5">Comm. Failure</option>
+                            <option value="9">Intrusion</option>                
+                        </select> </div>
+
+                        <label for="form-compact-text-1" class="form__label" style="line-height: 0.5px">Since Date </label>
+                        <input type="date" id="form-compact-text-1" name="compact_firstname" class="form__input" aria-required="true" required>
+
+                        <label for="form-compact-text-1" class="form__label" style="line-height: 0.5px">Till Date </label>
+                        <input type="date" id="form-compact-text-1" name="compact_firstname" class="form__input" aria-required="true" required> 
+
+                        <div style="text-align: center;">
+                             <a ng-click="filterClosedAlarms = true;" class="btn btn--primary btn--mobile-block m--top spacer-bottom" > Filter Alarms </a>
+                        </div>
+                        <div ng-if="filterClosedAlarms" id="closedAlarms" ui-grid="terminalGridOptions" ui-grid-auto-resize ></div> 
+                    </form>
+                </div>
+            </uib-tab>
+            <uib-tab index="2" ng-init="constructStatusGridOptions();">
+                 <uib-tab-heading>  <i class="fa fa-desktop" aria-hidden="true"></i> Machine Status</uib-tab-heading>
+               <div class="xrx-margin-10">
+                    <div class="export-options export-options--right">
+                        <span>Export:</span>
+                        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+                        <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                    </div>
+                    <p class="font-smaller">Results 10 of 40</p>
+                    <br/>
+                    <div ui-grid="statusGridOptions" ui-grid-auto-resize ></div>                
+                    <div class="pagination pagination-centered">
+                        <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                           <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
+                            <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
+                            <li class="active"><a href="javascript:void(0)">1</a></li>
+                           <li><a href="javascript:void(0)">21</a></li>
+                            <li><a href="javascript:void(0)">3</a></li>
+                            <li><a href="javascript:void(0)">4</a></li>
+                         <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
+                         <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
+                          <li>  &nbsp; &nbsp;<label for="form-history-limitSelect">Show:</label>
+                             <select id="form-history-limitSelect" name="form-history-limitSelect">
+                            <option value="10" selected="">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                             </select> 
+                        </li>
+                    </ul>            
+                 </div>
+                </div>
+            </uib-tab>
+        </uib-tabset>
+
+        </div>
+    </div>
+</main>

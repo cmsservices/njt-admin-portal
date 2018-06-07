@@ -1,0 +1,137 @@
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10">
+        <nav role="navigation" aria-label="checkout steps" class="sm-checkout-container">
+            <ul class="sm-checkout-bar sm-checkout-bar--has-thirds">
+                <li class="past"><a ui-sref="welcome.shipping">Shipping </a></li>
+                <li class="past"><a ui-sref="welcome.payment">Billing</a></li>
+                <li class="active"><a ui-sref="welcome.reviewOrder">Place Order <span class="hide">(current)</span></a></li>
+            </ul>
+        </nav>
+        <a id="maincontent" tabindex="-1"></a>
+
+        <i class="required-note">denotes a required field</i>
+        <h1 class="h2">Review Order</h1>
+
+        <div class="content--grid m--top">
+            <div class="content__block">
+                <div class="content__section content__section--fifty">
+                    <div>
+                        <h2 class="h4 inline">Shipping</h2>
+                        <a class="inline-edit inline-edit--nofloat" ui-sref="welcome.shipping">Edit</a>
+                    </div>
+                    <div class="block-indent font-smaller m--top">
+                        <div><strong>Shipping Type</strong></div>
+                        <div>Free</div>
+                        <div class="m--top"><strong>Shipping Address</strong></div>
+                        <div>Brain Adam</div>
+                        <div>68 Veronica Ave</div>
+                        <div>Somerset, NJ 08873</div>
+                    </div>
+                </div>
+                <div class="content__section content__section--fifty">
+                    <div class="block-indent font-smaller m--top">
+                        <div>
+                            <h2 class="h4 inline">Billing</h2>
+                            <a class="inline-edit inline-edit--nofloat" ui-sref="welcome.payment">Edit</a>
+                            <div><strong>Payment Method</strong></div>
+                            <div><i class="i--payment i--payment-visa"></i>Visa &nbsp;&nbsp;(XXXX-XXXX-XXXX-1881)</div>
+                        </div>
+                        <div class="m--top"><strong>Billing Address</strong></div>
+                        <div>Adam Brian</div>
+                        <div>68 Veronical Aven</div>
+                        <div>Somerset, NJ - 08873</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+            <h2 class="h4 hide">Shopping cart</h2>
+            <ul class="cart-products">
+                <li class="cart-product">
+                    <div class="content--grid">
+                        <div class="content__block">
+                            <div class="content__section content__section--seventy">
+                                <div class="cart-card-name"><a>Monthly Pass Adult - October 2016</a></div>
+                                <div class="cart-sub-product">JAV to Hoboken </div>
+                                <div class="cart-sub-product">Quantity <span class="cart-sub-product-price">1</span></div>
+                            </div>
+                             <div class="content__section content__section--twenty cart-product-price">$399.00</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart-product">
+                    <div class="content--grid">
+                        <div class="content__block">
+                            <div class="content__section content__section--seventy">
+                                <div class="cart-card-name"><a>Two way Adult</a></div>
+                                <div class="cart-sub-product">EWR to NYP</div>
+                                <div class="cart-sub-product">EWR <span class="cart-sub-product-price">1</span></div>
+                            </div>
+                             <div class="content__section content__section--twenty cart-product-price">$11.00</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cart-product">
+                    <div class="content--grid">
+                        <div class="content__block">
+                            <div class="content__section content__section--seventy">
+                                <div class="cart-card-name"><a>One Way Adult</a></div>
+                        <div class="cart-sub-product">SEC to HBK</div>
+                        <div class="cart-sub-product">Quantity <span class="cart-sub-product-price">3</span></div>
+                            </div>
+                            <div class="content__section content__section--twenty cart-product-price">$5.00</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content--grid">
+            <div class="content__block">
+                <div class="content__section content__section--fifty">
+                    <a class="block btn--small-text" ui-sref="welcome.shoppingCart">Update Shopping Cart</a>
+                </div>
+                <div class="content__section content__section--fifty font-smaller">
+                    <h3 class="h4 hide">Promotional Code</h3>
+                    <form class="form form--inline m--none" id="form--promotion" action="" novalidate="">
+                        <label for="form--promotionCode" class="form__label p--bottom">Enter Promotional Code:</label>
+                        <div class="js-expandable" id="promotionValidation" aria-hidden="true" style="display: none;">
+                            <div class="alert alert--error alert--dismissible no-margin--top" role="alert">
+                                <button type="button" class="alert__close js-close"><span aria-hidden="true">×</span><span class="hide">Close</span></button>
+                                <strong>Error!</strong> The code you entered has expired
+                            </div>
+                        </div>
+                        <input type="text" id="form--promotionCode" name="form--promotionCode" class="form__input" placeholder="">
+                        <input type="button" class="btn btn--control btn--inline--right js-expander" data-expandable="#promotionValidation" name="form--promotionApply" value="Apply" aria-expanded="false" aria-controls="promotionValidation">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="sc-box-style m--top">
+            <h2 class="h4 m--bottom hide">Order Summary</h2>
+            <table class="table table--small mobile__font-smaller" summary="Put a general description of the table here for accessibility">
+                <tbody>
+                    <tr>
+                        <td><strong>Subtotal :</strong></td>
+                        <td>$415.00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Promotion :</strong> <span class="promo-desc">Promotion description</span></td>
+                        <td>- $15.00</td>
+                    </tr>
+                    <tr class="sc-summary-total">
+                        <td><strong>Order total :</strong></td>
+                        <td><span class="cart-total-price">$400.00<span></span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align: center;">
+        <a class="btn btn--primary btn--proceed btn--mobile-block m--top" ui-sref="welcome.orderConfirmation">Place order</a>
+        </div>
+        <p class="form__fineprint spacer-bottom">By placing your order, you agree to NJTransit's <a href="http://www.njtransit.com/tm/tm_servlet.srv?hdnPageAction=CopyrightTo">terms and conditions and privacy policy</a>.</p>
+
+    </div>
+</main>

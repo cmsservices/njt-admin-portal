@@ -1,0 +1,25 @@
+<!-- <header class="header" role="banner">
+   <nav class="header__nav" role="navigation" aria-label="main">
+	  	<div class="header__controls">
+	  		<div class="header__logo">
+	  		 	<a href="http://www.njtransit.com/hp/hp_servlet.srv?hdnPageAction=HomePageTo" target="_blank"><img src="resources/images/header.png" alt="New Jersey Transit - The Way To Go."  class="alignright size-thumbnail wp-image-483"> </a>
+	  		</div>
+	  	</div>
+  		<div ng-if="!isloginPage" class="sc-quick-shopping-cart mobile__hide">
+        	<a ui-sref="welcome.shoppingCart" class="sc-sm-quick-product-count"><span class="badge badge--info">3 items</span><span class="sc-sm-quick-price">$140.00</span></a>
+  		</div>
+	</nav>
+</header>	
+ -->
+
+<header class="header" role="banner">
+   <nav class="header__nav" role="navigation" aria-label="main">
+	  	<div class="header__controls">
+	  		<div class="header__logo">
+	 	  		<div ng-if="!isloginPage" style="display: none;" class="sc-quick-shopping-cart mobile__hide">
+    				<a ui-sref="welcome.shoppingCart" class="sc-sm-quick-product-count"> <i class="fa fa-shopping-cart faStyle icon-grey xrx-badge" data-count="3" aria-hidden="true" style="color: #fff; font-size : 23px;"> <span style="color: #FFF; font-size : 15px !important;" class="sc-sm-quick-price">$140.00</span></i> </a>
+  				</div>
+	  		</div>
+	  	</div>
+	</nav>
+</header>	

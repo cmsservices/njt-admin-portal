@@ -1,0 +1,110 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="ticketOptionsController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Purchase Tickets</h1>
+        <div class="sc-cardbar spacer-bottom" style="background-color:#5c5c5c; border-color : #D7DBDD">
+            <div class="content">
+                <div class="content--grid">
+                    <div class="content__block">
+                        <div class="content__section content__section--full">
+                            <div class="sc-card-select">
+                                <form class="form form--compact" id="form-card-selected" action="" novalidate="">
+                                    <label for="form-card-select" class="form__label">Select a Product:</label>
+                                    <select id="form-card-select" name="form-card-select" class="form__input select" ng-options="productType as productType.productDescription for productType in productTypes" ng-model="selectedProduct" ng-change="updateSubProducts();"></select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-if="selectedProduct.productID === 'rail'">        
+            <form class="form" >
+            <h2 class="h3">Select Stations</h2>
+                <div class="sc-box-style sc-product-details">                    
+                    <div class="form__set">
+                        <label for="form-editpayment-ccCode" class="form__label">Select Origin:<i class="form__required">required</i></label>
+                         <ng-include src="'partials/views/components/common/selectStationsTemplate.html'"> </ng-include>
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editpayment-ccCode" class="form__label">Select Destination:<i class="form__required">required</i></label>
+                        <ng-include src="'partials/views/components/common/destinationStations.html'"> </ng-include>   
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editpayment-ccCode" class="form__label">Select Via:<i class="form__required">required</i></label>
+                        <div class="form__input select dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style=" width: 98%;background-color: #fff; color: #737373; border: 1px solid #fff;">
+                            {{selectVia}}
+                            
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="    width: 100%;
+                            ma-x-height: 200px; background-color: #fff; padding: 4px;
+                            overflow-y: scroll;
+                            overflow-x: hidden;"> 
+                                <li ng-click="setSelectedVia('Newark Penn Station')" value="107_NEC">Newark Penn Station</li>
+                                <li ng-click="setSelectedVia('Secaucus Junction')" value="38174_BNTN">Secaucus Junction</li>
+                                <li ng-click="setSelectedVia('Newyork Penn Station')" value="38174_BNTN">Newyork Penn Station</li>
+                           </ul> </div>
+                    </div>
+                </div>
+                <h2 class="h3 m--top">Select Tickets</h2>
+                <div class="sc-box-style" ui-grid="ticketGridOptions" style="max-height: 250px !important;"></div>     
+            </form>
+        </div>
+
+        <div ng-if="selectedProduct.productID === 'bus'">
+            <form class="form" >
+                <h2 class="h3">Select Stations</h2>
+                <div class="sc-box-style sc-product-details">
+                    <div class="form__set">
+                        <label for="form-editpayment-ccCode" class="form__label">Select Origin:<i class="form__required">required</i></label>
+                        <ng-include src="'partials/views/components/common/selectStationsTemplate.html'"> </ng-include>
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editpayment-ccCode" class="form__label">Select Destination:<i class="form__required">required</i></label>
+                        <ng-include src="'partials/views/components/common/selectStationsTemplate.html'"> </ng-include>   
+                    </div>
+                </div>
+                <h2 class="h3">Select Tickets</h2>
+                <div class="sc-box-style" style="max-height: 250px !important;" ui-grid="ticketGridOptions"></div>   
+                  
+            </form>
+        </div>
+
+        <div ng-if="selectedProduct.productID === 'lightRail'">
+            <form class="form" >
+                <h2 class="h3">Select Tickets</h2>
+
+               <div class="sc-box-style sc-product-details">
+                    <div class="form__set">
+                        <label for="form-editpayment-ccCode" class="form__label">Select Route:<i class="form__required">required</i></label>
+                        <select class="form__input select">
+                            <option value="">Select Route Name</option>  
+                            <option value="107_NEC">Newark Light Rail</option>
+                            <option value="38174_BNTN">Hudson-Bergen Light Rail</option>
+                        </select>
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editpayment-ccCode" class="form__label">Monthly Adult:<i class="form__required">required</i></label>
+                        <button> - </button> <input ng-model="noofTickets"/> <button> + </button>
+                    </div>
+                </div>
+               
+            </form>
+        </div>
+        <div ng-if="selectedProduct.productID === 'events'">
+            <h2 class="h3 m--top">Select Tickets</h2>
+            <div class="sc-box-style m--top">
+                <label for="form-card-select" class="form__label">Ticket Options:</label>
+                <select id="form-card-select" name="form-card-select" class="form__input select">
+                    <option value="1" checked="">Meadowlands Ticketing</option>
+                </select>                
+               <div ui-grid="eventGridOptions"></div>
+           </div>           
+        </div>        
+        <div style="text-align: center;">
+        <a class="btn btn--primary btn--proceed btn--mobile-block m--top spacer-bottom" ui-sref="welcome.shoppingCart"> Proceed to shopping cart </a>
+        </div>
+    </div>
+</main>

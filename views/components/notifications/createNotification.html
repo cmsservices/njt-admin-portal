@@ -1,0 +1,31 @@
+<main id="createAlertPage" role="main" class="content__section content__section--seventy" ng-controller="createNotificationController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Create Alert</h1>
+        <div class="m--top editlogin-content sc-box-style">
+            <form id="form-createAlert" class="form form--basic form--compact" novalidate="">
+                <div class="form__set">
+                    <label for="notification-category" id="notification-label" class="form__label">Category <i class="form__required">required</i></label>
+                    <select id="notification-category" name="notification-category" class="form__input select">
+                        <option value="1" checked>Select Category</option>
+                        <option value="2">MyTix</option>
+                    </select>
+                </div>
+
+                <div class="form__set">
+                    <label for="notification-title" id="notification-title-label" class="form__label">Notification Title<i class="form__required">required</i></label>
+                    <input id="notification-title" name="notification-title" class="form__input" type="text" aria-required="true" required="">
+                </div>
+
+                <div class="form__set">
+                    <label for="notification-message" id="notification-message-label" class="form__label">Notification Message <i class="form__required">required</i></label>
+                     <textarea id="notification-message" name="form-textarea" class="form__input" aria-required="true" required></textarea>
+                </div>  
+
+                <div style="text-align: center;">
+                    <input id="create-notification-btn" class="btn btn--primary btn--small m--top editlogin btn--mobile-block" name="save" value="Create" ng-click="">              
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

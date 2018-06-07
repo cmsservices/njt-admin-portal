@@ -1,0 +1,24 @@
+<div class="xrx-margin-10">
+<p class="notes"> Please Provide the reason in the below comments section  </p>
+  <form id="form-newaddress" name="form-newaddress" class="form form--basic form--compact m--top sc-box-style new-address-content">  
+   <div class="form__set">
+      <label for="form-newaddress-lastName" class="form__label">Action<i class="form__required">required</i></label>
+      <select id="form-editaddress-state" ng-disabled="true" ng-model="action" name="form-editaddress-state" class="form__input select" style="clear:both;" aria-required="true" required="">
+        <option value="newTicket">Push a New Ticket</option>
+        <option value="deactivate">Deacticate a Ticket</option>
+        <option value="refund">Refund</option>
+        <option value="updateAccountInfo">Update Account Information</option>
+      </select>
+    </div> 
+    
+    <div class="form__set">
+      <label for="form-newaddress-address1" class="form__label">Cooments <i class="form__required">required</i></label>
+      <textarea  id="form-newaddress-address1" ng-model="comments" name="form-newaddress-address1" class="form__input" aria-required="true" required=""></textarea>
+    </div>
+
+    <div class="m--top" style="text-align: center;"> 
+    <a ng-click="closeThisDialog();updateAccountInfo();" ng-disabled="!comments || comments === ''" class="btn btn--primary btn--mobile-block mobile__m--top">Save</a>
+    <a ng-click="closeThisDialog();" class="btn btn--primary btn--mobile-block mobile__m--top">Cancel</a>
+    </div>
+  </form> 
+</div>

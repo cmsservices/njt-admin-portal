@@ -1,0 +1,10 @@
+<ng-include ng-if="loginUser.role === 'reportAdmin'" src="'partials/views/components/common/dashBoard.html'"> </ng-include>
+
+<ng-include ng-if="loginUser.role === 'userAdmin'" src="'partials/views/components/user/search.html'"> </ng-include>
+
+<ng-include ng-if="loginUser.role === 'superAdmin'" src="'partials/views/components/common/dashBoard.html'"> </ng-include>
+
+<ng-include ng-if="loginUser.role === 'myTixAdmin'" src="'partials/views/components/alerts/createAlert.html'"> </ng-include>
+
+<ng-include ng-if="loginUser.role === 'supportAdmin'" src="'partials/views/components/common/dashBoard.html'"> </ng-include>
+

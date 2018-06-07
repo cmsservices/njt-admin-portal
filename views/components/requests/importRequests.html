@@ -1,0 +1,23 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="importRequestsController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Import Request</h1>
+        <uib-tabset active="activeJustified">
+            <uib-tab index="0" heading="New"  ng-init="constructImpGridOptions();">
+                <div class="xrx-margin-10">
+    			    <ng-include src="'partials/views/components/requests/approveNewImports.html'" > </ng-include>
+                </div>
+            </uib-tab>
+            <uib-tab index="1" heading="Pending"  ng-init="constructPendingImpGridOptions();">
+                <div class="xrx-margin-10">
+    	            <ng-include src="'partials/views/components/requests/pendingImports.html'" > </ng-include>
+                </div>
+            </uib-tab>
+            <uib-tab index="2" heading="History"  ng-init="constructImpHisotryGridOptions();">
+                <div class="xrx-margin-10">
+    	            <ng-include src="'partials/views/components/requests/importHistory.html'" > </ng-include>
+                </div>
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</main>

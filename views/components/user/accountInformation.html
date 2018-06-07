@@ -1,0 +1,137 @@
+<h2 class="h3">Update Account Information</h2> 
+    <div class="xrx-margin-10" style="height: 500px; overflow-y: scroll;">
+        <a id="maincontent" tabindex="-1"></a>       
+        <i class="required-note"><span class="hide">red asterisk</span> denotes a required field</i>
+        <div class="m--top editlogin-content">
+            <h3 class="hide">Update Account information</h3>           
+            <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact" novalidate="">
+                <fieldset id="contactinfo" class="content__section">
+                    <div class="form__set">
+                        <label for="form-edit-firstName" class="form__label">First name <i class="form__required">required</i></label>
+                        <input id="form-edit-firstName" name="form-edit-firstName" class="form__input" type="text" aria-required="true" value="Brain" required="">
+                    </div>
+                    <div class="form__set">
+                        <label for="form-edit-lastName" class="form__label">Last name<i class="form__required">required</i></label>
+                        <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" value="Adam" required="">
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editloginEmail" class="form__label">Email <i class="form__required">required</i></label>
+                        <input id="form-editloginEmail" name="form-editloginEmail" class="form__input" value="sample@gmail.com" type="text" aria-required="true" required="">
+                    </div>
+                    <div class="form__set">
+                        <label for="form-edit-phone" class="form__label">Phone number <span class="notes">(XXX-XXX-XXXX)</span><i class="form__required">required</i></label>
+                        <input id="form-edit-phone" name="form-edit-phone" class="form__input" type="text" value="555-555-5555" aria-required="true" required="">
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editlogincurrentPW" class="form__label">Current password <i class="form__required">required</i></label>
+                        <input id="form-editloginPW" name="form-editlogincurrentPW" class="form__input" type="password" aria-required="true" required="">
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editloginPW" class="form__label">New password <i class="form__required">required</i></label>
+                        <input id="form-editloginPW" name="form-editloginPW" class="form__input" type="password" aria-required="true" required="">
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editloginPW-confirm" class="form__label">Confirm new password <i class="form__required">required</i></label>
+                        <input id="form-editloginPW-confirm" name="form-editloginPW-confirm" class="form__input" type="password" aria-required="true" required="">
+                        <p class="notes m--bottom">Note: Password must be at least 8 characters and contain only numbers, letters, or special characters.</p>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <h2 class="h3 m--top">Shipping Information</h2>
+        <h3 class="hide">Update Shipping information</h3>
+        <form id="form-editaddress" name="form-editaddress" class="form form--basic form--compact m--top sc-box-style edit-address-content"> 
+            <div class="form__set">
+                <label for="form-editaddress-firstName" class="form__label">First name <i class="form__required">required</i></label>
+                <input id="form-editaddress-firstName" name="form-editaddress-firstName" class="form__input" type="text" value="Brain" aria-required="true" required="">
+            </div>
+            <div class="form__set">
+                <label for="form-editaddress-lastName" class="form__label">Last name<i class="form__required">required</i></label>
+                <input id="form-editaddress-lastName" name="form-editaddress-lastName" class="form__input" type="text" value="Adam" aria-required="true" required="">
+            </div>
+            <div class="form__set">
+                <label for="form-editaddress-address1" class="form__label">Street Address <i class="form__required">required</i></label>
+                <input id="form-editaddress-address1" name="form-editaddress-address1" class="form__input" type="text" value="68 Veronica Ave" aria-required="true" required="">
+            </div>
+            <div class="form__set">
+                <label for="form-editaddress-address2" class="form__label">Apt/Suite # </label>
+                <input id="form-editaddress-address2" name="form-editaddress-address2" class="form__input" type="text">
+            </div>
+
+            <div class="form__set">
+                <label for="form-editaddress-city" class="form__label">City <i class="form__required">required</i></label>
+                <input id="form-editaddress-city" name="form-editaddress-city" class="form__input" type="text" value="Somerset" aria-required="true" required="">
+            </div>
+
+            <div class="form__set">
+                <label for="form-editaddress-state" class="form__label">State <i class="form__required">required</i></label>
+                <select id="form-editaddress-state" name="form-editaddress-state" class="form__input select" style="clear:both;" aria-required="true" required="">
+                    <option value="">&nbsp;</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ"  selected="selected">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
+                </select>
+            </div>
+
+            <div class="form__set">
+                <label for="form-editaddress-zip" class="form__label">Zip <i class="form__required">required</i></label>
+                <input id="form-editaddress-zip" name="form-editaddress-zip" class="form__input" type="text" value="08873" size="8" pattern="\d*" aria-required="true" required="">
+            </div>
+        </form>
+       
+        <h4 class="h6-alt m--top">Additional Addresses</h4>
+        <ul class="list--lined list--edit m--both">
+            <li><strong>Brain Adam</strong> 68 Veronica Ave Somerset NJ 08873<div class="inline-edit--option"><a>Make Default</a><a class="delete">Delete</a><a class="edit">Edit</a></div></li>
+            <li><strong>John Doe</strong> Kathleen Renda 121 river st Hoboken NJ <div class="inline-edit--option"><a>Make Default</a><a class="delete">Delete</a><a class="edit">Edit</a></div></li>
+        </ul>
+        <div style="text-align: center;">
+            <button class="btn btn--primary btn--small m--top btn--mobile-block new-address" ng-click="updateNewShippingInfoMode();" name="form-newaddressAdd">Enter a new address</button>
+        </div>
+        <form id="form-newaddress" name="form-newaddress" class="form form--basic form--compact m--top sc-box-style new-address-content" ng-if="newShippingInfoMode" >
+            <legend class="h4 m--bottom">Enter new address information</legend>
+            <div class="form__set">
+                <label for="form-newaddress-firstName" class="form__label">First name <i class="form__required">required</i></label>
+                <input id="form-newaddress-firstName" name="form-newaddress-firstName" class="form__input" type="text" aria-required="true" required="">
+            </div>
+
+            <div class="form__set">
+                <label for="form-newaddress-lastName" class="form__label">Last name<i class="form__required">required</i></label>
+                <input id="form-newaddress-lastName" name="form-newaddress-lastName" class="form__input" type="text" aria-required="true" required="">
+            </div>
+
+            <div class="form__set">
+                <label for="form-newaddress-address1" class="form__label">Street Address <i class="form__required">required</i></label>
+                <input id="form-newaddress-address1" name="form-newaddress-address1" class="form__input" type="text" aria-required="true" required="">
+            </div>
+
+            <div class="form__set">
+                <label for="form-newaddress-address2" class="form__label">Apt/Suite # </label>
+                <input id="form-newaddress-address2" name="form-newaddress-address2" class="form__input" type="text">
+            </div>
+
+            <div class="form__set">
+                <label for="form-newaddress-city" class="form__label">City <i class="form__required">required</i></label>
+                <input id="form-newaddress-city" name="form-newaddress-city" class="form__input" type="text" aria-required="true" required="">
+            </div>
+
+            <div class="form__set">
+                <label for="form-newaddress-state" class="form__label">State <i class="form__required">required</i></label>
+                <select id="form-newaddress-state" name="form-newaddress-state" class="form__input select" style="clear:both;" aria-required="true" required="">
+                    <option value="">&nbsp;</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ" selected="selected">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
+                </select>
+            </div>
+
+            <div class="form__set">
+                <label for="form-newaddress-zip" class="form__label">Zip <i class="form__required">required</i></label>
+                <input id="form-newaddress-zip" name="form-newaddress-zip" class="form__input" type="text" size="8" pattern="\d*" aria-required="true" required="">
+            </div>
+
+            <div class="form__set">
+                <div class="form__optin form__optin-alt">
+                    <label for="form-newaddress-makedefault" class="form__label"><input id="form-newaddress-makedefault" name="form-newaddress-makedefault" type="checkbox"><span>Make this my default address</span></label>
+                </div>
+            </div>         
+        </form>
+    </div>
+<div style="text-align: center;">
+    <input class="btn btn--primary btn--small m--top new-address btn--mobile-block"
+    ng-click="updateNewShippingInfoMode();" name="save" value="Save">
+    <input class="btn btn--secondary btn--small m--top new-address btn--mobile-block" ng-click="closeThisDialog();" name="cancel" value="Cancel">
+</div>

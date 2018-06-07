@@ -1,0 +1,13 @@
+<div class="content--grid">
+	<div class="content__block">		
+		<div ng-if="toggleTerminals" class="content__section content__section--twenty  no-print xrx-card-4">
+			<a style="float: left;" ng-click="toggleAlarms();">Hide Terminals</a> <br/>
+			Terminals Secttion
+		</div>
+		<div class="content__section {{toggleTerminals === true ? 'content__section--seventy-five' :  'content__section--full'}}  xrx-card-4">
+			<a ng-if="!toggleTerminals" style="float: left;" ng-click="toggleAlarms();">View Terminals</a>
+			Alarms and Status
+		</div>
+	</div>
+</div>
+

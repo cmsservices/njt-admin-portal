@@ -1,0 +1,142 @@
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">View Tickets</h1>
+
+        <p class="notes">List of Active and inactive Tickets</p> <br/>
+
+        <script type="text/ng-template" id="group-template.html">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                  <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+                    {{heading}}
+                  </span>
+                </a>
+              </h4>
+            </div>
+            <div class="panel-collapse collapse" uib-collapse="!isOpen">
+              <div class="panel-body" ng-transclude></div>
+            </div>
+          </div>
+        </script>
+
+
+  <uib-accordion close-others="oneAtATime">
+
+    <div uib-accordion-group class="panel-default" heading="Custom template" template-url="group-template.html">
+    <uib-accordion-heading>
+      <img src="resources/images/mytix.jpg" alt="Full Fare" height="21" border="0" class="sc-card-img--inline">
+        <strong>Monthly Pass Adult : October 2016 - Rail</strong><span class="font-smaller">&nbsp;&nbsp; New Brunswick to Hoboken</span>
+        <div class="inline-edit--option inline-edit--option--right"><span style=" border-width: 1px;
+    border-style: solid;background-color: #eef7ea;border-color: #c1e2b3;color: #008040;">Active</span></div> 
+    </uib-accordion-heading> 
+    <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+        <ul class="cart-products">
+          <li class="cart-product">
+            <div class="content--grid">
+              <div class="content__block">
+                <div class="content__section content__section--eighty">
+                  <img src="resources/images/mytix.jpg" alt="card" height="30" border="0" class="cart-card-img">
+
+                  <span style="display: flex;">
+                    <span class="badge badge--info-note" >                         
+                          Monthly Pass adult - October 2016 - Rail
+                    </span> 					
+                  </span>                  
+                  <div class="cart-sub-product">
+                   Origin <span class="cart-sub-product-price"><strong>New Brunswick </strong></span>
+                  </div>
+                  <div class="cart-sub-product">
+                    Destination <span class="cart-sub-product-price"><strong> Hoboken </strong></span>
+                  </div>
+                  <div class="cart-sub-product">
+                    Via <span class="cart-sub-product-price"><strong> Newark Penn station </strong></span>
+                  </div>
+					<div class="cart-sub-product">
+					  <a class="cart-edit"><strong>  refund </strong> </a>
+                    </div>	
+                </div>
+                <div class="content__section content__section--twenty cart-product-price">$399.00 </div>
+			
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+     <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+       <!--   <div class="sc-box-style font-smaller edit-payment-content ng-scope"> -->
+              <div><i class="i--payment i--payment-visa"></i><strong>Visa &nbsp;&nbsp;(XXXX-XXXX-XXXX-1881)</strong></div>
+              <div><strong>Expiration Date: 12/2019</strong></div>
+              <div class="m--top"><strong>Billing Address</strong></div>
+              <div>Brain Adam</div>
+              <div>1600 Blake Street</div>
+              <div>Edison, NJ 08816</div>
+        <!--   </div>
+        </table> -->
+      </div> 
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
+      <uib-accordion-heading>
+        <img src="resources/images/mytix.jpg" alt="Discount" height="21" border="0" class="sc-card-img--inline">
+        <strong>One Way Adult</strong><span class="font-smaller">&nbsp;&nbsp;Jersey Ave - New York Penn Station</span>
+        <div class="inline-edit--option inline-edit--option--right"><span style="    border-width: 1px;
+    border-style: solid;
+    background-color: #eef7fb;
+    border-color: #b0daec;
+    color: #016f98;">Inactive</span>
+        </div>
+      </uib-accordion-heading>
+      <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+        <ul class="cart-products">
+          <li class="cart-product">
+            <div class="content--grid">
+              <div class="content__block">
+                <div class="content__section content__section--eighty">
+                  <img src="resources/images/mytix.jpg" alt="card" height="30" border="0" class="cart-card-img">
+
+                  <span style="display: flex;">
+                    <span class="badge badge--info-note" >                         
+                          One Way Adult
+                    </span>                    
+                  </span>                  
+                  <div class="cart-sub-product">
+                   Origin <span class="cart-sub-product-price"><strong>Jersey Ave </strong></span>
+                  </div>
+                  <div class="cart-sub-product">
+                    Destination <span class="cart-sub-product-price"><strong> New York Penn Station </strong></span>
+                  </div>
+				  					<div class="cart-sub-product">
+					  <a class="cart-edit"><strong>  refund </strong> </a>
+                    </div>	
+                </div>
+                <div class="content__section content__section--twenty cart-product-price">$15.00</div> 
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+     <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+       <!--   <div class="sc-box-style font-smaller edit-payment-content ng-scope"> -->
+              <div><i class="i--payment i--payment-visa"></i><strong>Visa &nbsp;&nbsp;(XXXX-XXXX-XXXX-1881)</strong></div>
+              <div><strong>Expiration Date: 12/2019</strong></div>
+              <div class="m--top"><strong>Billing Address</strong></div>
+              <div>Brain Adam</div>
+              <div>1600 Blake Street</div>
+              <div>Edison, NJ 08816</div>
+        <!--   </div>
+        </table> -->
+      </div> 
+    </div>
+   
+  </uib-accordion>
+
+      
+        <div class="m--top" style="text-align: center;">
+            <a class="btn btn--primary btn--proceed btn--mobile-block mobile__m--top" ui-sref="welcome.meadowLandsTicketing">Purchase a new Ticket</a>
+        </div>
+    </div>
+</main>

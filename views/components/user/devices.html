@@ -1,0 +1,78 @@
+<!-- <main role="main" class="content__section content__section--seventy" ng-controller="userController" ng-init="getDevices();">
+
+    <div class="xrx-margin-10">
+    	 <h1 class="h2">User Devices</h1>
+    	 <div id="grid1" ui-grid="devicesGridOptions"></div>
+   	</div>
+</main> -->
+
+
+<main role="main" class="content__section content__section--seventy-five" ng-controller="userController" ng-init="getDevices();">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+
+        <h1 class="h2">User Devices</h1>
+
+        <h2 class=" h3 m--top">Search Devices</h2>
+        <div class="content--grid">
+            <div class="content__block">
+                <div class="content__section content__section--seventy">
+                    <form id="form-order-history" name="form-order-history" class="form form--basic form--compact p--all mobile__no-sides" aria-controls="order-history" novalidate="">
+
+                        <div class="form__set">
+                            <label for="form-order-historyID" class="form__label">Email ID</label>
+                            <input id="form-order-historyID" name="form-order-historyID" class="form__input" type="text">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-order-historyDate-start" class="form__label">Start Date</label>
+                            <input id="form-order-historyDate-start" type="date"><div id="date-start-cal" class="i--calendar"></div>
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-order-historyDate-end" class="form__label">End Date</label>
+                            <input id="form-order-historyDate-end" type="date"><div id="date-end-cal" class="i--calendar"></div>
+                        </div>
+
+                        <input type="submit" class="btn btn--primary m--top btn--full" name="form-order-historySearch" value="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+       	<div class="export-options export-options--right">
+            <span>Export:</span>
+            <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+            <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+        </div>
+        <p class="font-smaller">Results 10 of 40</p>
+        <br/>
+     	<div id="grid1" ui-grid="devicesGridOptions"></div>
+
+        <div class="pagination pagination-centered">
+            <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
+                <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
+                <li class="active"><a href="javascript:void(0)">1</a></li>
+                <li><a href="javascript:void(0)">2</a></li>
+                <li><a href="javascript:void(0)">3</a></li>
+                <li><a href="javascript:void(0)">4</a></li>
+                <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
+                <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
+            </ul>
+        </div>
+
+        <div class="table-filter table-filter--bottom">
+            <form id="form-history-limit" class="form form--compact" aria-controls="order-history" action="">
+                <label for="form-history-limitSelect" class="form__label">Show:</label>
+                <select id="form-history-limitSelect" name="form-history-limitSelect" class="form__input select">
+                    <option value="10" selected="">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </form>
+        </div>
+
+    </div>
+</main>

@@ -1,0 +1,66 @@
+ <div class="order-details" id="transaction-details">
+  <div class="xrx-margin-10">
+      <a id="maincontent" tabindex="-1"></a>
+      <h1 class="h2">Terminal Details</h1>
+    
+      <uib-tabset id="terminalDetails" ng-init="getServiceHistory();">
+          <uib-tab index="0" heading="Manage">
+            <div class="sc-box-style" style="background-color: white; border-top:none;">
+               <div class="content--grid">
+                  <div class="content__block">
+                      <div class="content__section content__section--thirty" >
+                          <img src="resources/images/NJT_TVM.jpg" height="250" border="0">  
+                      </div>
+                      <div class=" content__section content__section--thirty ">
+                        <div class="sc-box-style m--top">
+                          <div><strong> Terminal Number : </strong> <span class="badge badge--info-alt"> {{selectedTerminal.terminalNumber}} </span> </div>
+                          <div> <strong> Station : </strong>{{selectedTerminal.stationName}} </div>
+                          <div><strong> Terminal Type : </strong>{{selectedTerminal.terminalType}}</div>
+                        </div>
+                        <Strong class="m--top"> Status Details </Strong>
+                        <div class="sc-box-style m--top">                              
+                          <div><strong> Operator Status : </strong>{{selectedTerminal.terminalNumber}} </div>
+                          <div> <strong> Severity : </strong> OK </div>
+                          <div><strong> Time : </strong>{{selectedTerminal.alarmOccured}}</div>
+                        </div>
+                      </div>
+                      <div class="content__section content__section--thirty m--top" style="float: right;" >
+                        <div class=" sc-box-style m--top">
+                          <ul class="list--bar">
+                            <li style="border-left : 0px;"><span style="cursor: pointer;" class="badge badge--success"> In Service </span></li>
+                            <li style="border-left : 0px;"><span style="cursor: pointer;" class="badge badge--warning"> Out Of Service </span></li>
+                            <li style="border-left : 0px; "><span style="cursor: pointer;" class="badge"> Reboot </span></li>
+                            <li style="border-left : 0px; "><span style="cursor: pointer;" class="badge badge--error"> Shutdown </span></li>
+                            <li style="border-left : 0px;"><span style="cursor: pointer;" class="badge badge--info"> Update Status </span></li>
+                          </ul>   
+                        </div>                             
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </uib-tab>
+          <uib-tab index="1" heading="Alarms" ng-click="getAlarmsByTerminalID();">
+            <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+              <div ui-grid="alarmsGridOptions" ui-grid-auto-resize ></div>
+            </div>
+          </uib-tab>
+
+          <uib-tab index="2" heading="Stats" ng-click="getstatsforTerminalID();">
+            <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+              <div ui-grid="statusByTerminalGridOptions" ui-grid-auto-resize ></div> 
+            </div>
+          </uib-tab>
+          
+          
+          <uib-tab index="3" heading="Service History">
+            <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+              <div ui-grid="serviceHistoryGridOptions" ui-grid-auto-resize ></div>
+            </div>
+          </uib-tab>
+        </uib-tabset>
+      </div>
+    </div>
+
+    <div style="text-align: center;"> 
+        <button tabindex="0" class="btn btn--primary btn--small m--top btn--mobile-block" ng-click="closeThisDialog(0);"> Close </button>
+    </div>

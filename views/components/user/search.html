@@ -1,0 +1,94 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="searchController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2"> Search </h1>
+
+        <label for="form-reports-terminalNo" class="form__label" style="display: inline !important; margin-right: 31% !important; line-height: 0.5px;">Search By</label>
+        <span class="form__group form__group--inline">
+            <label class="form__label"><input ng-model="searchBy" value="user" type="radio" name="form-radios-2" aria-required="true" required>User</label>
+
+            <label class="form__label"><input ng-model="searchBy" value="transaction" type="radio" name="form-radios-2" >Transactions</label>
+        </span>   
+        <br/>
+        <div ng-if="searchBy ==='user'" class="content--grid" ng-controller="userController">
+            <div class="content__block">
+                <div class="content__section content__section--full">
+                    <h2 class="h3">Users</h2>
+                    <form id="form-order-history" name="form-order-history" class="form form--basic form--compact p--all mobile__no-sides sc-box-style" aria-controls="order-history" novalidate="">
+
+                        <div class="form__set">
+                            <label for="form-order-historyID" class="form__label">User ID</label>
+                            <input id="form-order-historyID" ng-model="userId" name="form-order-historyID" class="form__input" type="text">
+                        </div>
+
+                        <input type="submit" class="btn btn--primary m--top btn--full" name="form-order-historySearch" ng-click="getUsers();" value="Search">
+                    </form>
+                    <br/>
+                    <div ng-if="users.length > 0">
+                        <div class="export-options export-options--right">
+                            <span>Export:</span>
+                            <a href="#"><img src="assets/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+                            <a href="#"><img src="assets/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                        </div>
+                        <p class="font-smaller">Results 1 of 1</p>
+                        <br/>
+                        <div id="usersGrid" ui-grid="searchUserGridOptions" ui-grid-selection></div> 
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <div class="xrx-margin-10" ng-controller="userTransactionsController" ng-if="searchBy === 'transaction'">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Transaction</h1>
+        <form id="form-order-history" name="form-order-history" class="form form--basic form--compact p--all mobile__no-sides sc-box-style" aria-controls="order-history" novalidate="">
+            <div class="form__set">
+                <label for="form-order-historyDate-start" class="form__label">Start Date <i class="form__required">required</i></label>
+                <input id="form-order-historyDate-start" type="date"><div id="date-start-cal" class="i--calendar"></div>
+            </div>
+
+            <div class="form__set">
+                <label for="form-order-historyDate-end" class="form__label">End Date <i class="form__required">required</i></label>
+                <input id="form-order-historyDate-end" type="date"><div id="date-end-cal" class="i--calendar"></div>
+            </div>
+
+            <div class="form__set">
+                <label for="form-order-historyDate-end" class="form__label">Amount</label>
+                <input id="form-order-historyID" name="form-order-historyID" type="text">
+            </div>
+
+            <div class="form__set">
+                <label for="form-order-historyDate-end" class="form__label">User ID</label>
+                <input id="form-order-historyID" name="form-order-historyID" type="text">
+            </div>
+
+            <div class="form__set">
+                <label for="form-order-historyDate-end" class="form__label"> CC Number</label>
+                <input id="form-order-historyID" name="form-order-historyID" type="text">
+            </div>
+
+            <div class="form__set">
+                <label for="form-order-historyDate-end" class="form__label">Transaction ID</label>
+                <input id="form-order-historyID" name="form-order-historyID" type="text">
+            </div>
+
+            <div class="form__set">
+                <label for="form-order-historyDate-end" class="form__label">App Purchase ID</label>
+                <input id="form-order-historyID" name="form-order-historyID" type="text">
+            </div>
+
+            <input type="submit" class="btn btn--primary m--top btn--full" name="form-order-historySearch" ng-click="constructTransactionsGridOptions();" value="Search">
+        </form>
+        <div ng-if="transactionsGridOptions.data.length > 0">
+            <div class="export-options export-options--right">
+                <span>Export:</span>
+                <a href="#"><img src="assets/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+                <a href="#"><img src="assets/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+            </div>               
+
+            <br/>
+            <div ui-grid="transactionsGridOptions" ui-grid-selection
+            style="max-width : 850px; margin-left:20px;"></div>   
+        </div>                  
+    </div>
+</main>
