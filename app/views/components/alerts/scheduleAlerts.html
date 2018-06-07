@@ -1,0 +1,77 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="notificationController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Schedule Alerts</h1>
+        <div class="m--top editlogin-content sc-box-style">
+            <h3 class="hide">Update Account information</h3>
+
+            <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact" novalidate="">
+                <fieldset id="contactinfo" class="content__section">
+                    <div class="form__set">
+                        <label for="form-edit-firstName" class="form__label">User Groups</label>
+
+                        <select id="selectUsergroup" ng-model="selectedUsergroup" required="" class="form__input select">
+                            <option value="default">Please select a User Group</option>
+                            <option ng-repeat="userGroup in notifications.userGroups" value="userGroup.id" class="ng-binding ng-scope">{{userGroup.description}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form__set">
+                        <label for="form-edit-lastName" class="form__label">Priority</label>
+                        <select id="selectedPriority" ng-model="selectedPriority" required="" class="form__input select">
+                            <option value="default">Please select a Priority</option>
+                            <option ng-repeat="priority in notifications.priority" value="priority.id" class="ng-binding ng-scope">{{priority.name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form__set">
+                        <label for="form-editloginEmail" class="form__label">Schedule Date</label>
+                        <input id="form-editloginEmail" name="form-editloginEmail" class="form__input" value="sample@gmail.com" type="text" aria-required="true" required="">
+                    </div>
+
+                    <div class="form__set">
+                        <label for="form-edit-phone" class="form__label">Schedule Time <span class="notes">(XXX-XXX-XXXX)</span></label>
+                        <input id="form-edit-phone" name="form-edit-phone" class="form__input" type="text" value="555-555-5555" aria-required="true" required="">
+                    </div>
+
+                    <div class="form__set">
+                        <label for="form-editlogincurrentPW" class="form__label">Expire Date </label>
+                        <input id="form-editloginPW" name="form-editlogincurrentPW" class="form__input" type="password" aria-required="true" required="">
+                    </div>
+
+                    <div class="form__set">
+                        <label for="form-editloginPW" class="form__label">Expire Time</label>
+                        <input id="form-editloginPW" name="form-editloginPW" class="form__input" type="password" aria-required="true" required="">
+                    </div>
+
+                    <div class="form__set">
+                        <label for="form-editloginPW-confirm" class="form__label">Color Code </label> 
+                        <select ng-model="selectedColorCode" class="form__input select"  style="background-color:{{selectedColorCode}}">
+                            <option value="">Please select a Color Code</option>
+                            <option value="{{colorCode.color_code}}" style="background-color:{{colorCode.color_code}}"
+                                    ng-repeat="colorCode in notifications.colorCodes">
+                                {{getColorCodeDisplayValue(colorCode)}} 
+                            </option>
+                        </select>
+
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editloginPW-confirm" class="form__label">Alerts </label>
+                         <select id="selectAlert" ng-model="selectedAlert" required="" class="form__input select" ng-change="setSelectedAlert(selectedAlert);">
+                            <option value="default">Please select a Priority</option>
+                            <option ng-repeat="alert in notifications.alerts" value="{{alert}}" class="ng-binding ng-scope">{{alert.title}}</option>
+                        </select>
+
+                    </div>
+                    <div class="form__set">
+                        <label for="form-editloginEmail" class="form__label"></label>
+                         <textarea id="form-textarea" name="form-textarea" class="form__input" aria-required="true" required>{{selectedAlertMessage}}</textarea>
+                    </div> 
+                </fieldset>
+                <div style="text-align: center;">
+                  <input class="btn btn--primary btn--small m--top editlogin btn--mobile-block" name="save" value="Send">                  
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

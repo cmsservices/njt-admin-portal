@@ -1,0 +1,22 @@
+<main role="main" class="content__section content__section--seventy-five"  ng-controller="chartController"  ng-init="loadTransactionsChart();">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+
+        <h1 class="h2">Transactions</h1>
+        <div class="content--grid">
+            <div class="content__block sc-box-style">
+                <h5 class="text-center no-margin "><strong> Transactions from Last : </strong>
+                    <select ng-model="transactionhrs" ng-change="loadTransactionsChart()"> 
+                        <option value="1"> 1 Hour </option>
+                        <option value="2"> 2 Hours </option>
+                        <option value="3"> 3 Hours </option>
+                        <option value="4"> 4 Hours </option>
+                        <option value="5"> 5 Hours </option>
+                        <option value="6"> 10 Hours </option>
+                    </select>
+                </h5>
+                <div  id="colChart1" class="chartStyles"></div>
+            </div>
+        </div>
+    </div>
+</main>

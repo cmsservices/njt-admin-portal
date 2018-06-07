@@ -1,0 +1,62 @@
+[
+    {
+        "userID": "mjones@njtransit.com",
+        "emailID": "mjones@njtransit.com",
+        "userActivity": "2016-10-03 13:40:06.0",
+        "carrierName": "Sprint",
+        "model": "HTCONE",
+        "version": "HTC",
+        "osSDKVersion": "5.0.2",
+        "osRelease": "16.2",
+        "phone": 8627551342,
+        "deviceID": "99000146136706",
+        "appID": "99000146136706_8627551342_20161003131524",
+        "IMEI": "99000146136706",
+        "appVersion": "2016.2.0b"
+    },
+    {
+        "userID": "overbridge10@mailtothis.com",
+        "emailID": "overbridge10@mailtothis.com",
+        "userActivity": "2016-10-03 13:12:46.0",
+        "carrierName": "Verizon",
+        "model": "iPhone",
+        "version": "iPhone OS",
+        "osSDKVersion": "9.3.5",
+        "osRelease": "16.2",
+        "phone": 0,
+        "deviceID": "4BD21619-F55E-455E-BE96-1D48EC9D3FA2",
+        "appID": "A645112C-80BB-4123-A963-FE2CD11DED31",
+        "IMEI": "4BD21619-F55E-455E-BE96-1D48EC9D3FA2",
+        "appVersion": "2016.2.0a"
+    },
+    {
+        "userID": "mm@mm.in",
+        "emailID": "mm@mm.in",
+        "userActivity": "2016-10-03 12:20:21.0",
+        "carrierName": "Verizon",
+        "model": "iPhone",
+        "version": "iPhone OS",
+        "osSDKVersion": "10.0.2",
+        "osRelease": "16.2",
+        "phone": 0,
+        "deviceID": "36BEBEF6-EC17-41DA-9A98-7E847432E9CF",
+        "appID": "EC08D080-2869-4298-8F79-B130323F0158",
+        "IMEI": "36BEBEF6-EC17-41DA-9A98-7E847432E9CF",
+        "appVersion": "2016.3.0b"
+    },
+    {
+        "userID": "sm@ios.com",
+        "emailID": "sm@ios.com",
+        "userActivity": "2016-10-03 12:16:24.0",
+        "carrierName": "Verizon Wireless",
+        "model": "SM-G900V",
+        "version": "samsung",
+        "osSDKVersion": "5.0",
+        "osRelease": "16.2",
+        "phone": 8627551342,
+        "deviceID": "99000146136706",
+        "appID": "EC08D080-2869-4298-8F79-B130323F0158",
+        "IMEI": "36BEBEF6-EC17-41DA-9A98-7E847432E9CF",
+        "appVersion": "2016.3.0"
+    }
+]

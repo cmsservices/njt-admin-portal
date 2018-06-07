@@ -1,0 +1,28 @@
+ <div class="order-details" id="transaction-details">
+  <div class="xrx-margin-10">
+      <a id="maincontent" tabindex="-1"></a>
+      <h1 class="h2">Transaction Details</h1>
+    
+      <uib-tabset active="activeJustified">
+          <uib-tab index="0" heading="Tickets">
+            <div class="sc-box-style" style="background-color: white; border-top:none !important;">
+                <ng-include src="'partials/views/components/user/tickets.html'" > </ng-include>
+            </div>
+          </uib-tab>
+          <uib-tab index="1" heading="Payments">
+            <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+              <ng-include src="'partials/views/components/user/payments.html'" > </ng-include>
+            </div>
+          </uib-tab>
+          <uib-tab index="2" heading="Device">
+            <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+               <ng-include src="'partials/views/components/user/transactionDevices.html'" > </ng-include>
+            </div>
+          </uib-tab>
+        </uib-tabset>
+      </div>
+    </div>
+
+    <div style="text-align: center;"> 
+        <button tabindex="0" class="btn btn--primary btn--small m--top btn--mobile-block" ng-click="closeThisDialog(0);"> Close </button>
+    </div>

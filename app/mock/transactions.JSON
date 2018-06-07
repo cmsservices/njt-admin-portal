@@ -1,0 +1,267 @@
+[{
+	"transactionType" : "Credit",
+	"noOfTransactions" : 150,
+	"transactionsByStation" : [{
+		"stationName" : "Absecon",
+		"stationCode" : "2_ATLC",
+		"noOfTransactions" : 10,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  5         
+        }, {
+            "terminalName": "TOM",
+            "count" : 3                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 2                 
+        }]   
+	}, {
+		"stationName" : "Aberdeen Matawan",
+		"stationCode" : "37169_NJCL",
+		"noOfTransactions" : 40,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  23         
+        }, {
+            "terminalName": "TOM",
+            "count" : 10                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 6                 
+        }, {
+            "terminalName": "VD",
+            "count" : 1                 
+        }]   
+	}, {
+		"stationName" : "Allendale",
+		"stationCode" : "3_MNBN",
+		"noOfTransactions" : 60,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  33         
+        }, {
+            "terminalName": "TOM",
+            "count" : 23                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 3                 
+        }]   
+	},{
+		"stationName" : "Allenhurst",
+		"stationCode" : "4_NJCL",
+		"noOfTransactions" : 30,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  13         
+        }, {
+            "terminalName": "TOM",
+            "count" : 10                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 4                 
+        }, {
+            "terminalName": "VD",
+            "count" : 3                 
+        }]   
+	},{
+		"stationName" : "Metropark",
+		"stationCode" : "MP",
+		"noOfTransactions" : 5,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  4         
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        }]   
+	},{
+		"stationName" : "Edison",
+		"stationCode" : "ED",
+		"noOfTransactions" : 5,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  3         
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }]   
+	}]
+
+},{
+	"transactionType" : "Debit",
+	"noOfTransactions" : 100,
+	"transactionsByStation" : [{
+		"stationName" : "Absecon",
+		"stationCode" : "2_ATLC",
+		"noOfTransactions" : 5,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  3         
+        }, {
+            "terminalName": "TOM",
+            "count" : 2                 
+        }]   
+	}, {
+		"stationName" : "Aberdeen Matawan",
+		"stationCode" : "37169_NJCL",
+		"noOfTransactions" : 25,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  13         
+        }, {
+            "terminalName": "TOM",
+            "count" : 7                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 2                 
+        }, {
+            "terminalName": "VD",
+            "count" : 3                 
+        }]   
+	}, {
+		"stationName" : "Allendale",
+		"stationCode" : "3_MNBN",
+		"noOfTransactions" : 50,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  33         
+        }, {
+            "terminalName": "TOM",
+            "count" : 13                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 3                 
+        }]   
+	},{
+		"stationName" : "Allenhurst",
+		"stationCode" : "4_NJCL",
+		"noOfTransactions" : 20,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  13         
+        }, {
+            "terminalName": "TOM",
+            "count" : 3                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 3                 
+        }]   
+	},{
+		"stationName" : "Metropark",
+		"stationCode" : "MP",
+		"noOfTransactions" : 5,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  3         
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }]   
+	},{
+		"stationName" : "Edison",
+		"stationCode" : "ED",
+		"noOfTransactions" : 5,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  3         
+        },{
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 1                
+        }]   
+	}]
+}, {
+	"transactionType" : "Cash",
+	"noOfTransactions" : 40,
+	"transactionsByStation" : [{
+		"stationName" : "Absecon",
+		"stationCode" : "2_ATLC",
+		"noOfTransactions" : 8,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  3         
+        }, {
+            "terminalName": "TOM",
+            "count" : 3                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 2                
+        }]   
+	}, {
+		"stationName" : "Aberdeen Matawan",
+		"stationCode" : "37169_NJCL",
+		"noOfTransactions" : 10,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  5         
+        }, {
+            "terminalName": "TOM",
+            "count" : 3                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 1                
+        }]   
+	}, {
+		"stationName" : "Allendale",
+		"stationCode" : "3_MNBN",
+		"noOfTransactions" : 15,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  13         
+        }, {
+            "terminalName": "TOM",
+            "count" : 3                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 3                 
+        }]   
+	},{
+		"stationName" : "Allenhurst",
+		"stationCode" : "4_NJCL",
+		"noOfTransactions" : 2,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  2       
+        }]   
+	},{
+		"stationName" : "Metropark",
+		"stationCode" : "MP",
+		"noOfTransactions" : 5,
+		"terminals" :[{
+            "terminalName": "TVM",
+            "count":  3         
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }]   
+	}]
+}]

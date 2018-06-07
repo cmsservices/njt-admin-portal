@@ -1,0 +1,323 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="userController" ng-init="getDevices();">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+
+        <h1 class="h2">User Account Details</h1>           
+        <div class="sc-box-style m--top" style="background-color: white;">
+            {{user.blocked}}
+            <div class="editlogin-content form--display">
+                <div class="content--grid">
+                    <div class="content__block">
+                        <div class="content__section  content__section--fifty">    
+                            <h2 class="h3">Account Information</h2>    
+                            <a class="inline-edit editlogin" ng-click="openCreateNoteDialog('updateAccountInfo');">Edit</a>
+                            <div class="sc-box-style">
+                             <span style="cursor: pointer; float : right;" class="{{user.blocked ? 'badge badge--error': 'badge badge--success'}}" 
+                                    title="{{user.blocked ? 'Click here to block the user': 'Click here to unblock the user'}}"  ng-click="user.blocked = !user.blocked">{{user.blocked ? 'Block' : 'Unblock'}} User </span>
+                                <div class="form__set">
+                                    <div class="form--display__label">Account Status :</div>
+                                    <div class="form--display__input">Active</div>                                 
+                                </div>
+
+                                <div class="form--display__label">Account Created </div>
+                                <div class="form--display__input">08/05/2014</div>
+
+                                <div class="form--display__label">Number of Transactions</div>
+                                <div class="form--display__input">4</div>
+
+                                <div class="form--display__label">Number of Tickets</div>
+                                <div class="form--display__input">5</div>
+
+                                <div class="form--display__label">Number of Refunds</div>
+                                <div class="form--display__input"> 0  </div>
+
+                                <div class="form--display__label">Deactivated Tickets</div>
+                                <div class="form--display__input"> 0  </div>
+
+                                <div class="form--display__label">Import Status</div>
+                                <div class="form--display__input"> 0  </div>
+
+                                <div class="form--display__label">Completed Imports</div>
+                                <div class="form--display__input"> 1  </div>
+                            </div>                     
+                        </div>
+                        <div class="content__section  content__section--forty" style="margin-left: 3%">  
+                            <h2 class="h3">Current Active Device</h2> 
+                            <div class="sc-box-style">                           
+                                <div class="form--display__label">Device ID :</div>
+                                <div class="form--display__input">99000146136706</div>
+
+                                <div class="form--display__label">User Activity :</div>
+                                <div class="form--display__input">2016-10-03</div>
+
+                                <div class="form--display__label">Model :</div>
+                                <div class="form--display__input">iPhone</div>
+
+                                <div class="form--display__label">Carrier Name :</div>
+                                <div class="form--display__input">Verizon</div>
+
+                                <div class="form--display__label">App ID :</div>
+                                <div class="form--display__input">8627551342</div>
+
+                                <div class="form--display__label">IMEI :</div>
+                                <div class="form--display__input">99000146136706</div>
+                            </div>  
+                        </div>     
+                    </div>                               
+                </div>   
+            </div>            
+        </div>
+        <div class="sc-box-style m--top" style="background-color: white;">
+            <a id="maincontent" tabindex="-1"></a>
+            <h2 class="h3">View Tickets</h2>
+            <p class="notes">List of Active and inactive Tickets</p> <br/>
+            <script type="text/ng-template" id="group-template.html">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                          <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+                            {{heading}}
+                          </span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div class="panel-collapse collapse" uib-collapse="!isOpen">
+                      <div class="panel-body" ng-transclude></div>
+                    </div>
+                </div>
+            </script>
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" heading="Custom template" template-url="group-template.html">
+                    <uib-accordion-heading>
+                        <img src="resources/images/mytix.jpg" alt="Full Fare" height="21" border="0" class="sc-card-img--inline">
+                          <strong>Monthly Pass Adult : October 2016 - Rail</strong><span class="font-smaller">&nbsp;&nbsp; New Brunswick to Hoboken</span>
+                          <div class="inline-edit--option inline-edit--option--right"><span style=" border-width: 1px;
+                          border-style: solid;background-color: #eef7ea;border-color: #c1e2b3;color: #008040;">Active</span></div> 
+                    </uib-accordion-heading> 
+                    <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+                        <ul class="cart-products">
+                            <li class="cart-product">
+                                <div class="content--grid">
+                                    <div class="content__block">
+                                        <div class="content__section content__section--eighty">
+                                            <img src="resources/images/mytix.jpg" alt="card" height="30" border="0" class="cart-card-img">
+                                            <span style="display: flex;">
+                                                <span class="badge badge--info-note" >                         
+                                                    Monthly Pass adult - October 2016 - Rail
+                                                </span>                     
+                                            </span>                  
+                                            <div class="cart-sub-product">
+                                                Origin <span class="cart-sub-product-price"><strong>New Brunswick </strong></span>
+                                            </div>
+                                            <div class="cart-sub-product">
+                                                Destination <span class="cart-sub-product-price"><strong> Hoboken </strong></span>
+                                            </div>
+                                            <div class="cart-sub-product">
+                                                Via <span class="cart-sub-product-price"><strong> Newark Penn station </strong></span>
+                                            </div>
+                                            <div class="cart-sub-product">
+                                                <a class="cart-edit" ng-click = "openCreateNoteDialog('refund');"><strong>  refund </strong> </a> |
+                                                <a class="cart-edit" ng-click = "openCreateNoteDialog('deactivate');"><strong>  Deactivate a ticket </strong> </a>    
+                                            </div>  
+                                        </div>
+                                        <div class="content__section content__section--twenty cart-product-price">$399.00 </div>
+                                   </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+      
+                    <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+                        <div><i class="i--payment i--payment-visa"></i><strong>Visa &nbsp;(XXXX-XXXX-XXXX-1881)</strong></div>
+                        <div><strong>Expiration Date: 12/2019</strong></div>
+                        <div class="m--top"><strong>Billing Address</strong></div>
+                        <div>Brain Adam</div>
+                        <div>1600 Blake Street</div>
+                        <div>Edison, NJ 08816</div>                     
+                    </div> 
+                </div>
+                <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
+                    <uib-accordion-heading>
+                          <img src="resources/images/mytix.jpg" alt="Discount" height="21" border="0" class="sc-card-img--inline">
+                          <strong>One Way Adult</strong><span class="font-smaller">&nbsp;&nbsp;Jersey Ave - New York Penn Station</span>
+                          <div class="inline-edit--option inline-edit--option--right">
+                              <span style="border-width: 1px;
+                                  border-style: solid;
+                                  background-color: #eef7fb;
+                                  border-color: #b0daec;
+                                  color: #016f98;">Inactive
+                              </span>
+                          </div>
+                    </uib-accordion-heading>
+                    <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+                        <ul class="cart-products">
+                            <li class="cart-product">
+                                <div class="content--grid">
+                                    <div class="content__block">
+                                        <div class="content__section content__section--eighty">
+                                            <img src="resources/images/mytix.jpg" alt="card" height="30" border="0" class="cart-card-img">
+                                            <span style="display: flex;">
+                                                <span class="badge badge--info-note" >                         
+                                                    One Way Adult
+                                                </span>                    
+                                            </span>                  
+                                            <div class="cart-sub-product">
+                                                Origin <span class="cart-sub-product-price"><strong>Jersey Ave </strong></span>
+                                            </div>
+                                            <div class="cart-sub-product">
+                                                Destination <span class="cart-sub-product-price"><strong> New York Penn Station </strong></span>
+                                            </div>
+                                            <div class="cart-sub-product">
+                                                <a  class="cart-edit"  ng-click="openCreateNoteDialog('refund');"><strong>  Refund </strong> </a> 
+                                               <!--  <a class="cart-edit"><strong>  Deactivate a ticket </strong> </a> -->
+
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sc-box-style cart-product-container cart-product-container--compact m--top">
+                        <div><i class="i--payment i--payment-visa"></i><strong>Visa &nbsp;&nbsp;(XXXX-XXXX-XXXX-1881)</strong></div>
+                        <div><strong>Expiration Date: 12/2019</strong></div>
+                        <div class="m--top"><strong>Billing Address</strong></div>
+                        <div>Brain Adam</div>
+                        <div>1600 Blake Street</div>
+                        <div>Edison, NJ 08816</div>             
+                    </div> 
+                </div>         
+            </uib-accordion>      
+            <div class="m--top" style="text-align: center;">
+                <a class="btn btn--primary btn--mobile-block mobile__m--top" ng-click="openCreateNoteDialog('newTicket')">Push a new Ticket</a>
+            </div>
+        </div>       
+        <div class="sc-box-style m--top" style="background-color: white;">
+            <uib-tabset active="activeJustified">
+              <uib-tab index="0" heading="Notes">
+                <div class="sc-box-style" style="background-color: white; border-top:none !important;">
+                    <h2 class="h3">Notes</h2>   
+                    <table border="1"> 
+                        <thead>
+                          <th style="text-align: center;"> Date </th>
+                          <th style="padding: 8px;"> Action </th>
+                          <th style="padding: 8px;"> Description </th>
+                          <th style="padding: 8px;"> By Agent</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="padding: 8px;"> 11/11/2016 </td>
+                            <td style="padding: 8px;"> Deactivated A Ticket  </td>
+                            <td style="padding: 8px;"> Ticket was deactiated</td>
+                            <td style="padding: 8px;"> userAdmin </td>
+                          </tr>                          
+                          <tr>
+                            <td style="padding: 8px;"> 10/11/2016 </td>
+                            <td style="padding: 8px;"> Refunded </td>
+                            <td style="padding: 8px;"> Refunded because customer don't want to use the Pass for the remaining Month </td>
+                            <td style="padding: 8px;"> superAdmin </td>
+                          </tr>                          
+                          <tr>
+                            <td style="padding: 8px;"> 10/01/2016 </td>
+                            <td style="padding: 8px;"> Pushed a New ticket </td>
+                            <td style="padding: 8px;"> Pushed a New ticket </td>
+                            <td style="padding: 8px;"> superAdmin </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 8px;"> 09/21/2016 </td>
+                            <td style="padding: 8px;"> Updated Account Information</td>
+                            <td style="padding: 8px;"> Updated shipping Address as custumer is unable to do.</td>
+                            <td style="padding: 8px;"> userAdmin </td>
+                          </tr>
+                        </tbody>
+                  </table>   
+                </div>
+              </uib-tab>
+              <uib-tab index="1" heading="Devices History">
+                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+<!--                     <div class="export-options export-options--right" >
+                        <span>Export:</span>
+                        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+                        <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                    </div> <br/> -->
+                    <div ui-grid="devicesGridOptions" ui-grid-auto-resize></div>
+                </div>
+              </uib-tab>
+              <uib-tab index="2" heading="Transactions History">
+                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+<!--                    <div class="export-options export-options--right" >
+                        <span>Export:</span>
+                        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+                        <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                    </div> -->
+                    <div ui-grid="userTransactionsGridOptions" ui-grid-selection ui-grid-auto-resize style="max-width : 850px; margin-left:20px;"> </div>
+                </div>
+              </uib-tab>
+              <uib-tab index="3" heading="Import Requests">
+                <div class="xrx-margin-10" ng-controller="importRequestsController">
+                    <h3 class="h4">Import Request</h3>
+                    <uib-tabset id="userImportRequests">
+                        <uib-tab index="0" heading="New"  ng-init="constructImpGridOptions();">
+                            <div class="xrx-margin-10">
+                                <ng-include src="'partials/views/components/requests/approveNewImports.html'" > </ng-include>
+                            </div>
+                        </uib-tab>
+                        <uib-tab index="1" heading="Pending"  ng-init="constructPendingImpGridOptions();">
+                            <div class="xrx-margin-10">
+                                <ng-include src="'partials/views/components/requests/pendingImports.html'" > </ng-include>
+                            </div>
+                        </uib-tab>
+                        <uib-tab index="2" heading="History"  ng-init="constructImpHisotryGridOptions();">
+                            <div class="xrx-margin-10">
+                                <ng-include src="'partials/views/components/requests/importHistory.html'" > </ng-include>
+                            </div>
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
+              </uib-tab>
+              <uib-tab index="4" heading="Refund Requests">
+                  <div class="xrx-margin-10" ng-controller="refundRequestsController">
+                        <h3 class="h4">Refund Request</h3>
+                        <uib-tabset id="UserRefundRequests">
+                            <uib-tab index="0" heading="Pending">
+                                <div class="xrx-margin-10">
+                                    <ng-include src="'partials/views/components/requests/pendingRefunds.html'" > </ng-include> 
+                                </div>
+                            </uib-tab>
+                            <uib-tab index="1" heading="History">
+                                <div class="xrx-margin-10">
+                                    <ng-include src="'partials/views/components/requests/refundsHistory.html'" > </ng-include>
+                                </div>
+                            </uib-tab>
+                        </uib-tabset>
+                    </div>
+              </uib-tab>
+              <uib-tab index="5" heading="Account Settings">
+                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+                    <form id="form-acount_Settings" name="form-editlogin" class="form form--basic form--compact" novalidate="">
+                        <fieldset id="contactinfo" class="content__section">
+                            <div class="form__set">
+                                <label for="form-edit-firstName" class="form__label">User Type </label>
+                                <input id="form-edit-firstName" name="form-edit-firstName" class="form__input" type="text" aria-required="true" value="Brain" required="">
+                            </div>
+                            <div class="form__set">
+                                <label for="form-edit-lastName" class="form__label">User Status </label>
+                                <span style="cursor: pointer;" class="{{user.blocked ? 'badge badge--success': 'badge badge--error'}}" 
+                                title="{{user.blocked ? 'Click here to block the user': 'Click here to unblock the user'}}""  ng-click="user.blocked = !user.blocked">{{user.blocked ? 'Active' : 'Blocked'}} </span>
+
+                            </div>
+                            <div class="form__set">
+                                <label for="form-editloginEmail" class="form__label">Email <i class="form__required">required</i></label>
+                                <input id="form-editloginEmail" name="form-editloginEmail" class="form__input" value="sample@gmail.com" type="text" aria-required="true" required="">
+                            </div>
+                           
+                        </fieldset>
+                    </form>
+                </div>
+              </uib-tab>
+
+            </uib-tabset>
+        </div>
+    </div>
+</main>

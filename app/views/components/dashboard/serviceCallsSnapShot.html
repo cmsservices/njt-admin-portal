@@ -1,0 +1,21 @@
+<main role="main" class="content__section content__section--seventy-five"  ng-controller="chartController"  ng-init="refreshServiceCallsChart();">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Service Calls</h1>
+        <div class="content--grid">
+            <div class="content__block sc-box-style">
+                <h5 class="text-center no-margin"><strong>  Service Calls Snapshot From Last: </strong>
+                    <select ng-model="SChrs", ng-change="refreshServiceCallsChart()"> 
+                        <option value="1"> 1 Hour </option>
+                        <option value="2"> 2 Hours </option>
+                        <option value="3"> 3 Hours </option>
+                        <option value="4"> 4 Hours </option>
+                        <option value="5"> 5 Hours </option>
+                        <option value="6"> 10 Hours </option>
+                    </select> 
+                </h5>
+                <div id="barChart" class="chartStyles"></div> 
+            </div>
+        </div>
+    </div>
+</main>

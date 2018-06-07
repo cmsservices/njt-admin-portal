@@ -1,0 +1,15 @@
+<div class="panel panel-default col-md-4 no-padding">
+    <div class="panel-heading" style="padding:5px;">
+        <h5 class="text-center no-margin "><strong> Transactions from Last : </strong>
+        <select ng-model="transactionhrs" ng-change="loadTransactionsChart()"> 
+            <option value="1"> 1 Hour </option>
+            <option value="2"> 2 Hours </option>
+            <option value="3"> 3 Hours </option>
+            <option value="4"> 4 Hours </option>
+            <option value="5"> 5 Hours </option>
+            <option value="6"> 10 Hours </option>
+        </select>
+         </h5>
+    </div>
+    <div  id="colChart1" class="chartStyles"></div>
+</div>

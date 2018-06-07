@@ -1,0 +1,14 @@
+ <div class="panel panel-default col-md-4 no-padding" >
+    <div class="panel-heading " style="padding:5px;">
+        <h5 class="text-center no-margin" ><strong>  Alarms in Last : </strong>
+        <select ng-model="alarmHrs", ng-change="loadColumnCharts()"> 
+            <option value="1"> 24 Hours </option>
+            <option value="3"> 48 Hours </option>
+            <option value="4"> 5 Days </option>
+            <option value="5"> 10 Days </option>
+            <option value="5"> 20 Days </option>
+            <option value="7"> 30 Days </option>
+        </select> </h5>
+    </div>
+    <div id="colChart2" class="chartStyles"></div>
+</div>

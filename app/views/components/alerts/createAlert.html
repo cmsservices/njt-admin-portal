@@ -1,0 +1,30 @@
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Create Alert</h1>
+        <div class="m--top editlogin-content sc-box-style">
+            <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact" novalidate="">
+                <div class="form__set">
+                    <label for="form-edit-firstName" class="form__label">Category <i class="form__required">required</i></label>
+                    <select id="form-select-1" name="form-select" class="form__input select">
+                        <option value="1" checked>Select Category</option>
+                        <option value="2">MyTix</option>
+                    </select>
+                </div>
+
+                <div class="form__set">
+                    <label for="form-edit-lastName" class="form__label">Notification Title<i class="form__required">required</i></label>
+                    <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                </div>
+
+                <div class="form__set">
+                    <label for="form-editloginEmail" class="form__label">Notification Message <i class="form__required">required</i></label>
+                     <textarea id="form-textarea" name="form-textarea" class="form__input" aria-required="true" required></textarea>
+                </div>                   
+                <div style="text-align: center;">
+                <input class="btn btn--primary btn--small m--top editlogin btn--mobile-block" name="save" value="Create" ng-click="">              
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

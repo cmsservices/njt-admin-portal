@@ -1,0 +1,109 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="chartController">
+    <div class="xrx-margin-10">
+        <div class="content--grid">
+            <div class="content__block">
+                
+				<form class="form form--compact sc-box-style" id="form-card-selected">
+                <label for="form-card-select" style="padding-top: 0px;" class="form__label">Filter By:</label>
+                <select id="form-card-select" name="form-card-select" class="form__input select" ng-model="filerBy"><option value="all"> System Level </option>
+                <option value="station"> Station </option></select> <br/>
+                <label ng-if="filerBy === 'station'" style="padding-top: 0px;" for="form-card-select" class="form__label">Select Station:</label>
+                <select ng-if="filerBy === 'station'" id="form-card-select" name="form-card-select" class="form__input select" ng-options="station as station.stationName for station in stations" ng-model="selectedStation"><option> Select Station</option> </select> 
+                <button class="btn btn--primary m--top" ng-click="loadCharts();refreshGridData();"> Apply </button> 
+                  
+            </form> <br/>
+            <form name="myForm">
+                <div ng-init="loadCharts();">
+                    <div class="row">
+                        <div  class="panel panel-default col-md-4 no-padding" >
+                            <div class="panel-heading" style="padding:5px;">
+                                <h5 class="text-center no-margin "><strong> Terminal System Health </strong></h5>
+                            </div>
+                            <div id="pChart" class="chartStyles"></div>
+                        </div>
+                            <div class="panel panel-default col-md-4 no-padding">
+                                <div class="panel-heading" style="padding:5px;">
+                                    <h5 class="text-center no-margin "><strong> Transactions from Last : </strong>
+                                        <select ng-model="transactionhrs" ng-change="loadTransactionsChart()"> 
+                                            <option value="1"> 1 Hour </option>
+                                            <option value="2"> 2 Hours </option>
+                                            <option value="3"> 3 Hours </option>
+                                            <option value="4"> 4 Hours </option>
+                                            <option value="5"> 5 Hours </option>
+                                            <option value="6"> 10 Hours </option>
+                                        </select>
+                                    </h5>
+                                </div>
+                                <div  id="colChart1" class="chartStyles"></div>
+                            </div>
+                        <div class="panel panel-default col-md-4 no-padding" >
+                            <div class="panel-heading " style="padding:5px;">
+                                <h5 class="text-center no-margin" ><strong>  Alarms in Last : </strong>
+                                <select ng-model="alarmHrs"> 
+                                    <option value="1"> 24 Hours </option>
+                                    <option value="3"> 48 Hours </option>
+                                    <option value="4"> 5 Days </option>
+                                    <option value="5"> 10 Days </option>
+                                    <option value="5"> 20 Days </option>
+                                    <option value="7"> 30 Days </option>
+                                </select> </h5>
+                            </div>
+                            <div id="colChart2" class="chartStyles"></div>
+                        </div>
+                    </div>
+                    <div class="row" style="height:25%;">
+                       <div class="panel panel-default col-md-6 no-padding">
+    <div class="panel-heading" style="padding:5px;">
+        <h5 class="text-center no-margin"><strong>  Machines Needs Attention Top: </strong>
+        <select> 
+            <option> 15 Machines </option>
+            <option> 20 Machines </option>
+            <option> 30 Machines </option>
+            <option> 50 Machines </option>
+        </select> </h5>
+    </div>
+     <div ui-grid="topTencheckedGridOptions" class="chartStyles"></div>
+</div>
+                        <div class="panel panel-default col-md-6 no-padding">
+                            <div class="panel-heading" style="padding:5px;">
+                                <h5 class="text-center no-margin"><strong>  TVM Not Checked in Top: </strong>
+                                <select> 
+                                    <option> 15 TVMs </option>
+                                    <option> 20 TVMs </option>
+                                    <option> 30 TVMs </option>
+                                    <option> 50 TVMs </option>
+                                </select> </h5>
+                            </div>
+                            <div ui-grid="topTenUncheckedGridOptions" class="chartStyles"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-default col-md-6 no-padding">
+                            <div class="panel-heading" style="padding:5px;">
+                                <h5 class="text-center no-margin"><strong>  Service Calls Snapshot From Last: </strong>
+                                <select ng-model="SChrs", ng-change="refreshServiceCallsChart()"> 
+                                    <option value="1"> 1 Hour </option>
+                                    <option value="2"> 2 Hours </option>
+                                    <option value="3"> 3 Hours </option>
+                                    <option value="4"> 4 Hours </option>
+                                    <option value="5"> 5 Hours </option>
+                                    <option value="6"> 10 Hours </option>
+                                </select> </h5>
+                            </div>
+                            <div id="barChart" class="chartStyles"></div> 
+                        </div>
+                        <div class="panel panel-default col-md-6 no-padding">
+                            <div class="panel-heading" style="padding:5px;">
+                                <h5 class="text-center no-margin"><strong>  Support Calender - 1 Week </strong>
+                                </h5>
+                            </div>
+                            <div id="stackedBarChart" class="chartStyles"></div> 
+                        </div>
+                    </div>
+                            
+                </div>
+                </form>   
+            </div>
+        </div>
+    </div>
+</main>

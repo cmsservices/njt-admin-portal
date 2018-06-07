@@ -1,0 +1,41 @@
+[{
+	"firstName" : "xerox",
+	"lastName" : "reportAdmin",
+	"userName" : "reportAdmin",
+	"email" : "xerox.reportAdmin@gmail.com",
+	"password" : "Test@123",
+	"zipCode" : "08873",
+	"role" : "reportAdmin"
+}, {
+	"firstName" : "xerox",
+	"lastName" : "admin",
+	"userName" : "myTixAdmin",
+	"email" : "xerox.admin@gmail.com",
+	"password" : "Test@123",
+	"zipCode" : "08902",
+	"role" : "myTixAdmin"
+}, {
+	"firstName" : "xerox",
+	"lastName" : "supportAdmin",
+	"userName" : "supportAdmin",
+	"email" : "adam.supportAdmin@gmail.com",
+	"password" : "Test@123",
+	"zipCode" : "08816",
+	"role" : "supportAdmin"
+}, {
+	"firstName" : "xerox",
+	"lastName" : "superAdmin",
+	"userName" : "superAdmin",
+	"email" : "xerox.superAdmin@a.com",
+	"password" : "Test@123",
+	"zipCode" : "08873",
+	"role" : "superAdmin"
+}, {
+	"firstName" : "xerox",
+	"lastName" : "superAdmin",
+	"userName" : "userAdmin",
+	"email" : "xerox.superAdmin@a.com",
+	"password" : "Test@123",
+	"zipCode" : "08873",
+	"role" : "userAdmin"
+}]

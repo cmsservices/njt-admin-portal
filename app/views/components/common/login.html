@@ -1,0 +1,38 @@
+<div class="sc-login-container">
+  	<div class="sc-padding">
+    	<div id="acountLloginFocus" tabindex="0"> <h1 class="h3 xrx-text-capitalize">Account Login</h1> </div>
+    	<form id="form-user-login" name="loginNav.userLogin" ng-submit="loginNav.login()" class="form form--basic form--login" novalidate>
+    		<label for="email" class="hide">Email</label>
+		    <input id="email" name="email" class="form__input" type="text" 
+		             placeholder="User Name"
+		             ng-model="loginUser.userName">
+		    <label for="password" class="hide">Password</label>
+		    <input id="password" name="password" class="form__input" type="password" 
+		             placeholder="Password"
+		             ng-model="loginUser.password" 
+		             autocomplete="off" >
+         	<button type="submit" ng-click="login();" class="btn btn--secondary btn--login"> Login </button>
+
+	        <div class="sc-subtext">
+		        <p>forgot
+		            <a class="login-forgot" title="forgot Username" ui-sref="login.forgetUsername">
+		              Username
+		            </a> 
+		          or
+		          
+		          <a class="login-forgot" title="forgot Password" ui-sref="login.forgetPassword">
+		            password
+		          </a>
+		        </p>
+
+		       <!-- <fieldset class="form__group form__group--inline"> -->
+		          <label class="form__label" for="remember" >
+		            <input id="remember" name="remember" type="checkbox" ng-model="loginNav.loginDetails.rememberme">remember me
+		          </label>
+		       <!-- </fieldset> -->
+		    </div>
+    	</form>
+    </div>
+</div>
+
+    

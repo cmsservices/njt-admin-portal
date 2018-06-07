@@ -1,0 +1,25 @@
+[{
+	"action" : "deactivate",
+	"seqID" : 245450,
+	"termNo" : 3001,
+	"trxNo" : 126407,
+	"ticketType" : "11001 - One Way",
+	"zttNo" : 0,
+	"origin" : "370 - ANNANDALE",
+	"destination" : "563 - DENVILLE",
+	"ticketFare" : "$ 16.25",
+	"activationDate" : "2016-10-03 10:59:45.0",
+	"deactivationDate" : "2016-10-03 13:44:45.0"
+}, {
+	"action" : "deactivate",
+	"seqID" : 245458,
+	"termNo" : 3001,
+	"trxNo" : 126408,
+	"ticketType" : "11001 - One Way",
+	"zttNo" : 0,
+	"origin" : "370 - ANNANDALE",
+	"destination" : "563 - DENVILLE",
+	"ticketFare" : "$ 16.25",
+	"activationDate" : "2016-10-03 10:59:45.0",
+	"deactivationDate" : "2016-10-03 13:44:45.0"
+}]

@@ -1,0 +1,11 @@
+<div ng-init="refundType = 'standard'" style="text-align: center;"> 
+  <span class="form__group form__group--inline">
+    <label class="form__label"><input ng-model="refundType" value="standard" type="radio" name="form-radios-2" aria-required="true" required>Standard Refund</label>
+    <label class="form__label"><input ng-model="refundType" value="amount" type="radio" name="form-radios-2" >Choose Amount</label>   
+    </span> 
+     <input type="text" ng-if="refundType === 'amount'" name="amount"> 
+      <div class="m--top" style="text-align: center;">
+          <a ng-click="closeThisDialog()" class="btn btn--secondary btn--mobile-block mobile__m--top">Update</a>
+          <a ng-click="closeThisDialog()" class="btn btn--secondary btn--mobile-block mobile__m--top">Cancel</a>
+      </div>
+</div>

@@ -1,0 +1,127 @@
+[{ 
+	"day" : "Monday",
+	"shifts" : [{
+		"ShiftName" : "Morning Shift",
+		"timings" : "6AM-1PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Bruce", "Lisa", "Meghan"]
+	}, {
+		"ShiftName" : "Afternoon Shift",
+		"timings" : "1PM - 10PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["John", "Linda", "Chris"]
+	}, {
+		"ShiftName" : "Night Shift",
+		"timings" : "10PM - 6AM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Mary", "Jack", "Jonathan"]
+	}]
+}, { 
+	"day" : "Tuesday",
+	"shifts" : [{
+		"ShiftName" : "Morning Shift",
+		"timings" : "6AM-1PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Bruce", "Lisa", "Meghan"]
+	}, {
+		"ShiftName" : "Afternoon Shift",
+		"timings" : "1PM - 10PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["John", "Linda", "Chris"]
+	}, {
+		"ShiftName" : "Night Shift",
+		"timings" : "10PM - 6AM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Mary", "Jack", "Jonathan"]
+	}]
+}, {
+	"day" : "Wednesday",
+	"shifts" : [{
+		"ShiftName" : "Morning Shift",
+		"timings" : "6AM-1PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Bruce", "Lisa", "Meghan"]
+	}, {
+		"ShiftName" : "Afternoon Shift",
+		"timings" : "1PM - 10PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["John", "Linda", "Chris"]
+	}, {
+		"ShiftName" : "Night Shift",
+		"timings" : "10PM - 6AM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Mary", "Jack", "Jonathan"]
+	}]
+}, {
+	"day" : "Thurday",
+	"shifts" : [{
+		"ShiftName" : "Morning Shift",
+		"timings" : "6AM-1PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Mary", "Jack", "Jonathan"]
+	}, {
+		"ShiftName" : "Afternoon Shift",
+		"timings" : "1PM - 10PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Bruce", "Lisa", "Meghan"]
+	}, {
+		"ShiftName" : "Night Shift",
+		"timings" : "10PM - 6AM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["John", "Linda", "Chris"]
+	}]
+}, {
+	"day" : "Friday",
+	"shifts" : [{
+		"ShiftName" : "Morning Shift",
+		"timings" : "6AM-1PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Mary", "Jack", "Jonathan"]
+	}, {
+		"ShiftName" : "Afternoon Shift",
+		"timings" : "1PM - 10PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" :  ["Bruce", "Lisa", "Meghan"]
+	}, {
+		"ShiftName" : "Night Shift",
+		"timings" : "10PM - 6AM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["John", "Linda", "Chris"]
+	}]
+}, {
+	"day" : "Saturday",
+	"shifts" : [{
+		"ShiftName" : "Morning Shift",
+		"timings" : "6AM-1PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Mary", "Jack", "Jonathan"]
+	}, {
+		"ShiftName" : "Afternoon Shift",
+		"timings" : "1PM - 10PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" :  ["Bruce", "Lisa", "Meghan"]
+	}, {
+		"ShiftName" : "Night Shift",
+		"timings" : "10PM - 6AM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["John", "Linda", "Chris"]
+	}]
+}, {
+	"day" : "Sunday",
+	"shifts" : [{
+		"ShiftName" : "Morning Shift",
+		"timings" : "6AM-1PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["Mary", "Jack", "Jonathan"]
+	}, {
+		"ShiftName" : "Afternoon Shift",
+		"timings" : "1PM - 10PM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" :  ["Bruce", "Lisa", "Meghan"]
+	}, {
+		"ShiftName" : "Night Shift",
+		"timings" : "10PM - 6AM",
+		"noOfSupportPersons" : 3,
+		"supportMemebers" : ["John", "Linda", "Chris"]
+	}]
+}]

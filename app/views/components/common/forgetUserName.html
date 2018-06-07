@@ -1,0 +1,26 @@
+<main role="main" class="content__section content__section--seventy-five">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+
+        <h1 class="h2"> Forgot Username</h1>
+
+        <div class="content--grid m--top">
+            <div class="content__block">
+                <div class="content__section content__section--eighty">
+                    <form class="form form--basic box--default forgot-submit-successful" id="form--forgotusername" action="">
+                        <label for="form--forgotusernameEmail" class="form__label">Please enter the email address associated with your account. Your username will be emailed to the email address on file.</label>
+                        <input type="text" id="form--forgotusernameEmail" name="form--forgotusernameEmail" class="form__input m--top" aria-required="true" required="">
+                        <div style="text-align: center;">
+                        <input type="button" class="btn btn--primary btn--proceed btn--mobile-block m--top js-expander forgot-submit" data-expandable="#forgot-submit-successful" value="Submit" aria-expanded="false" aria-controls="forgot-submit-successful" ng-click="showalert = true;">
+                        </div>
+                    </form>
+                    <div class="js-expandable" id="forgot-submit-successful" aria-hidden="true" ng-if="showalert">
+                        <div class="alert alert--info alert--dismissible" role="alert">
+                            <p><strong>Email sent:</strong><br>Please check your email to retrieve your username or login email. You will only receive email if there is an account associated with the email address you entered. Be sure to check your junk folder and add rtd-denver.com to your email whitelist.</p><p>
+                        </p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

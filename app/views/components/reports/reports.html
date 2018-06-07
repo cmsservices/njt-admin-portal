@@ -1,0 +1,97 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="reportsController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">{{reportName}}</h1>
+        <div class="sc-cardbar spacer-bottom">
+            <div class="content">
+                <div class="content--grid">
+                    <div class="content__block">
+                        <div class="content__section content__section--full">
+                            <div class="sc-card-select">
+                                <form class="form form--compact" id="form-card-selected">
+	                            <label for="form-card-select" class="form__label">Select a Product:</label>
+	                            <select id="form-card-select" name="form-card-select" class="form__input select" ng-options="report as report.reportName for report in reports" ng-model="selectedReport"></select>
+	                        </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     	<label for="form-reports-terminalNo" class="form__label" style="display: inline !important; margin-right: 31% !important; line-height: 0.5px;">Sort By </label>
+	    <span class="form__group form__group--inline">
+	        <label class="form__label"><input type="radio" name="form-radios-2" aria-required="true" required>Terminal No.</label>
+	        <label class="form__label"><input type="radio" name="form-radios-2" >Group ID</label>
+	        <label class="form__label"><input type="radio" name="form-radios-2" >Group Name</label>
+        </span>           
+        <form class="form form--compact" id="form-reports" action="" novalidate="">
+            <label for="form-compact-terminalNo" class="form__label" style="line-height: 0.5px">Terminal No </label>
+            <div><select id="form-compact-terminalNo" name="form-reports-terminalNo" class="form__input select" aria-required="true" required=""> 
+ 				<option value="1">1         |octatvm_001</option>
+                <option value="2">2         |octatvm_002</option>
+                <option value="3">3         |World_Trade_3</option>
+                <option value="4">4         |World_Trade_4</option>
+                <option value="5">5         |Exchange_Pl_5</option>
+                <option value="9">9         |Grove_St_9</option>
+                <option value="13">13        |Journal_SQ_13</option>
+                <option value="14">14        |Journal_SQ_14</option>
+                <option value="15">15        |Journal_SQ_15</option>
+                <option value="17">17        |Harrison_17</option>
+                <option value="20" selected="">20        |East_34th_20</option>
+                <option value="21">21        |Hnt_Pnt So_21</option>
+                <option value="22">22        |India_St_22</option>
+                <option value="23">23        |N6th_St_23</option>
+                <option value="24">24        |Schf_Lndn_24</option>
+                <option value="25">25        |Fulton_25</option>
+        	</select> </div>
+
+            <label for="form-compact-text-1" class="form__label" style="line-height: 0.5px">From Date </label>
+   			<input type="text" id="form-compact-text-1" name="compact_firstname" class="form__input" aria-required="true" required>
+
+   		    <label for="form-compact-text-1" class="form__label" style="line-height: 0.5px">To Date </label>
+   			<input type="text" id="form-compact-text-1" name="compact_firstname" class="form__input" aria-required="true" required>
+
+     		<label for="form-compact-text-1" class="form__label" style="line-height: 0.5px">Ticket Agent</label>
+    		<select id="form-reports-terminalNo" name="form-reports-terminalNo" class="form__input select" style="clear:both;" aria-required="true" required=""> 
+    			<option value="-1">ALL</option>
+                <option value="0">0 root  -</option>
+                <option value="1">1 System  Manager</option>
+                <option value="2">2 Product  Manager</option>
+                <option value="3" selected="">3 Configurator  -</option>
+                <option value="4">4 Technical  Service 1</option>
+                <option value="5">5 Technical  Service 2</option>
+                <option value="6">6 Technical  Service 3</option>
+                <option value="7">7 Technical  Service 4</option>
+                <option value="8">8 Technical  Service 5</option>
+                <option value="9">9 Technical  Service 6</option>
+                <option value="10">10 Technical  Service 7</option>
+                <option value="11">11 Maintenance  Service</option>
+                <option value="12">12 Ticket Stock  Service</option>
+                <option value="13">13 Revenue  Manager</option>
+                <option value="14">14 Finance   Manager</option>
+                <option value="15">15 Station  Supervisor</option>
+                <option value="16">16 Ticket  Agent</option>
+                <option value="17">17 Conductor  C</option>
+                <option value="18">18 Commissioned  Ticket Agent</option>
+                <option value="19">19 Revenue  Service</option>
+                <option value="20">20 Parking  Manager</option>
+                <option value="21">21 Police  -</option>
+                <option value="22">22 Automatic  Service</option>
+                <option value="23">23 Ronald  Billups</option>
+                <option value="25">25 Charles  Awodiya</option> </select>
+
+    		<label for="form-compact-text-1" class="form__label" style="line-height: 0.5px">Export Format</label>
+    		<div><select id="form-reports-terminalNo" name="form-reports-terminalNo" class="form__input select" aria-required="true" required=""> 
+    			<option value="pdf">PDF</option>
+                <option value="html">HTML</option>
+                <option value="xls">XLS</option>
+                <option value="rtf">RTF</option>
+                <option value="csv">CSV</option>
+            </select>
+    		 </div>
+		</form>
+		 <div style="text-align: center;">
+        <a class="btn btn--primary btn--proceed btn--mobile-block m--top spacer-bottom" ui-sref=""> Run The Report </a>
+        </div>
+    </div>
+</main>

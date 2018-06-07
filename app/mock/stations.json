@@ -1,0 +1,237 @@
+[{
+    "alarmName" : "Security Alarm",
+    "alarmCount" : 6,
+    "stations" : [{
+        "stationName": "Aberdeen Matawan",
+        "stationCode": "37169_NJCL",
+        "terminalCount" : 2,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        }]   
+    }, {
+        "stationName": "Absecon",
+        "stationCode": "2_ATLC",
+        "terminalCount" : 2,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        }]
+    }, {
+        "stationName": "Allendale",
+        "stationCode": "3_MNBN",
+        "terminalCount" : 2,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        }]
+    }]
+}, {
+    "alarmName" : "Critical Alarm",
+    "alarmCount" : 3,
+     "stations" : [{
+        "stationName": "Aberdeen Matawan",
+        "stationCode": "37169_NJCL",
+        "terminalCount" : 1,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }]   
+    }, {
+        "stationName": "Absecon",
+        "stationCode": "2_ATLC",
+        "terminalCount" : 1,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }]
+    }, {
+        "stationName": "Allendale",
+        "stationCode": "3_MNBN",
+        "terminalCount" : 1,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }]
+    }]
+}, {
+    "alarmName" : "Major/minor/warning Alarm",
+    "alarmCount" : 10,
+    "stations" : [{
+        "stationName": "Allenhurst",
+        "stationCode": "4_NJCL",
+        "terminalCount" : 1,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }]   
+    },{
+        "stationName": "Aberdeen Matawan",
+        "stationCode": "37169_NJCL",
+        "terminalCount" : 2,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  2           
+        }]   
+    }, {
+        "stationName": "Absecon",
+        "stationCode": "2_ATLC",
+        "terminalCount" : 6,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  5            
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        }]
+    }, {
+        "stationName": "Allendale",
+        "stationCode": "3_MNBN",
+        "terminalCount" : 1,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }]
+    }]
+}, {
+    "alarmName" : "Communication Failure",
+    "alarmCount" : 8,
+    "stations" : [{
+        "stationName": "Allenhurst",
+        "stationCode": "4_NJCL",
+        "terminalCount" : 1,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1            
+        }]   
+    },{
+        "stationName": "Aberdeen Matawan",
+        "stationCode": "37169_NJCL",
+        "terminalCount" : 2,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1           
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        }]   
+    }, {
+        "stationName": "Absecon",
+        "stationCode": "2_ATLC",
+        "terminalCount" : 3,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  1           
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        },  {
+            "terminalName": "VD",
+            "count" : 1                 
+        }]
+    }, {
+        "stationName": "Allendale",
+        "stationCode": "3_MNBN",
+        "terminalCount" : 2,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  2           
+        }]
+    }]
+}, {
+    "alarmName" : "Full Service",
+    "alarmCount" : 66,
+        "stations" : [{
+        "stationName": "Allenhurst",
+        "stationCode": "4_NJCL",
+        "terminalCount" : 4,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  3           
+        }, {
+            "terminalName": "TOM",
+            "count":  1  
+        }]   
+    },{
+        "stationName": "Aberdeen Matawan",
+        "stationCode": "37169_NJCL",
+        "terminalCount" : 20,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  13         
+        }, {
+            "terminalName": "TOM",
+            "count" : 3                 
+        }, {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 3                 
+        }]   
+    }, {
+        "stationName": "Absecon",
+        "stationCode": "2_ATLC",
+        "terminalCount" : 28,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  20           
+        }, {
+            "terminalName": "TOM",
+            "count" : 5                 
+        },  {
+            "terminalName": "VDS",
+            "count" : 1                 
+        }, {
+            "terminalName": "VD",
+            "count" : 2                 
+        }]
+    }, {
+        "stationName": "Allendale",
+        "stationCode": "3_MNBN",
+        "terminalCount" : 12,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  10            
+        },  {
+            "terminalName": "TOM",
+            "count" : 2               
+        }]
+    }]
+}, {
+    "alarmName" : "No Configured Terminals",
+    "alarmCount" : 5,
+    "stations" : [{
+        "stationName": "Aberdeen Matawan",
+        "stationCode": "37169_NJCL",
+        "terminalCount" : 2,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  2            
+        }]   
+    }, {
+        "stationName": "Absecon",
+        "stationCode": "2_ATLC",
+        "terminalCount" : 3,
+        "terminals" :[{
+            "terminalName": "TVM",
+            "count":  2            
+        }, {
+            "terminalName": "TOM",
+            "count" : 1                 
+        }]
+    }]
+}]
+
+
+
+   

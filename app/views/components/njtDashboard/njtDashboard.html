@@ -1,0 +1,146 @@
+<main role="main" class="content__section content__section--seventy" ng-controller="njtDashboardController">
+    <div class="xrx-margin-10">
+        <div class="content--grid">
+            <div class="content__block">
+             <form name="myForm">
+                <div ng-init="loadCharts();">
+                    <div class="row">
+                        <div  class="panel panel-default col-md-4 no-padding" >
+                            <div class="panel-heading" style="padding:5px;">
+                                <h5 class="text-center no-margin "><strong> Ticket Activations  </strong>
+                                    <select ng-model="transactionhrs" ng-change="loadTerminalPieChart()"> 
+                                        <option value="1"> 1 Min </option>
+                                        <option value="2"> 5 Min </option>
+                                        <option value="3"> 10 Min </option>
+                                        <option value="4"> 15 Min </option>
+                                        <option value="5"> 30 Min </option>
+                                        <option value="6"> 1 hour </option>
+                                    </select>
+                                </h5>
+                            </div>
+                            <div id="pChart" class="chartStyles"></div>
+                        </div>
+                            <div class="panel panel-default col-md-4 no-padding">
+                                <div class="panel-heading" style="padding:5px;">
+                                    <h5 class="text-center no-margin "><strong> Transactions : </strong>
+                                        <select ng-model="transactionhrs" ng-change="loadTransactionsChart()"> 
+                                           <option value="1"> 1 Min </option>
+                                        <option value="2"> 5 Min </option>
+                                        <option value="3"> 10 Min </option>
+                                        <option value="4"> 15 Min </option>
+                                        <option value="5"> 30 Min </option>
+                                        <option value="6"> 1 hour </option>
+                                        </select>
+                                    </h5>
+                                </div>
+                                <div  id="colChart1" class="chartStyles"></div>
+                            </div>
+                        <div class="panel panel-default col-md-4 no-padding" >
+                            <div class="panel-heading " style="padding:5px;">
+                                <h5 class="text-center no-margin" ><strong>  Ticket purchases : </strong>
+                                <select ng-model="alarmHrs" ng-change="loadColumnCharts()"> 
+                                    <option value="1"> 1 Min </option>
+                                        <option value="2"> 5 Min </option>
+                                        <option value="3"> 10 Min </option>
+                                        <option value="4"> 15 Min </option>
+                                        <option value="5"> 30 Min </option>
+                                        <option value="6"> 1 hour </option>
+                                </select> </h5>
+                            </div>
+                            <div id="colChart2" class="chartStyles"></div>
+                        </div>
+                    </div>
+                    <div class="row" style="height:25%;">
+                        <div class="panel panel-default no-padding">
+                            <div class="panel-heading " style="padding:5px;">
+                                <h5 class="text-center no-margin"><strong>  Server Status </strong>
+                               <!--  <select ng-model="SChrs", ng-change="refreshServiceCallsChart()"> 
+                                    <option value="1">  Newark-Mtix1 </option>
+                                    <option value="2">  Newark-Mtix2 </option>
+                                    <option value="3">  Newark-Mtix3 </option>
+                                    <option value="4">  Mapplewood-Mtix1 </option>
+                                    <option value="5">  Mapplewood-Mtix2 </option>
+                                    <option value="6">  Mapplewood-Mtix3 </option>
+                                </select>  -->
+                                </h5>
+                            </div>   
+                            <div class="row">
+                                 <img src="resources/images/ss.jpg" style="padding:5px; margin-left: 25px;" height="100%" width="95%"" border="0">
+
+                                <!-- <div class="col-md-6">
+                                    <div id="Mapplewood-Mtix1" class="chartStyles"></div> 
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="Newark-Mtix1" class="chartStyles"></div> 
+                                </div> -->
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <img src="resources/images/ss_01.jpg" style="padding:5px; margin-left: 25px;" height="100%" width="94%" border="0">
+
+                                <!-- <div class="col-md-6">
+                                    <div id="Mapplewood-Mtix2" class="chartStyles"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="Newark-Mtix2" class="chartStyles"></div>
+                                </div> -->
+                            </div>
+                           <!--  <div class="row">
+                                <div class="col-md-6">
+                                    <div id="Mapplewood-Mtix3" class="chartStyles"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="Newark-Mtix3" class="chartStyles"></div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-default col-md-6 no-padding">
+                            <div class="panel-heading" style="padding:5px;">
+                                <h5 class="text-center no-margin"><strong>  Import/Refund Status </strong>
+                                </h5>
+                            </div>
+                             <ul class="list--bar">
+                                <li style="border-left: 1px;"> <h5> Import Requests : </h5> </li>
+                                <li style="border-left: 1px;"> New Imports : <strong> 100 </strong> </li>
+                                <li style="border-left: 1px;"> Pending Imports :  <strong>  70 </strong> </li>
+                                <li style="border-left: 1px;"> <h5> Refund Requests : </h5> </li>
+                                <li style="border-left: 1px;"> Approved Refunds :<strong>  50 </strong> </li>
+                                <li style="border-left: 1px;"> Rejected Refunds :<strong>  150 </strong> </li>
+                                <li style="border-left: 1px;"> Pending Refund :  <strong>  100 </strong> </li>
+                             </ul>
+                        </div>
+                        <div class="panel panel-default col-md-6 no-padding">
+                            <div class="panel-heading" style="padding:5px;">
+                                <h5 class="text-center no-margin"><strong>  notifications </strong>
+                                </h5>
+                            </div>
+                            <!-- <div id="stackedBarChart" class="chartStyles"></div>  -->
+                            <ul class="list--bar">
+                                <li style="border-left: 8px solid red;"> Regular weekday service resumes on all rail lines on September 5th. Visit njtransit.com for more information.
+                                </li>
+                                <li style="border-left: 8px solid #4e0351;">Service plan for July 10 through September 1, 2017 is now available, including new NJ TRANSIT rail schedules.
+                                </li>
+                                <li style="border-left: 8px solid #a40000;">NJ TRANSIT PREPARES FOR FULL RESTORATION
+                                </li>
+                                <li style="border-left: 8px solid #FFD700;">Rail service is currently suspended in and out of Hoboken. Please visit njtransit.com for the most current service information.
+                                </li>
+                                <li style="border-left: 8px solid #B0E0E6;"> NJ TRANSIT restores full rail service to and from Penn Station New York on September 5th.
+                                </li>
+                               <!--  <li style="border-left: 8px solid #f96353;">Montclair-Boonton Line
+                                </li>
+                                <li style="border-left: 8px solid #800080;">Pascack Valley Line
+                                </li>
+                                <li style="border-left: 8px solid blue;">Atlantic City Line
+                                </li> -->
+                            </ul> 
+                        </div>
+                    </div>
+                            
+                </div>
+                </form>   
+            </div>
+        </div>
+    </div>
+</main>

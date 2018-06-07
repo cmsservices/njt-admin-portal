@@ -1,0 +1,17 @@
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10" ng-controller="userTransactionsController">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Transaction History</h1>
+        <div class="export-options export-options--right">
+            <span>Export:</span>
+            <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+            <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+        </div>
+        <p class="font-smaller">Results 10 of 40</p>
+
+        <br/>
+        <div ui-grid="transactionsGridOptions" ui-grid-selection style="max-width : 850px; margin-left:120px;"></div>   
+
+        
+    </div>
+</main>
