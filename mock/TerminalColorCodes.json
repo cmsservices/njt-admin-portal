@@ -1,0 +1,25 @@
+ [{
+ 	"status" : "securityAlarm",
+ 	"statusDesc" : "Intrusion/Security Alarm",
+ 	"colorCode" : "red"
+ }, {
+ 	"status" : "criticalAlarm",
+ 	"statusDesc" : "Critical Alarm",
+ 	"colorCode" : "orange"
+ }, {
+ 	"status" : "majorAlarm",
+ 	"statusDesc" : "Major/Minor/warning Alarm",
+ 	"colorCode" : "yellow"
+ }, {
+ 	"status" : "comminicationFailure",
+ 	"statusDesc" : "Comminication Failure",
+ 	"colorCode" : "blue"
+ }, {
+ 	"status" : "fullService",
+ 	"statusDesc" : "Full Service",
+ 	"colorCode" : "green"
+ }, {
+ 	"status" : "noConfigTerms",
+ 	"statusDesc" : "No Configured Terminals",
+ 	"colorCode" : "white"
+ }]

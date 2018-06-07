@@ -1,0 +1,666 @@
+[{
+	"stationId" : "37169_NJCL",
+	"stationName" : "Aberdeen Matawan",
+	"isFav" : true
+}, {
+	"stationId" : "2_ATLC",
+	"stationName" : "Absecon",
+	"isFav" : false
+}, {
+	"stationId" : "3_MNBN",
+	"stationName" : "Allendale",
+	"isFav" : false
+}, {
+	"stationId" : "4_NJCL",
+	"stationName" : "Allenhurst",
+	"isFav" : false
+}, {
+	"stationId" : "5_PASC",
+	"stationName" : "Anderson Street ",
+	"isFav" : false
+}, {
+	"stationId" : "6_RARV",
+	"stationName" : "Annandale",
+	"isFav" : false
+}, {
+	"stationId" : "8_NJCL",
+	"stationName" : "Asbury Park",
+	"isFav" : false
+}, {
+	"stationId" : "9_ATLC",
+	"stationName" : "Atco",
+	"isFav" : false
+}, {
+	"stationId" : "10_ATLC",
+	"stationName" : "Atlantic City",
+	"isFav" : false
+}, {
+	"stationId" : "11_NJCL",
+	"stationName" : "Avenel",
+	"isFav" : false
+}, {
+	"stationId" : "12_MNE",
+	"stationName" : "Basking Ridge",
+	"isFav" : false
+}, {
+	"stationId" : "13_NJCL",
+	"stationName" : "Bay Head",
+	"isFav" : false
+}, {
+	"stationId" : "14_BNTN",
+	"stationName" : "Bat Street",
+	"isFav" : false
+}, {
+	"stationId" : "15_NJCL",
+	"stationName" : "Belmar",
+	"isFav" : false
+}, {
+	"stationId" : "17_MNE",
+	"stationName" : "Berkeley Heights",
+	"isFav" : false
+}, {
+	"stationId" : "18_MNE",
+	"stationName" : "",
+	"isFav" : false
+}, {
+	"stationId" : "19_BNTN",
+	"stationName" : "Bloomfield",
+	"isFav" : false
+}, {
+	"stationId" : "20_BNTN",
+	"stationName" : "Boonton",
+	"isFav" : false
+}, {
+	"stationId" : "21_RARV",
+	"stationName" : "Bound Brook",
+	"isFav" : false
+}, {
+	"stationId" : "22_NJCL",
+	"stationName" : "Bradley Beach",
+	"isFav" : false
+}, {
+	"stationId" : "23_MNE",
+	"stationName" : "Brick Church",
+	"isFav" : false
+}, {
+	"stationId" : "24_RARV",
+	"stationName" : "Bridgewater",
+	"isFav" : false
+}, {
+	"stationId" : "25_MNBN",
+	"stationName" : "Broadway",
+	"isFav" : "false"
+}, {
+	"stationId" : "26_MNBN",
+	"stationName" : "Campbell",
+	"isFav" : false
+}, {
+	"stationId" : "27_MNE",
+	"stationName" : "Chatham",
+	"isFav" : false
+}, {
+	"stationId" : "28_ATLC",
+	"stationName" : "Cherry Hill",
+	"isFav" : false
+}, {
+	"stationId" : "29_MNBN",
+	"stationName" : "Clifton",
+	"isFav" : false
+}, {
+	"stationId" : "30_MNE",
+	"stationName" : "Convent Station",
+	"isFav" : false
+}, {
+	"stationId" : "32_RARV",
+	"stationName" : "Cranford",
+	"isFav" : false
+}, {
+	"stationId" : "33_RARV",
+	"stationName" : "Delawanna",
+	"isFav" : false
+}, {
+	"stationId" : "34_BNTN",
+	"stationName" : "Denville",
+	"isFav" : false
+}, {
+	"stationId" : "35_BNTN",
+	"stationName" : "Dover",
+	"isFav" : false
+}, {
+	"stationId" : "36_RARV",
+	"stationName" : "Dunellen",
+	"isFav" : false
+}, {
+	"stationId" : "37_MNE",
+	"stationName" : "East Orange",
+	"isFav" : false
+}, {
+	"stationId" : "38_NEC",
+	"stationName" : "Edison",
+	"isFav" : false
+}, {
+	"stationId" : "39_ATLC",
+	"stationName" : "egg Harbor City",
+	"isFav" : false
+}, {
+	"stationId" : "40_NJCL",
+	"stationName" : "Elberon",
+	"isFav" : false
+}, {
+	"stationId" : "41_NEC",
+	"stationName" : "Elizabeth",
+	"isFav" : false
+}, {
+	"stationId" : "42_PASC",
+	"stationName" : "Emerson",
+	"isFav" : false
+}, {
+	"stationId" : "43_PASC",
+	"stationName" : "Essex",
+	"isFav" : false
+}, {
+	"stationId" : "44_RARV",
+	"stationName" : "Fanwood",
+	"isFav" : false
+}, {
+	"stationId" : "45_MNE",
+	"stationName" : "Far Hills",
+	"isFav" : false
+}, {
+	"stationId" : "46_MNBN",
+	"stationName" : "Garfield",
+	"isFav" : false
+}, {
+	"stationId" : "47_RARV",
+	"stationName" : "Garwood",
+	"isFav" : false
+}, {
+	"stationId" : "48_MNE",
+	"stationName" : "Gillette",
+	"isFav" : false
+}, {
+	"stationId" : "49_MNE",
+	"stationName" : "Gladstone",
+	"isFav" : true
+}, {
+	"stationId" : "50_BNTN",
+	"stationName" : "Glen Ridge",
+	"isFav" : false
+}, {
+	"stationId" : "51_MNBN",
+	"stationName" : "Glen Rock Boro Hall",
+	"isFav" : false
+}, {
+	"stationId" : "52_MNBN",
+	"stationName" : "Glen Rock Main Line",
+	"isFav" : false
+}, {
+	"stationId" : "54_BNTN",
+	"stationName" : "Hackettstown",
+	"isFav" : false
+}, {
+	"stationId" : "32905_NEC",
+	"stationName" : "Hamilton",
+	"isFav" : false
+}, {
+	"stationId" : "55_ATLC",
+	"stationName" : "Hammonton",
+	"isFav" : false
+}, {
+	"stationId" : "57_MNBN",
+	"stationName" : "Harriman",
+	"isFav" : false
+}, {
+	"stationId" : "58_MNBN",
+	"stationName" : "Hawthorne",
+	"isFav" : false
+}, {
+	"stationId" : "59_NJCL",
+	"stationName" : "Hazlet",
+	"isFav" : false
+}, {
+	"stationId" : "60_RARV",
+	"stationName" : "High Bridge",
+	"isFav" : false
+}, {
+	"stationId" : "61_MNE",
+	"stationName" : "Highland Avenue",
+	"isFav" : false
+}, {
+	"stationId" : "62_PASC",
+	"stationName" : "Hillsdale",
+	"isFav" : false
+}, {
+	"stationId" : "63_BNTN",
+	"stationName" : "Ho-Ho-Kus",
+	"isFav" : false
+}, {
+	"stationId" : "64_MNBN",
+	"stationName" : "Hoboken",
+	"isFav" : false
+}, {
+	"stationId" : "32906_NEC",
+	"stationName" : "Jersey Avenue",
+	"isFav" : false
+}, {
+	"stationId" : "66_MNBN",
+	"stationName" : "Kingsland",
+	"isFav" : false
+}, {
+	"stationId" : "67_BNTN",
+	"stationName" : "Lake Hopatcong",
+	"isFav" : false
+}, {
+	"stationId" : "68_RARV",
+	"stationName" : "Lebanon",
+	"isFav" : false
+}, {
+	"stationId" : "69_BNTN",
+	"stationName" : "Lincoln Park",
+	"isFav" : false
+}, {
+	"stationId" : "70_NEC",
+	"stationName" : "Linden",
+	"isFav" : false
+}, {
+	"stationId" : "71_ATLC",
+	"stationName" : "Lindenwold",
+	"isFav" : "false"
+}, {
+	"stationId" : "72_BNTN",
+	"stationName" : "Little Falls",
+	"isFav" : false
+}, {
+	"stationId" : "73_NJCL",
+	"stationName" : "Little Silver",
+	"isFav" : false
+}, {
+	"stationId" : "74_NJCL",
+	"stationName" : "Long Branch",
+	"isFav" : false
+}, {
+	"stationId" : "75_MNBN",
+	"stationName" : "Lyndhurst",
+	"isFav" : false
+}, {
+	"stationId" : "76_MNE",
+	"stationName" : "Lyons",
+	"isFav" : false
+}, {
+	"stationId" : "77_MNE",
+	"stationName" : "Madison",
+	"isFav" : false
+}, {
+	"stationId" : "78_MNBN",
+	"stationName" : "Mahwah",
+	"isFav" : false
+}, {
+	"stationId" : "79_NJCL",
+	"stationName" : "Manasquan",
+	"isFav" : false
+}, {
+	"stationId" : "81_MNE",
+	"stationName" : "Maplewood",
+	"isFav" :false
+}, {
+	"stationId" : "40570_SL",
+	"stationName" : "Meadowlands Sports Complex",
+	"isFav" : false
+}, {
+	"stationId" : "83_NEC",
+	"stationName" : "Metropark",
+	"isFav" : false
+}, {
+	"stationId" : "84_NEC",
+	"stationName" : "Metuchen",
+	"isFav" : false
+}, {
+	"stationId" : "85_NJCL",
+	"stationName" : "Middletown New Jersey",
+	"isFav" : false
+}, {
+	"stationId" : "86_MNBN",
+	"stationName" : "Middletown New York",
+	"isFav" : false
+}, {
+	"stationId" : "87_MNE",
+	"stationName" : "Millburn",
+	"isFav" : false
+}, {
+	"stationId" : "88_MNE",
+	"stationName" : "Millington",
+	"isFav" : false
+}, {
+	"stationId" : "31696_NJCL",
+	"stationName" : "Monmouth Park",
+	"isFav" : false
+}, {
+	"stationId" : "89_PASC",
+	"stationName" : "Montclair Heights",
+	"isFav" : false
+}, {
+	"stationId" : "38081_BNTN",
+	"stationName" : "Montclair State University",
+	"isFav" : false
+}, {
+	"stationId" : "90_PASC",
+	"stationName" : "Montvale",
+	"isFav" : false
+}, {
+	"stationId" : "91_MNE",
+	"stationName" : "Morris Plains",
+	"isFav" : false
+}, {
+	"stationId" : "92_MNE",
+	"stationName" : "Morristown",
+	"isFav" : false
+}, {
+	"stationId" : "39472_BNTN",
+	"stationName" : "Mount Arlington",
+	"isFav" : false
+}, {
+	"stationId" : "93_BNTN",
+	"stationName" : "Mount Olive",
+	"isFav" : false
+}, {
+	"stationId" : "94_MNE",
+	"stationName" : "Mount Tabor",
+	"isFav" : false
+}, {
+	"stationId" : "95_BNTN",
+	"stationName" : "Mountain Avenue",
+	"isFav" : false
+}, {
+	"stationId" : "96_BNTN",
+	"stationName" : "Mountain Lakes",
+	"isFav" : false
+}, {
+	"stationId" : "97_MNE",
+	"stationName" : "Mountain Station",
+	"isFav" : false
+}, {
+	"stationId" : "98_BNTN",
+	"stationName" : "Mountain View",
+	"isFav" : false
+}, {
+	"stationId" : "99_MNE",
+	"stationName" : "Murray Hill",
+	"isFav" : false
+}, {
+	"stationId" : "100_PASC",
+	"stationName" : "Nanuet",
+	"isFav" : false
+}, {
+	"stationId" : "101_BNTN",
+	"stationName" : "Netcong",
+	"isFav" : false
+}, {
+	"stationId" : "102_RARV",
+	"stationName" : "Netherwoodt",
+	"isFav" : false
+}, {
+	"stationId" : "110_PASC",
+	"stationName" : "New Bridge Landing",
+	"isFav" : false
+}, {
+	"stationId" : "103_NEC",
+	"stationName" : "New Brunswick",
+	"isFav" : false
+}, {
+	"stationId" : "104_MNE",
+	"stationName" : "New Providence",
+	"isFav" : false
+}, {
+	"stationId" : "105_BNTN",
+	"stationName" : "New York Penn Station",
+	"isFav" : false
+}, {
+	"stationId" : "37953_NEC",
+	"stationName" : "Newark Airport",
+	"isFav" : false
+}, {
+	"stationId" : "106_BNTN",
+	"stationName" : "Newark Broad Street",
+	"isFav" : false
+}, {
+	"stationId" : "107_NEC",
+	"stationName" : "Newark Penn Station",
+	"isFav" : false
+}, {
+	"stationId" : "108_RARV",
+	"stationName" : "North Branch",
+	"isFav" : false
+}, {
+	"stationId" : "109_NEC",
+	"stationName" : "North Elizabeth",
+	"isFav" : false
+}, {
+	"stationId" : "111_PASC",
+	"stationName" : "Oradell",
+	"isFav" : false
+}, {
+	"stationId" : "112_MNE",
+	"stationName" : "Orange",
+	"isFav" : false
+}, {
+	"stationId" : "113_MNBN",
+	"stationName" : "Otisville",
+	"isFav" : false
+}, {
+	"stationId" : "114_PASC",
+	"stationName" : "Park Ridge",
+	"isFav" : false
+}, {
+	"stationId" : "115_MNBN",
+	"stationName" : "Passaic",
+	"isFav" : false
+}, {
+	"stationId" : "116_MNBN",
+	"stationName" : "Paterson",
+	"isFav" : false
+}, {
+	"stationId" : "117_MNE",
+	"stationName" : "Peapack",
+	"isFav" : false
+}, {
+	"stationId" : "118_PASC",
+	"stationName" : "Pearl River",
+	"isFav" : false
+}, {
+	"stationId" : "43298_ATLC",
+	"stationName" : "Pennsauken Transit Center",
+	"isFav" : false
+}, {
+	"stationId" : "119_NJCL",
+	"stationName" : "Perth Amboy",
+	"isFav" : false
+}, {
+	"stationId" : "1_ATLC",
+	"stationName" : "Philadelphia 30th Street",
+	"isFav" : false
+}, {
+	"stationId" : "120_RARV",
+	"stationName" : "Plainfield",
+	"isFav" : false
+}, {
+	"stationId" : "121_MNBN",
+	"stationName" : "Plauderville",
+	"isFav" : false
+}, {
+	"stationId" : "122_NJCL",
+	"stationName" : "Point Pleasant Beach",
+	"isFav" : false
+}, {
+	"stationId" : "123_MNBN",
+	"stationName" : "Port Jervis",
+	"isFav" : false
+}, {
+	"stationId" : "124_PRIN",
+	"stationName" : "Princeton",
+	"isFav" : false
+}, {
+	"stationId" : "125_NEC",
+	"stationName" : "Princeton Junction",
+	"isFav" : false
+}, {
+	"stationId" : "126_MNBN",
+	"stationName" : "Radburn",
+	"isFav" : false
+}, {
+	"stationId" : "127_NEC",
+	"stationName" : "Rahway",
+	"isFav" : false
+}, {
+	"stationId" : "128_MNBN",
+	"stationName" : "Ramsey",
+	"isFav" : false
+}, {
+	"stationId" : "38417_MNBN",
+	"stationName" : "Ramsey Route 17 ",
+	"isFav" : false
+}, {
+	"stationId" : "129_RARV",
+	"stationName" : "Raritan",
+	"isFav" : false
+}, {
+	"stationId" : "130_NJCL",
+	"stationName" : "Red Bank",
+	"isFav" : false
+}, {
+	"stationId" : "131_MNBN",
+	"stationName" : "Ridgewood",
+	"isFav" : false
+}, {
+	"stationId" : "132_PASC",
+	"stationName" : "River Edge",
+	"isFav" : false
+}, {
+	"stationId" : "31_RARV",
+	"stationName" : "Roselle Park",
+	"isFav" : false
+}, {
+	"stationId" : "134_MNBN",
+	"stationName" : "Rutherford",
+	"isFav" : false
+}, {
+	"stationId" : "135_MNBN",
+	"stationName" : "Salisbury Mills Cornwall",
+	"isFav" : false
+}, {
+	"stationId" : "38174_BNTN",
+	"stationName" : "Secaucus",
+	"isFav" : false
+}, {
+	"stationId" : "136_MNE",
+	"stationName" : "Short Hills",
+	"isFav" : false
+}, {
+	"stationId" : "137_MNBN",
+	"stationName" : "Sloatsburg",
+	"isFav" : false
+}, {
+	"stationId" : "138_RARV",
+	"stationName" : "Somerville",
+	"isFav" : false
+}, {
+	"stationId" : "139_NJCL",
+	"stationName" : "South Amboy",
+	"isFav" : false
+}, {
+	"stationId" : "140_MNE",
+	"stationName" : "South Orange",
+	"isFav" : false
+}, {
+	"stationId" : "141_NJCL",
+	"stationName" : "Spring Lake",
+	"isFav" : false
+}, {
+	"stationId" : "142_PASC",
+	"stationName" : "Spring Valley",
+	"isFav" : false
+}, {
+	"stationId" : "143_MNE",
+	"stationName" : "Stirling",
+	"isFav" : false
+}, {
+	"stationId" : "144_MNBN",
+	"stationName" : "Suffern",
+	"isFav" : false
+}, {
+	"stationId" : "145_MNE",
+	"stationName" : "Summit",
+	"isFav" : false
+}, {
+	"stationId" : "146_PASC",
+	"stationName" : "Teterboro",
+	"isFav" : false
+}, {
+	"stationId" : "147_BNTN",
+	"stationName" : "Towaco",
+	"isFav" : false
+}, {
+	"stationId" : "148_NEC",
+	"stationName" : "Trenton Transit Center",
+	"isFav" : false
+}, {
+	"stationId" : "149_MNBN",
+	"stationName" : "Tuxedo",
+	"isFav" : false
+}, {
+	"stationId" : "38105_RARV",
+	"stationName" : "Union",
+	"isFav" : false
+}, {
+	"stationId" : "150_BNTN",
+	"stationName" : "Upper Montclair",
+	"isFav" : false
+}, {
+	"stationId" : "151_MNBN",
+	"stationName" : "Waldwick",
+	"isFav" : false
+}, {
+	"stationId" : "152_BNTN",
+	"stationName" : "Walnut Street",
+	"isFav" : false
+}, {
+	"stationId" : "153_BNTN",
+	"stationName" : "Watchung Avenue",
+	"isFav" : false
+}, {
+	"stationId" : "154_BNTN",
+	"stationName" : "Watsessing Avenue",
+	"isFav" : false
+}, {
+	"stationId" : "39635_BNTN",
+	"stationName" : "Wayne/Route 23 Transit Center",
+	"isFav" : false
+}, {
+	"stationId" : "43599_MNBN",
+	"stationName" : "Wesmont",
+	"isFav" : false
+}, {
+	"stationId" : "155_RARV",
+	"stationName" : "Westfield",
+	"isFav" : false
+}, {
+	"stationId" : "156_PASC",
+	"stationName" : "Wesmont",
+	"isFav" : false
+}, {
+	"stationId" : "157_RARV",
+	"stationName" : "White House",
+	"isFav" : false
+}, {
+	"stationId" : "160_PASC",
+	"stationName" : "Wood Ridge",
+	"isFav" : false
+}, {
+	"stationId" : "158_NJCL",
+	"stationName" : "Woodbridge",
+	"isFav" : false
+}, {
+	"stationId" : "159_PASC",
+	"stationName" : "Woodcliff Lake",
+	"isFav" : false
+}]
+

@@ -1,0 +1,353 @@
+[{
+	"serviceType" : "NJ Transit Rail",
+	"colorCode" : "red",
+	"serviceLines" : [{
+		"lineName" : "ACRL",
+		"colorCode" : "brown",
+		"stations" : [{
+			"stationName" : "Absecon",
+			"colorCode" : "orange",
+			"terminals" : [{
+				"terminalNumber" : 54,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 408,
+					"alarmDescription" : "Recycler 6 full",
+					"alarmOccured" : "10/13/16 08:58:59",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}, {
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}, {
+				"terminalNumber" : 55,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}]
+		}, {
+			"stationName" : "Atco",
+			"colorCode" : "orange",
+			"terminals" : [{
+				"terminalNumber" : 61,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}, {
+				"terminalNumber" : 62,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}]
+		},  {
+			"stationName" : "Atlantic City",
+			"colorCode" : "brown",
+			"terminals" : [{
+				"terminalNumber" : 51,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}, {
+				"terminalNumber" : 52,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "",
+					"door" : "close",
+					"category" : "Revenue"
+				}, {
+					"alarmCode" : 401,
+					"alarmDescription" : "Recycler 4 almost full",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}]
+		}]
+	},{
+		"lineName" : "Airport",
+		"colorCode" : "red",
+		"stations" : [{
+			"stationName" : "EWR Airport",
+			"colorCode" : "red",
+			"terminals" : [{
+				"terminalNumber" : 357,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 380,
+					"alarmDescription" : "No Change Available",
+					"alarmOccured" : "10/13/16 03:52:14",
+					"dispatchOccured" : "DISPATCH",
+					"dispatcher" : "",
+					"door" : "Close",
+					"category" : "Revenue"
+				}, {
+					"alarmCode" : 396,
+					"alarmDescription" : "Pull Back is Active",
+					"alarmOccured" : "10/13/16 03:52:14",
+					"dispatchOccured" : "DISPATCH",
+					"dispatcher" : "",
+					"door" : "Close",
+					"category" : "Technical"
+				}]
+			}, {
+				"terminalNumber" : 369,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 1170,
+					"alarmDescription" : "Medium Low for reciept stock",
+					"alarmOccured" : "10/13/16 03:52:14",
+					"dispatchOccured" : "DISPATCH",
+					"dispatcher" : "",
+					"door" : "Close",
+					"category" : "Revenue"
+				}, {
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/13/16 03:52:14",
+					"dispatchOccured" : "DISPATCH",
+					"dispatcher" : "",
+					"door" : "Close",
+					"category" : "Technical"
+				}]
+			}]
+		}]
+	}]
+}, {
+	"serviceType" : "NJ Transit Bus",
+	"colorCode" : "red",
+	"serviceLines" : [{
+		"lineName" : "Bus Park & Ride",
+		"colorCode" : "red",
+		"stations" : [{
+			"stationName" : "Allwood Park & Ride",
+			"colorCode" : "orange",
+			"terminals" : [{
+				"terminalNumber" : 943,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "Recycler 6 full",
+					"alarmOccured" : "10/13/16 08:58:59",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}, {
+				"terminalNumber" : 937,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}]
+		}, {
+			"stationName" : "Howell Park & Ride",
+			"colorCode" : "orange",
+			"terminals" : [{
+				"terminalNumber" : 961,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}, {
+				"terminalNumber" : 960,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}]
+		},  {
+			"stationName" : "Mother's P&R",
+			"colorCode" : "red",
+			"terminals" : [{
+				"terminalNumber" : 954,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "Syezaidi",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}, {
+				"terminalNumber" : 955,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "",
+					"door" : "close",
+					"category" : "Revenue"
+				}, {
+					"alarmCode" : 406,
+					"alarmDescription" : "Recycler 6 almost full",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "",
+					"door" : "close",
+					"category" : "Revenue"
+				}]
+			}]
+		}]
+	},{
+		"lineName" : "PABT",
+		"colorCode" : "orange",
+		"stations" : [{
+			"stationName" : "Port Authority Bus Terminal",
+			"colorCode" : "orange",
+			"terminals" : [{
+				"terminalNumber" : 900,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/13/16 03:52:14",
+					"dispatchOccured" : "DISPATCH",
+					"dispatcher" : "",
+					"door" : "Close",
+					"category" : "Technical"
+				}]
+			}, {
+				"terminalNumber" : 901,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 5017,
+					"alarmDescription" : "BNR Needs Maintainance",
+					"alarmOccured" : "10/13/16 03:52:14",
+					"dispatchOccured" : "DISPATCH",
+					"dispatcher" : "",
+					"door" : "Close",
+					"category" : "Technical"
+				}]
+			},  {
+				"terminalNumber" : 902,
+				"terminalType" : "TVM" 				
+			}]
+		}]	
+	}]
+}, {
+	"serviceType" : "NJ Waterway",
+	"colorCode" : "orange",
+	"serviceLines" : [{
+		"lineName" : "Ferry",
+		"colorCode" : "orange",
+		"stations" : [{
+			"stationName" : "Belford/Harbor Way",
+			"colorCode" : "orange",
+			"terminals" : [{
+				"terminalNumber" : 6009,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 991,
+					"alarmDescription" : "No Proper Shutdown",
+					"alarmOccured" : "10/13/16 08:58:59",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "",
+					"door" : "NA",
+					"category" : "Technical"
+				}]
+			}]
+		}, {
+			"stationName" : "Brooklyn Bridge/Dumbo",
+			"colorCode" : "green",
+			"terminals" : [{
+				"terminalNumber" : 25,
+				"terminalType" : "TVM" 
+				
+			}]
+		}, {
+			"stationName" : "East 34th Street",
+			"colorCode" : "orange",
+			"terminals" : [{
+				"terminalNumber" : 28,
+				"terminalType" : "TVM" ,
+				"alarms" : [{
+					"alarmCode" : 1190,
+					"alarmDescription" : "Medium Empty Reciept Stock",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "",
+					"door" : "close",
+					"category" : "Paper"
+				}]
+			}, {
+				"terminalNumber" : 20,
+				"terminalType" : "TVM" ,
+				"colorCode" : "orange",
+				"alarms" : [{
+					"alarmCode" : 1190,
+					"alarmDescription" : "Medium Empty Reciept Stock",
+					"alarmOccured" : "10/22/16 03:47:15",
+					"dispatchOccured" : "Dispatch",
+					"dispatcher" : "",
+					"door" : "close",
+					"category" : "Paper"
+				}]
+			}]
+		}]
+	}]
+}]

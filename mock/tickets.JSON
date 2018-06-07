@@ -1,0 +1,41 @@
+[{
+	"ticketType" : "One Way Adult",
+	"fare" : 14.00,
+	"quantity" : 0,
+	"total" : 0
+}, {
+	"ticketType" : "One Way Child",
+	"fare" : 6.00,
+	"quantity" : 0,
+	"total" : 0
+}, {
+	"ticketType" : "One Way Sr/Dis",
+	"fare" : 6.00,
+	"quantity" : 0,
+	"total" : 0
+}, {
+	"ticketType" : "Round Trip Adult",
+	"fare" : 28.00,
+	"quantity" : 0,
+	"total" : 0
+}, {
+	"ticketType" : "Round Trip Child",
+	"fare" : 12.00,
+	"quantity" : 0,
+	"total" : 0
+}, {
+	"ticketType" : "Round Trip Sr/Dis",
+	"fare" : 12.00,
+	"quantity" : 0,
+	"total" : 0
+}, {
+	"ticketType" : "Weekly Pass Adult",
+	"fare" : 120.00,
+	"quantity" : 0,
+	"total" : 0
+}, {
+	"ticketType" : "Monthly Pass Adult",
+	"fare" : 393.00,
+	"quantity" : 0,
+	"total" : 0
+}]
