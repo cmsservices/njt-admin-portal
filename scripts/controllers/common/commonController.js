@@ -1,8 +1,8 @@
 'use restrict';
 var app = angular.module('njTransitApp');
 
-app.controller('commonController', ['$rootScope','$scope','userService', '$state', '$location', 'dashBoardService',
-	function($rootScope,$scope, userService, $state, $location, dashBoardService) {
+app.controller('commonController', ['$rootScope','$scope','userService', '$state', '$location', 'dashBoardService', 'ngDialog',
+	function($rootScope,$scope, userService, $state, $location, dashBoardService, ngDialog) {
 	$scope.isValidUser = true;
 	$scope.isloginPage = true;
 	$scope.loginUser = {};
@@ -71,7 +71,7 @@ app.controller('commonController', ['$rootScope','$scope','userService', '$state
 				console.log("loginUser", $scope.loginUser);
 				$scope.isloginPage = false;
 				$scope.isValidUser = true;
-				$state.go('welcome');		
+				$state.go('welcome.search');		
 			} 
 		});
 	}
@@ -80,6 +80,18 @@ app.controller('commonController', ['$rootScope','$scope','userService', '$state
 		$scope.loginUser = {};
 		$location.path('/');
 	}
+
+ $scope.openManageUpdateCacheModal = function() {
+		ngDialog.open ({
+        	template: '../njt-admin-portal/partials/views/components/system-management/updateCache.html',
+        	className: 'ngdialog-theme-default order-details',
+        	showClose : true,
+        	scope:$scope,
+        	width : '30%'    		
+        });
+	}
+
+	
 
 	$scope.contactUS = function() {
 		$location.path('http://www.njtransit.com/tm/tm_servlet.srv?hdnPageAction=ContactUsTo');

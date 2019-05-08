@@ -13,11 +13,11 @@
         <div ng-if="searchBy ==='user'" class="content--grid" ng-controller="userController">
             <div class="content__block">
                 <div class="content__section content__section--full">
-                    <h2 class="h3">Users</h2>
+                    <!--<h2 class="h3">Users</h2>-->
                     <form id="form-order-history" name="form-order-history" class="form form--basic form--compact p--all mobile__no-sides sc-box-style" aria-controls="order-history" novalidate="">
 
                         <div class="form__set">
-                            <label for="form-order-historyID" class="form__label">User ID</label>
+                            <label for="form-order-historyID" class="form__label">Email ID<i class="form__required">required</i></label>
                             <input id="form-order-historyID" ng-model="userId" name="form-order-historyID" class="form__input" type="text">
                         </div>
 
@@ -27,10 +27,11 @@
                     <div ng-if="users.length > 0">
                         <div class="export-options export-options--right">
                             <span>Export:</span>
-                            <a href="#"><img src="assets/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
-                            <a href="#"><img src="assets/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                            <!--<a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>-->
+                            <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
                         </div>
-                        <p class="font-smaller">Results 1 of 1</p>
+                       <p class="font-smaller"></p>
+                        <br/>
                         <br/>
                         <div id="usersGrid" ui-grid="searchUserGridOptions" ui-grid-selection></div> 
                     </div>
@@ -58,12 +59,12 @@
             </div>
 
             <div class="form__set">
-                <label for="form-order-historyDate-end" class="form__label">User ID</label>
+                <label for="form-order-historyDate-end" class="form__label">Email ID</label>
                 <input id="form-order-historyID" name="form-order-historyID" type="text">
             </div>
 
             <div class="form__set">
-                <label for="form-order-historyDate-end" class="form__label"> CC Number</label>
+                <label for="form-order-historyDate-end" class="form__label">Last 4 of the CC #</label>
                 <input id="form-order-historyID" name="form-order-historyID" type="text">
             </div>
 
@@ -72,23 +73,22 @@
                 <input id="form-order-historyID" name="form-order-historyID" type="text">
             </div>
 
-            <div class="form__set">
+            <!--<div class="form__set">
                 <label for="form-order-historyDate-end" class="form__label">App Purchase ID</label>
                 <input id="form-order-historyID" name="form-order-historyID" type="text">
-            </div>
+            </div>-->
 
             <input type="submit" class="btn btn--primary m--top btn--full" name="form-order-historySearch" ng-click="constructTransactionsGridOptions();" value="Search">
         </form>
         <div ng-if="transactionsGridOptions.data.length > 0">
             <div class="export-options export-options--right">
                 <span>Export:</span>
-                <a href="#"><img src="assets/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
-                <a href="#"><img src="assets/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                <!--<a href="#"><img src="assets/images/icon-file-xls.png" alt="Export XLS" border="0"></a>-->
+                <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="1"></a>
             </div>               
-
             <br/>
-            <div ui-grid="transactionsGridOptions" ui-grid-selection
-            style="max-width : 850px; margin-left:20px;"></div>   
+            <br/>
+            <div ui-grid="transactionsGridOptions"></div>   
         </div>                  
     </div>
 </main>

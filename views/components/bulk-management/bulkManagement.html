@@ -1,0 +1,290 @@
+<main id="createAlertPage" role="main" class="content__section content__section--seventy ng-scope" ng-controller="createNotificationController">
+    <div class="alert alert-success" style="display:none">
+        <strong>Success!</strong> File uploaded successfully.
+    </div>
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Bulk Management</h1>
+        <div class="m--top editlogin-content sc-box-style">
+            <form id="form-createAlert" class="form form--basic form--compact ng-pristine ng-valid" novalidate="">
+                <div class="form__set">
+                    <i class="required-note ">
+                        <span class="hide ">red asterisk</span> denotes a required field</i>
+                </div>
+                <div class="form__set">
+                    <label for="acc-type" id="notification-label" class="form__label">Account Type
+                        <i class="form__required">required</i>
+                    </label>
+                    <select id="acc-type" name="acc-type" class="form__input select">
+                        <option value="1" checked="">Select Account Type</option>
+                        <option value="Wire Commute">Wire Commute</option>
+                        <option value="Wage Works">Wage Works</option>
+                    </select>
+                </div>
+
+                <div class="m--top spacer-bottom" style="display:none" id="wire-commute-bulk-upload">
+
+                    <h2 class="h3 m--top hide">Wire Commute</h2>
+
+                    <form class="form m--top" id="form--products" action="" novalidate="">
+                        <h3 class="h4">Wire Commute</h3>
+                        <ul class="sc-products-list">
+
+                            <li class="sc-product sc-product-cash">
+                                <div class="sc-product-details clearfix">
+                                    <div class="sc-product-description">
+                                        <h3 class="h4">Download</h3>
+                                        <p>Pease click on download button to download a sample Excel Format of bulk upload. (optional)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="sc-product-content">
+                                    <div class="content--grid cashvalue-dynamic-content">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--full">
+                                                <div class="sc-product-padding sc-product-padding--end">
+                                                    <a href="partials/views/components/bulk-management/bulk_template_101.xlsx" target="_blank" class="btn btn-info"
+                                                        role="button" download="">Download</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content--grid cashvalue-manual-content" style="display:none;">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--sixty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <fieldset>
+                                                        <div class="form__set">
+                                                            <legend for="form--products-cashValue" class="form__label">Enter value</legend>
+                                                            <span class="muted">$</span>
+                                                            <input class="form__input cashvalue-manual-input" id="reload_amount" name="reload_amount" title="Please enter an amount"
+                                                                type="text" value="">
+                                                            <span class="muted">$5 to $200</span>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="content__section content__section--forty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <label class="form__label invisible">Add selection to card</label>
+                                                    <input type="button" class="btn btn--full btn--control" value="Add to card">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content__block no-padding--top">
+                                            <div class="content__section content__section--full">
+                                                <div class="sc-product-padding">
+                                                    <input type="button" class="btn btn-text m--top cashvalue-manual" value="Or choose an amount">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="sc-product sc-product-cash">
+                                <div class="sc-product-details clearfix">
+                                    <div class="sc-product-description">
+                                        <h3 class="h4">Upload</h3>
+                                        <p>Please select a Excel to upload. Uploaded Excel should be in a predefined format, which can be downloaded from the above download section
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="sc-product-content">
+                                    <div class="content--grid cashvalue-dynamic-content">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--full">
+                                                <div class="sc-product-padding sc-product-padding--end">
+                                                    <label class="custom-file">
+                                                        <input type="file" id="file" class="custom-file-input">
+                                                        <span class="custom-file-control"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content--grid cashvalue-manual-content" style="display:none;">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--sixty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <fieldset>
+                                                        <div class="form__set">
+                                                            <legend for="form--products-cashValue" class="form__label">Enter value</legend>
+                                                            <span class="muted">$</span>
+                                                            <input class="form__input cashvalue-manual-input" id="reload_amount" name="reload_amount" title="Please enter an amount"
+                                                                type="text" value="">
+                                                            <span class="muted">$5 to $200</span>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="content__section content__section--forty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <label class="form__label invisible">Add selection to card</label>
+                                                    <input type="button" class="btn btn--full btn--control" value="Add to card">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content__block no-padding--top">
+                                            <div class="content__section content__section--full">
+                                                <div class="sc-product-padding">
+                                                    <input type="button" class="btn btn-text m--top cashvalue-manual" value="Or choose an amount">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+
+                <div class="spacer-bottom" style="display:none" id="wage-work-bulk-upload">
+
+                    <h2 class="h3 m--top hide">Add products to card</h2>
+
+                    <form class="form m--top" id="form--products" action="" novalidate="">
+                        <h3 class="h4">Wage Work</h3>
+                        <ul class="sc-products-list">
+
+                            <li class="sc-product sc-product-cash">
+                                <div class="sc-product-details clearfix">
+                                    <div class="sc-product-description">
+                                        <h3 class="h4">Download</h3>
+                                        <p>Pease click on download button to download a sample Excel Format of bulk upload. (optional)
+                                        </p>
+                                        <div class="sc-product-padding sc-product-padding--end">
+                                            <a href="partials/views/components/bulk-management/bulk_template_102.xlsx" target="_blank" class="btn btn-info"
+                                                role="button" download="">Download</a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="sc-product-content">
+                                    <div class="content--grid cashvalue-dynamic-content">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--full">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content--grid cashvalue-manual-content" style="display:none;">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--sixty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <fieldset>
+                                                        <div class="form__set">
+                                                            <legend for="form--products-cashValue" class="form__label">Enter value</legend>
+                                                            <span class="muted">$</span>
+                                                            <input class="form__input cashvalue-manual-input" id="reload_amount" name="reload_amount" title="Please enter an amount"
+                                                                type="text" value="">
+                                                            <span class="muted">$5 to $200</span>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="content__section content__section--forty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <label class="form__label invisible">Add selection to card</label>
+                                                    <input type="button" class="btn btn--full btn--control" value="Add to card">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content__block no-padding--top">
+                                            <div class="content__section content__section--full">
+                                                <div class="sc-product-padding">
+                                                    <input type="button" class="btn btn-text m--top cashvalue-manual" value="Or choose an amount">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="sc-product sc-product-cash">
+                                <div class="sc-product-details clearfix">
+                                    <div class="sc-product-description">
+                                        <h3 class="h4">Upload</h3>
+                                        <p>Please select a Excel to upload. Uploaded Excel should be in a predefined format, which can be downloaded from the above download section
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="sc-product-content">
+                                    <div class="content--grid cashvalue-dynamic-content">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--full">
+                                                <div class="sc-product-padding sc-product-padding--end">
+
+                                                    <label class="custom-file">
+                                                        <input type="file" id="file" class="custom-file-input">
+                                                        <span class="custom-file-control"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content--grid cashvalue-manual-content" style="display:none;">
+                                        <div class="content__block">
+                                            <div class="content__section content__section--sixty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <fieldset>
+                                                        <div class="form__set">
+                                                            <legend for="form--products-cashValue" class="form__label">Enter value</legend>
+                                                            <span class="muted">$</span>
+                                                            <input class="form__input cashvalue-manual-input" id="reload_amount" name="reload_amount" title="Please enter an amount"
+                                                                type="text" value="">
+                                                            <span class="muted">$5 to $200</span>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="content__section content__section--forty">
+                                                <div class="sc-product-padding no-padding--bottom">
+                                                    <label class="form__label invisible">Add selection to card</label>
+                                                    <input type="button" class="btn btn--full btn--control" value="Add to card">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content__block no-padding--top">
+                                            <div class="content__section content__section--full">
+                                                <div class="sc-product-padding">
+                                                    <input type="button" class="btn btn-text m--top cashvalue-manual" value="Or choose an amount">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<script>
+
+
+    $("#acc-type").change(function () {
+
+        if (this.value == "Wire Commute") {
+            $('#wire-commute-bulk-upload').show();
+            $('#wage-work-bulk-upload').hide();
+        } 
+        if (this.value == "Wage Works") {
+           
+            $('#wire-commute-bulk-upload').hide();
+             $('#wage-work-bulk-upload').show();
+        }
+
+    });
+
+    $('input[type="file"]').change(function () {
+        $('.alert-success').show()
+        $('.alert-success').fadeOut(2000);
+    });
+
+
+</script>

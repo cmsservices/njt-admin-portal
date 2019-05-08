@@ -33,6 +33,8 @@ app.controller('notificationController', ['$rootScope','$scope', '$state', 'noti
 	    	$scope.selectedAlertMessage= JSON.parse($scope.selectedAlert).messages;
 	    }
 
+	   
+
 	    $scope.constructHistoryAlerts = function() {
 	    	$scope.alertHistoryGridOptions = {
 	         	enableGridMenu : false,

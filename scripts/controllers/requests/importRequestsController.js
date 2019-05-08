@@ -25,8 +25,8 @@ app.controller('importRequestsController', ['$rootScope','$scope', '$state', 're
        		$scope.newImportGridOptions.enableFiltering = true;
             $scope.newImportGridOptions.columnDefs = [
           		{ displayName: 'Approve', field: 'approve', cellTemplate: approveCellTemplate, cellClass : 'gridCellClass', width : 120},
-	            { displayName: 'User ID', field: 'userID', cellClass : 'gridCellClass', width : 250},
-	            { displayName: 'Email ID', field: 'emailID', cellClass : 'gridCellClass', width : 250}
+	            { displayName: 'User ID', field: 'userID', cellClass : 'gridCellClass', width : 300},
+	            { displayName: 'Email ID', field: 'emailID', cellClass : 'gridCellClass', width : 300}
             ];
 		}
 
@@ -49,7 +49,7 @@ app.controller('importRequestsController', ['$rootScope','$scope', '$state', 're
 	         	enableGridMenu : false,
 	         	enableFiltering: true,
 	            columnDefs: [
-	          		{ displayName: 'Cancel', field: 'approve', cellTemplate: cancelCellTemplate, cellClass : 'gridCellClass', width : 120},
+	          		{ displayName: 'Action', field: 'approve', cellTemplate: cancelCellTemplate, cellClass : 'gridCellClass', width : 120},
 		            { displayName: 'User ID', field: 'userID', cellClass : 'gridCellClass', width : 250},
 		            { displayName: 'Email ID', field: 'emailID', cellClass : 'gridCellClass', width : 250},
 		            { displayName: 'Approved By', field: 'approvedBy', cellClass : 'gridCellClass', width : 250},
@@ -67,7 +67,7 @@ app.controller('importRequestsController', ['$rootScope','$scope', '$state', 're
 	          		{ displayName: 'User ID', field: 'userID', cellClass : 'gridCellClass', width : 250},
 		            { displayName: 'Email ID', field: 'emailID', cellClass : 'gridCellClass', width : 250},
 		            { displayName: 'Import Date', field: 'importDate', cellClass : 'gridCellClass', width : 250},
-		            { displayName: 'Phone Number', field: 'phoneNumber', cellClass : 'gridCellClass', width : 200},
+		            //{ displayName: 'Phone Number', field: 'phoneNumber', cellClass : 'gridCellClass', width : 200},
 		            { displayName: 'Status', field: 'status', cellClass : 'gridCellClass', width : 150},
 		            { displayName: 'Admin Name', field: 'adminName', cellClass : 'gridCellClass', width : 200},
 		            { displayName: 'Import Approved Date', field: 'importApproveDate', cellClass : 'gridCellClass', width : 200},

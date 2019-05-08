@@ -8,10 +8,16 @@ app.controller('ticketOptionsController', ['$rootScope','$scope','userService', 
       $scope.ticketGridOptions = {};
       $scope.tickets = {};
       $scope.noofTickets = 0;
-      $scope.productTypes = [{
+      $scope.productTypes = [
+      {
+        "productID" : "",
+        "productDescription" : "Please select a Product" 
+      },
+      {
         "productID" : "rail",
-        "productDescription" : "Rail Tickets" 
-      },{
+        "productDescription" : "Rail" 
+      }
+      /*,{
         "productID" : "bus",
         "productDescription" : "Bus Tickets" 
       },{
@@ -20,7 +26,8 @@ app.controller('ticketOptionsController', ['$rootScope','$scope','userService', 
       },{
         "productID" : "events",
         "productDescription" : "Event Tickets" 
-      }];
+      }*/
+      ];
       $scope.selectedProduct = $scope.productTypes[0];
     	
     	function init() {

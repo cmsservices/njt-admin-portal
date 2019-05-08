@@ -2,46 +2,252 @@
     <div class="xrx-margin-10">
         <a id="maincontent" tabindex="-1"></a>
 
-        <h1 class="h2">User Account Details</h1>           
-        <div class="sc-box-style m--top" style="background-color: white;">
-            {{user.blocked}}
-            <div class="editlogin-content form--display">
-                <div class="content--grid">
-                    <div class="content__block">
-                        <div class="content__section  content__section--fifty">    
-                            <h2 class="h3">Account Information</h2>    
-                            <a class="inline-edit editlogin" ng-click="openCreateNoteDialog('updateAccountInfo');">Edit</a>
-                            <div class="sc-box-style">
-                             <span style="cursor: pointer; float : right;" class="{{user.blocked ? 'badge badge--error': 'badge badge--success'}}" 
-                                    title="{{user.blocked ? 'Click here to block the user': 'Click here to unblock the user'}}"  ng-click="user.blocked = !user.blocked">{{user.blocked ? 'Block' : 'Unblock'}} User </span>
-                                <div class="form__set">
-                                    <div class="form--display__label">Account Status :</div>
-                                    <div class="form--display__input">Active</div>                                 
-                                </div>
+        <h2 class="h3">User Account Details</h2>   
+        <span class="backTolink" style="cursor: pointer; float : right;" >
+              <a ui-sref="welcome.search"> Back to Search </a>
+        </span>        
+       <br/>
 
-                                <div class="form--display__label">Account Created </div>
+          <div class="sc-box-style m--top" style="background-color: white;">
+            <uib-tabset id="second">
+              <uib-tab index="0" heading="Account Information">
+              <div class="editlogin-content form--display">
+                <div class="content--grid">
+                <div class="content__section  content__section--full">    
+                            <h2 class="h3">Account Information</h2>    
+                          <!-- <a class="inline-edit editlogin" ng-click="openCreateNoteDialog('updateAccountInfo');">Edit</a>-->
+                            <div class="sc-box-style">
+                                                       
+                              
+                              <span style="cursor: pointer; float : right;" class="{{user.blocked ? 'badge badge--error': 'badge badge--error'}}" 
+                                    title="{{user.unblock ? 'Click here to block the user': 'Click here to block the user'}}"  ng-click="user.unblock = user.unblock">{{user.blocked ? 'Block' : 'Block'}} User 
+                            </span>
+                            <div class="form--display__label">First Name:</div>
+                              <div class="form--display__input">Smith</div>
+                            
+                            <span id="block-user-btn" style="cursor: pointer; float : right;" class="badge badge--success" title="Click here to add note"  (click)="openCreateNoteDialog('USER_NOTES');">Add Note </span>
+
+                            
+                              <div class="form--display__label">Last Name:</div>
+                              <div class="form--display__input">John</div>
+                            
+                            <span style="cursor: pointer; float : right;" class="{{user.blocked ? 'badge badge--error': 'badge badge--error'}}" 
+                                    title="Click here to Import"  ng-click="user.unblock = user.unblock">Initiate Import 
+                            </span>
+                               
+                            
+                              <div class="form--display__label">Current Email ID:</div>
+                              <div class="form--display__input">mjones@njtransit.com</div>
+                           
+                            
+                              <div class="form--display__label">Original Email ID:</div>
+                              <div class="form--display__input">mjones@njtransit.com</div>
+                            
+                              
+                                <div class="form--display__label">Account Status:</div>
+                                <div class="form--display__input">Active</div>                                 
+                           
+                              
+                                <div class="form--display__label">Account Created:</div>
                                 <div class="form--display__input">08/05/2014</div>
 
-                                <div class="form--display__label">Number of Transactions</div>
+                                <div class="form--display__label">No. of Transactions:</div>
                                 <div class="form--display__input">4</div>
 
-                                <div class="form--display__label">Number of Tickets</div>
+                                <div class="form--display__label">No. of Tickets:</div>
                                 <div class="form--display__input">5</div>
 
-                                <div class="form--display__label">Number of Refunds</div>
+                                <div class="form--display__label">No. of Refunds:</div>
                                 <div class="form--display__input"> 0  </div>
 
-                                <div class="form--display__label">Deactivated Tickets</div>
+                                <div class="form--display__label">Deactivated Tickets:</div>
                                 <div class="form--display__input"> 0  </div>
 
-                                <div class="form--display__label">Import Status</div>
-                                <div class="form--display__input"> 0  </div>
+                                <div class="form--display__label">No. of Approved Imports:</div>
+                                <div class="form--display__input">3</div>   
 
-                                <div class="form--display__label">Completed Imports</div>
+                                <div class="form--display__label">No. of CC:</div>
+                                <div class="form--display__input">2</div>  
+
+                                <div class="form--display__label">Completed Imports:</div>
                                 <div class="form--display__input"> 1  </div>
-                            </div>                     
+
+                                <div class="form--display__label">Admin Import Status:</div>
+                                <div class="form--display__input"> 0  </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="content__section  content__section--forty" style="margin-left: 3%">  
+                      </div>
+              </uib-tab>
+              <uib-tab index="1" heading="Notes">
+                <div class="table-responsive clearfix m--top" style="background-color: white; border-top:none !important;">
+                    <div class="export-options export-options--right">
+                            <span>Export:</span>
+                            <!--<a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>-->
+                            <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                        </div> 
+                    <table border="0" class= "table table--striped table--header table--bordered  table--sc-transactions"> 
+                        <thead>
+                          <th scope="col"> Date <br/> <br/> <input id="form-edit-firstName" name="form-edit-firstName" type="text"></th>
+                          <th scope="col"> Action <br/> <br/> <input id="form-edit-firstName" name="form-edit-firstName" type="text"></th>
+                          <th scope="col"> Comments <br/> <br/> <input id="form-edit-firstName" name="form-edit-firstName" type="text"></th>
+                          <th scope="col"> AdminName<br/> <br/> <input id="form-edit-firstName" name="form-edit-firstName" type="text"></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="padding: 8px;"> 11/11/2016 </td>
+                            <td style="padding: 8px;"> Deactivated A Ticket  </td>
+                            <td style="padding: 8px;"> Ticket was deactiated</td>
+                            <td style="padding: 8px;"> userAdmin </td>
+                          </tr>                          
+                          <tr>
+                            <td style="padding: 8px;"> 10/11/2016 </td>
+                            <td style="padding: 8px;"> Refunded </td>
+                            <td style="padding: 8px;"> Refunded because customer don't want to use the Pass for the remaining Month </td>
+                            <td style="padding: 8px;"> superAdmin </td>
+                          </tr>                          
+                          <tr>
+                            <td style="padding: 8px;"> 10/01/2016 </td>
+                            <td style="padding: 8px;"> Pushed a New ticket </td>
+                            <td style="padding: 8px;"> Pushed a New ticket </td>
+                            <td style="padding: 8px;"> superAdmin </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 8px;"> 09/21/2016 </td>
+                            <td style="padding: 8px;"> Updated Account Information</td>
+                            <td style="padding: 8px;"> Updated shipping Address as custumer is unable to do.</td>
+                            <td style="padding: 8px;"> userAdmin </td>
+                          </tr>
+                        </tbody>
+                  </table>   
+                </div>
+              </uib-tab>
+              <uib-tab index="2" heading="Current Device">
+                <div class="editlogin-content form--display">
+                <div class="content--grid">
+                
+                    <div class="content__section  content__section--full">  
+                            <h2 id="current-active-device" class="h3"> Current Active Device: </h2> 
+                            <div class="sc-box-style" >  
+                                   <span style="cursor: pointer; float : right;" class="{{user.blocked ? 'badge badge--error': 'badge badge--error'}}" 
+                                          title="{{user.unblock ? 'Click here to block the device': 'Click here to block the device'}}"  ng-click="user.unblock = user.unblock">{{user.blocked ? 'Block' : 'Block'}} Device 
+                                  </span>    
+
+                                      <div id="device-id-lbl" class="form--display__label"> Device Id: </div>
+
+                                      <div id="device-id" class="form--display__input">
+                                          <a id="account-info-edit-link" 
+                                           (click)="getDeviceHistory(deviceInfo.deviceId);">CCB93DEF-9A9C-4B8A-9484-D3A73A8037BF</a></div>
+                                      
+                                
+                                    <div id="user-activity-lbl" class="form--display__label"> User Activity: </div>
+                                    <div id="user-activity" class="form--display__input">2019-05-06 09:39:04.0</div>
+                                      
+                               
+                                    <div id="device-model-lbl" class="form--display__label">Model:</div>
+                                    <div id="device-model" class="form--display__input">iPhone</div>
+                                         
+                               
+                                   <div id="carrier-name-lbl" class="form--display__label">Carrier Name:</div>
+                                   <div id="carrier-name" class="form--display__input">Verizon</div>
+                                
+                                    <div id="app-id-lbl" class="form--display__label">App Id: </div>
+                                    <div id="app-id" class="form--display__input">DA0D0A77-BE3F-4AF7-8CDC-CA62521AADC7</div>
+                               
+                                    <div id="osReleaseVersion-lbl"  class="form--display__label"> OS ReleaseVersion: </div>
+                                    <div id="osReleaseVersion" class="form--display__input">
+                                      12.1.4</div>
+                               
+                                    <div id="appVersion-lbl"  class="form--display__label"> App Version: </div>
+                                    <div id="appVersion" class="form--display__input">2019.1.0a</div>
+                                </div>          
+
+                            </div>  
+                        </div> 
+                </div>
+              </uib-tab>
+              <uib-tab index="3" heading="Devices History">
+                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+<!--                    <div class="export-options export-options--right" >
+                        <span>Export:</span>
+                        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+                        <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
+                    </div> -->
+                   <div ui-grid="devicesGridOptions" ui-grid-auto-resize></div>
+                </div>
+              </uib-tab>
+             <!-- <uib-tab index="4" heading="Import Requests">
+                <div class="xrx-margin-10" ng-controller="importRequestsController">
+                    <h3 class="h4">Import Request</h3>
+                    <uib-tabset id="userImportRequests">
+                        <uib-tab index="0" heading="New"  ng-init="constructImpGridOptions();">
+                            <div class="xrx-margin-10">
+                                <ng-include src="'partials/views/components/requests/approveNewImports.html'" > </ng-include>
+                            </div>
+                        </uib-tab>
+                        <uib-tab index="1" heading="Pending"  ng-init="constructPendingImpGridOptions();">
+                            <div class="xrx-margin-10">
+                                <ng-include src="'partials/views/components/requests/pendingImports.html'" > </ng-include>
+                            </div>
+                        </uib-tab>
+                        <uib-tab index="2" heading="History"  ng-init="constructImpHisotryGridOptions();">
+                            <div class="xrx-margin-10">
+                                <ng-include src="'partials/views/components/requests/importHistory.html'" > </ng-include>
+                            </div>
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
+              </uib-tab>-->
+              <uib-tab index="5" heading="Refund Requests">
+                  <div class="xrx-margin-10" ng-controller="refundRequestsController">
+                        <h3 class="h4">Refund Request</h3>
+                        <uib-tabset id="UserRefundRequests">
+                            <uib-tab index="0" heading="Pending">
+                                <div class="xrx-margin-10">
+                                    <ng-include src="'partials/views/components/requests/pendingRefunds.html'" > </ng-include> 
+                                </div>
+                            </uib-tab>
+                            <uib-tab index="1" heading="History">
+                                <div class="xrx-margin-10">
+                                    <ng-include src="'partials/views/components/requests/refundsHistory.html'" > </ng-include>
+                                </div>
+                            </uib-tab>
+                        </uib-tabset>
+                    </div>
+              </uib-tab>
+             <!-- <uib-tab index="5" heading="Account Settings">
+                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
+                    <form id="form-acount_Settings" name="form-editlogin" class="form form--basic form--compact" novalidate="">
+                        <fieldset id="contactinfo" class="content__section">
+                            <div class="form__set">
+                                <label for="form-edit-firstName" class="form__label">User Type </label>
+                                <input id="form-edit-firstName" name="form-edit-firstName" class="form__input" type="text" aria-required="true" value="Brain" required="">
+                            </div>
+                            <div class="form__set">
+                                <label for="form-edit-lastName" class="form__label">User Status </label>
+                                <span style="cursor: pointer;" class="{{user.blocked ? 'badge badge--success': 'badge badge--error'}}" 
+                                title="{{user.blocked ? 'Click here to block the user': 'Click here to unblock the user'}}""  ng-click="user.blocked = !user.blocked">{{user.blocked ? 'Active' : 'Blocked'}} </span>
+
+                            </div>
+                            <div class="form__set">
+                                <label for="form-editloginEmail" class="form__label">Email <i class="form__required">required</i></label>
+                                <input id="form-editloginEmail" name="form-editloginEmail" class="form__input" value="sample@gmail.com" type="text" aria-required="true" required="">
+                            </div>
+                           
+                        </fieldset>
+                    </form>
+                </div>
+              </uib-tab>-->
+
+            </uib-tabset>
+       
+            
+           <!-- <div class="editlogin-content form--display">
+                <div class="content--grid">
+                    <div class="content__block">
+                                             
+                        </div>
+                        <div class="content__section  content__section--full">  
                             <h2 class="h3">Current Active Device</h2> 
                             <div class="sc-box-style">                           
                                 <div class="form--display__label">Device ID :</div>
@@ -65,12 +271,202 @@
                         </div>     
                     </div>                               
                 </div>   
-            </div>            
+            </div> -->           
         </div>
         <div class="sc-box-style m--top" style="background-color: white;">
             <a id="maincontent" tabindex="-1"></a>
-            <h2 class="h3">View Tickets</h2>
-            <p class="notes">List of Active and inactive Tickets</p> <br/>
+            <h2 class="h3">Ticket Information</h2>
+            <uib-tabset active="activeJustified" id="first">
+             
+              <uib-tab index="0" heading="All">
+                <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact " novalidate="">
+                        <div class="table-responsive">
+                <table border="0" class= "table table--striped table--header table--bordered  table--sc-transactions" >
+                    <h4 class="h6" class="m--top" style="text-align: center;">All Tickets</h4> 
+                        <thead value="All Tickets">
+                          <th scope="col"> Trx. Date <br/> <br/> <input id="form-edit-Trx. Date" name="form-edit-Trx. Date" type="text"></th>
+                          <th scope="col"> Trx. Seq. Id <br/> <br/> <input id="form-edit-Trx. Seq. Id" name="form-edit-Trx. Seq. Id" type="text"></th>
+                          <th scope="col"> Ticket Type <br/> <br/> <input id="form-edit-Ticket Type" name="form-edit-Ticket Type" type="text"></th>
+                          <th scope="col"> Product<br/> <br/> <input id="form-edit-Product" name="form-edit-Product" type="text"></th>
+                          <th scope="col">Route<br/> <br/> <input id="form-edit-Route" name="form-edit-Route" type="text"></th>
+                          <th scope="col"> Payment Type <br/> <br/> <input id="form-edit-Payment Type" name="form-edit-Payment Type" type="text"></th>
+                          <th scope="col"> Amount <br/> <br/> <input id="form-edit-Amount" name="form-edit-Amount" type="text"></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <a ui-sref="welcome.accDetails" style="cursor: pointer"><td> 12/06/2018 04:40:26 </td>
+                            <td > 2000022613  </td>
+                            <td > Adult Meadowlands</td>
+                            <td > Super Pass </td>
+                            <td > Adult Meadowlands </td>
+                            <td > 401288XXXXXX1881 </td>
+                            <td > $11.00 </td></a>
+                          </tr> 
+                          <tr>
+                            <td> 12/07/2018 04:40:26 </td>
+                            <td > 2000022551  </td>
+                            <td > Adult DISCOUNTED 10 TRIP</td>
+                            <td > Bus </td>
+                            <td > Route- 315 | Zones - 5 </td>
+                            <td > 401288XXXXXX1881 </td>
+                            <td > $33.50 </td>
+                          </tr> 
+                          <tr>
+                            <td> 09/19/2018 04:40:26 </td>
+                            <td > 2000022491  </td>
+                            <td > Adult\\n(Non-Refundable) One Way</td>
+                            <td > Rail </td>
+                            <td > Anderson St. to Edison via Far Hills </td>
+                            <td > 411111XXXXXX1111 </td>
+                            <td > $59.00 </td>
+                          </tr> 
+                          <tr>
+                            <td> 09/19/2018 04:40:26 </td>
+                            <td > 2000022369  </td>
+                            <td > MultiTicket</td>
+                            <td > Rail </td>
+                            <td > Allendale to Bay Head </td>
+                            <td > 411111XXXXXX1111 </td>
+                            <td > $495.30 </td>
+                          </tr>                          
+                          
+                        </tbody>
+                  </table> 
+                  <div class="pagination pagination-centered" style="margin-left:350px;">
+                      <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                      <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
+                      <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
+                      <li class="active"><a href="javascript:void(0)">1</a></li>
+                      <li><a href="javascript:void(0)">2</a></li>
+                      <li><a href="javascript:void(0)">3</a></li>
+                      <li><a href="javascript:void(0)">4</a></li>
+                      <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
+                      <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
+                      <li>  &nbsp; &nbsp;<label for="form-history-limitSelect">Show:</label>
+                     <select id="form-history-limitSelect" name="form-history-limitSelect">
+                            <option value="25">30</option>
+                            <option value="50" selected="">50</option>
+                            <option value="100">60</option>
+                  </select> </li>
+                  </ul>
+              </div> 
+            </div>
+          </form>
+              </uib-tab>
+               <uib-tab index="1" heading="Active">
+                 <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact " novalidate="">
+                        <div class="table-responsive">
+                <table border="0" class= "table table--striped table--header table--bordered  table--sc-transactions" >
+                    <h4 class="h6" class="m--top" style="text-align: center;">Active Tickets</h4> 
+                        <thead value="Active Tickets">
+                         <th scope="col"> Trx. Date <br/> <br/> <input id="form-edit-Trx. Date" name="form-edit-Trx. Date" type="text"></th>
+                          <th scope="col"> Trx. Seq. Id <br/> <br/> <input id="form-edit-Trx. Seq. Id" name="form-edit-Trx. Seq. Id" type="text"></th>
+                          <th scope="col"> Ticket Type <br/> <br/> <input id="form-edit-Ticket Type" name="form-edit-Ticket Type" type="text"></th>
+                          <th scope="col"> Product<br/> <br/> <input id="form-edit-Product" name="form-edit-Product" type="text"></th>
+                          <th scope="col">Route<br/> <br/> <input id="form-edit-Route" name="form-edit-Route" type="text"></th>
+                          <th scope="col"> Payment Type <br/> <br/> <input id="form-edit-Payment Type" name="form-edit-Payment Type" type="text"></th>
+                          <th scope="col"> Amount <br/> <br/> <input id="form-edit-Amount" name="form-edit-Amount" type="text"></th>
+                        </thead>
+                        <tbody>
+                           <tr>
+                            <td> 09/19/2018 04:40:26 </td>
+                            <td > 2000022369  </td>
+                            <td > MultiTicket</td>
+                            <td > Rail </td>
+                            <td > Allendale to Bay Head </td>
+                            <td > 411111XXXXXX1111 </td>
+                            <td > $495.30 </td>
+                          </tr>     
+                        </tbody>
+                    </table> 
+                    <div class="pagination pagination-centered" style="margin-left:350px;">
+                      <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                      <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
+                      <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
+                      <li class="active"><a href="javascript:void(0)">1</a></li>
+                      <li><a href="javascript:void(0)">2</a></li>
+                      <li><a href="javascript:void(0)">3</a></li>
+                      <li><a href="javascript:void(0)">4</a></li>
+                      <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
+                      <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
+                      <li>  &nbsp; &nbsp;<label for="form-history-limitSelect">Show:</label>
+                     <select id="form-history-limitSelect" name="form-history-limitSelect">
+                       <option value="25">30</option>
+                      <option value="50" selected="">50</option>
+                      <option value="100">60</option>
+                  </select> </li>
+                  </ul>
+                  </div>
+                  </div>
+                  </form> 
+
+               </uib-tab>
+               <uib-tab index="2" heading="Non-Active">
+                 <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact " novalidate="">
+                        <div class="table-responsive">
+                  <table border="0" class= "table table--striped table--header table--bordered  table--sc-transactions" >
+                    <h4 class="h6" class="m--top" style="text-align: center;">Non Active Tickets</h4> 
+                        <thead value="Non Active Tickets">
+                         <th scope="col"> Trx. Date <br/> <br/> <input id="form-edit-Trx. Date" name="form-edit-Trx. Date" type="text"></th>
+                          <th scope="col"> Trx. Seq. Id <br/> <br/> <input id="form-edit-Trx. Seq. Id" name="form-edit-Trx. Seq. Id" type="text"></th>
+                          <th scope="col"> Ticket Type <br/> <br/> <input id="form-edit-Ticket Type" name="form-edit-Ticket Type" type="text"></th>
+                          <th scope="col"> Product<br/> <br/> <input id="form-edit-Product" name="form-edit-Product" type="text"></th>
+                          <th scope="col">Route<br/> <br/> <input id="form-edit-Route" name="form-edit-Route" type="text"></th>
+                          <th scope="col"> Payment Type <br/> <br/> <input id="form-edit-Payment Type" name="form-edit-Payment Type" type="text"></th>
+                          <th scope="col"> Amount <br/> <br/> <input id="form-edit-Amount" name="form-edit-Amount" type="text"></th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td> 12/07/2018 04:40:26 </td>
+                            <td > 2000022551  </td>
+                            <td > Adult DISCOUNTED 10 TRIP</td>
+                            <td > Bus </td>
+                            <td > Route- 315 | Zones - 5 </td>
+                            <td > 401288XXXXXX1881 </td>
+                            <td > $33.50 </td>
+                          </tr> 
+                          <tr>
+                            <td> 09/19/2018 04:40:26 </td>
+                            <td > 2000022491  </td>
+                            <td > Adult\\n(Non-Refundable) One Way</td>
+                            <td > Rail </td>
+                            <td > Anderson St. to Edison via Far Hills </td>
+                            <td > 411111XXXXXX1111 </td>
+                            <td > $59.00 </td>
+                          </tr> 
+                        </tbody>
+                  </table> 
+                      <div class="pagination pagination-centered" style="margin-left:350px;">
+                          <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                          <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
+                          <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
+                          <li class="active"><a href="javascript:void(0)">1</a></li>
+                          <li><a href="javascript:void(0)">2</a></li>
+                          <li><a href="javascript:void(0)">3</a></li>
+                          <li><a href="javascript:void(0)">4</a></li>
+                          <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
+                          <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
+                          <li>  &nbsp; &nbsp;<label for="form-history-limitSelect">Show:</label>
+                         <select id="form-history-limitSelect" name="form-history-limitSelect">                      
+                          <option value="25">30</option>
+                          <option value="50" selected="">50</option>
+                          <option value="100">60</option>
+                      </select> </li>
+                      </ul>
+                  </div> 
+                </div>
+              </form>
+               </uib-tab>
+          </uib-tabset>
+          <!--<div class="m--top" style="text-align: left;">
+                <a class="btn btn--secondary btn--mobile-block mobile__m--top" ng-click="openCreateNoteDialog('newTicket')">RT</a>: Refund Ticket
+                <a class="btn btn--secondary btn--mobile-block mobile__m--top" ng-click="openCreateNoteDialog('newTicket')">DT</a>: Deavtivate Ticket
+                <a class="btn btn--secondary btn--mobile-block mobile__m--top" ng-click="openCreateNoteDialog('newTicket')">CT</a>: Courtesy Ticket
+            </div> -->
+            <div class="m--top" style="text-align: center;">
+                <a class="btn btn--primary btn--mobile-block mobile__m--top" ng-click="openCreateNoteDialog('newTicket')">Push Courtesy Ticket</a>
+            </div>
+           <!-- <p class="notes">List of Active and inactive Tickets</p> <br/>
             <script type="text/ng-template" id="group-template.html">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -172,7 +568,7 @@
                                                 <a  class="cart-edit"  ng-click="openCreateNoteDialog('refund');"><strong>  Refund </strong> </a> 
                                                <!--  <a class="cart-edit"><strong>  Deactivate a ticket </strong> </a> -->
 
-                                            </div>                                        
+                                          <!--  </div>                                        
                                         </div>
                                     </div>
                                 </div>
@@ -188,136 +584,9 @@
                         <div>Edison, NJ 08816</div>             
                     </div> 
                 </div>         
-            </uib-accordion>      
-            <div class="m--top" style="text-align: center;">
-                <a class="btn btn--primary btn--mobile-block mobile__m--top" ng-click="openCreateNoteDialog('newTicket')">Push a new Ticket</a>
-            </div>
+            </uib-accordion>-->      
+            
         </div>       
-        <div class="sc-box-style m--top" style="background-color: white;">
-            <uib-tabset active="activeJustified">
-              <uib-tab index="0" heading="Notes">
-                <div class="sc-box-style" style="background-color: white; border-top:none !important;">
-                    <h2 class="h3">Notes</h2>   
-                    <table border="1"> 
-                        <thead>
-                          <th style="text-align: center;"> Date </th>
-                          <th style="padding: 8px;"> Action </th>
-                          <th style="padding: 8px;"> Description </th>
-                          <th style="padding: 8px;"> By Agent</th>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td style="padding: 8px;"> 11/11/2016 </td>
-                            <td style="padding: 8px;"> Deactivated A Ticket  </td>
-                            <td style="padding: 8px;"> Ticket was deactiated</td>
-                            <td style="padding: 8px;"> userAdmin </td>
-                          </tr>                          
-                          <tr>
-                            <td style="padding: 8px;"> 10/11/2016 </td>
-                            <td style="padding: 8px;"> Refunded </td>
-                            <td style="padding: 8px;"> Refunded because customer don't want to use the Pass for the remaining Month </td>
-                            <td style="padding: 8px;"> superAdmin </td>
-                          </tr>                          
-                          <tr>
-                            <td style="padding: 8px;"> 10/01/2016 </td>
-                            <td style="padding: 8px;"> Pushed a New ticket </td>
-                            <td style="padding: 8px;"> Pushed a New ticket </td>
-                            <td style="padding: 8px;"> superAdmin </td>
-                          </tr>
-                          <tr>
-                            <td style="padding: 8px;"> 09/21/2016 </td>
-                            <td style="padding: 8px;"> Updated Account Information</td>
-                            <td style="padding: 8px;"> Updated shipping Address as custumer is unable to do.</td>
-                            <td style="padding: 8px;"> userAdmin </td>
-                          </tr>
-                        </tbody>
-                  </table>   
-                </div>
-              </uib-tab>
-              <uib-tab index="1" heading="Devices History">
-                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
-<!--                     <div class="export-options export-options--right" >
-                        <span>Export:</span>
-                        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
-                        <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
-                    </div> <br/> -->
-                    <div ui-grid="devicesGridOptions" ui-grid-auto-resize></div>
-                </div>
-              </uib-tab>
-              <uib-tab index="2" heading="Transactions History">
-                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
-<!--                    <div class="export-options export-options--right" >
-                        <span>Export:</span>
-                        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
-                        <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
-                    </div> -->
-                    <div ui-grid="userTransactionsGridOptions" ui-grid-selection ui-grid-auto-resize style="max-width : 850px; margin-left:20px;"> </div>
-                </div>
-              </uib-tab>
-              <uib-tab index="3" heading="Import Requests">
-                <div class="xrx-margin-10" ng-controller="importRequestsController">
-                    <h3 class="h4">Import Request</h3>
-                    <uib-tabset id="userImportRequests">
-                        <uib-tab index="0" heading="New"  ng-init="constructImpGridOptions();">
-                            <div class="xrx-margin-10">
-                                <ng-include src="'partials/views/components/requests/approveNewImports.html'" > </ng-include>
-                            </div>
-                        </uib-tab>
-                        <uib-tab index="1" heading="Pending"  ng-init="constructPendingImpGridOptions();">
-                            <div class="xrx-margin-10">
-                                <ng-include src="'partials/views/components/requests/pendingImports.html'" > </ng-include>
-                            </div>
-                        </uib-tab>
-                        <uib-tab index="2" heading="History"  ng-init="constructImpHisotryGridOptions();">
-                            <div class="xrx-margin-10">
-                                <ng-include src="'partials/views/components/requests/importHistory.html'" > </ng-include>
-                            </div>
-                        </uib-tab>
-                    </uib-tabset>
-                </div>
-              </uib-tab>
-              <uib-tab index="4" heading="Refund Requests">
-                  <div class="xrx-margin-10" ng-controller="refundRequestsController">
-                        <h3 class="h4">Refund Request</h3>
-                        <uib-tabset id="UserRefundRequests">
-                            <uib-tab index="0" heading="Pending">
-                                <div class="xrx-margin-10">
-                                    <ng-include src="'partials/views/components/requests/pendingRefunds.html'" > </ng-include> 
-                                </div>
-                            </uib-tab>
-                            <uib-tab index="1" heading="History">
-                                <div class="xrx-margin-10">
-                                    <ng-include src="'partials/views/components/requests/refundsHistory.html'" > </ng-include>
-                                </div>
-                            </uib-tab>
-                        </uib-tabset>
-                    </div>
-              </uib-tab>
-              <uib-tab index="5" heading="Account Settings">
-                <div class="sc-box-style"  style="background-color: white; border-top:none !important;">
-                    <form id="form-acount_Settings" name="form-editlogin" class="form form--basic form--compact" novalidate="">
-                        <fieldset id="contactinfo" class="content__section">
-                            <div class="form__set">
-                                <label for="form-edit-firstName" class="form__label">User Type </label>
-                                <input id="form-edit-firstName" name="form-edit-firstName" class="form__input" type="text" aria-required="true" value="Brain" required="">
-                            </div>
-                            <div class="form__set">
-                                <label for="form-edit-lastName" class="form__label">User Status </label>
-                                <span style="cursor: pointer;" class="{{user.blocked ? 'badge badge--success': 'badge badge--error'}}" 
-                                title="{{user.blocked ? 'Click here to block the user': 'Click here to unblock the user'}}""  ng-click="user.blocked = !user.blocked">{{user.blocked ? 'Active' : 'Blocked'}} </span>
-
-                            </div>
-                            <div class="form__set">
-                                <label for="form-editloginEmail" class="form__label">Email <i class="form__required">required</i></label>
-                                <input id="form-editloginEmail" name="form-editloginEmail" class="form__input" value="sample@gmail.com" type="text" aria-required="true" required="">
-                            </div>
-                           
-                        </fieldset>
-                    </form>
-                </div>
-              </uib-tab>
-
-            </uib-tabset>
-        </div>
+        
     </div>
 </main>

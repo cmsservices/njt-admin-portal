@@ -72,16 +72,18 @@ app.controller('userController', ['$rootScope','$scope','userService', '$state',
       });
     }
 
+    
+
     $scope.constructUserGridOptions = function() {
           $scope.searchUserGridOptions.data = $scope.users;
           $scope.searchUserGridOptions.columnDefs = [
-            { displayName: 'User ID', field: 'userID', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'Email ID', field: 'emailID', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'User Activity', field: 'userActivity', cellClass : 'gridCellClass', width : 150}, 
-            { displayName: 'Carrier Name', field: 'carrierName',cellClass : 'gridCellClass', width : 150},
-            { displayName: 'Phone', field : 'phone', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'Device ID', field : 'deviceID', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'App ID', field : 'appID', cellClass : 'gridCellClass', width : 150}           
+           //{ displayName: 'User ID', field: 'userID', cellClass : 'gridCellClass', width : 150},
+            { displayName: 'Email ID', field: 'emailID', cellClass : 'gridCellClass'}
+            //{ displayName: 'User Activity', field: 'userActivity', cellClass : 'gridCellClass', width : 150}, 
+            //{ displayName: 'Carrier Name', field: 'carrierName',cellClass : 'gridCellClass', width : 150},
+            //{ displayName: 'Phone', field : 'phone', cellClass : 'gridCellClass', width : 150},
+            //{ displayName: 'Device ID', field : 'deviceID', cellClass : 'gridCellClass', width : 150},
+            //{ displayName: 'App ID', field : 'appID', cellClass : 'gridCellClass', width : 150}           
           ]
       }
 
@@ -89,16 +91,12 @@ app.controller('userController', ['$rootScope','$scope','userService', '$state',
           $scope.devicesGridOptions = {
           data : $scope.devices,
           columnDefs: [
-            { displayName: 'User Activity',enableColumnMenu : false, field: 'userActivity', cellClass : 'gridCellClass', width : 150}, 
-            { displayName: 'Carrier Name',enableColumnMenu : false, field: 'carrierName',cellClass : 'gridCellClass', width : 150},
-            { displayName: 'Model',enableColumnMenu : false, field : 'model', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'Version',enableColumnMenu : false, field : 'version',  cellClass : 'gridCellClass', width : 150},
-            { displayName: 'OS SDK Version',enableColumnMenu : false, field : 'osSDKVersion', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'OS Release',enableColumnMenu : false, field : 'osRelease', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'Phone',enableColumnMenu : false, field : 'phone', cellClass : 'gridCellClass', width : 150},
+            { displayName: 'User Activity Date',enableColumnMenu : false, field: 'userActivity', cellClass : 'gridCellClass', width : 150}, 
             { displayName: 'Device ID',enableColumnMenu : false, field : 'deviceID', cellClass : 'gridCellClass', width : 150},
+            { displayName: 'Carrier Name',enableColumnMenu : false, field: 'carrierName',cellClass : 'gridCellClass', width : 150},
+            { displayName: 'Device Model',enableColumnMenu : false, field : 'model', cellClass : 'gridCellClass', width : 150},
+            { displayName: 'OS Release Version',enableColumnMenu : false, field : 'version',  cellClass : 'gridCellClass', width : 150},
             { displayName: 'App ID',enableColumnMenu : false, field : 'appID', cellClass : 'gridCellClass', width : 150},
-            { displayName: 'IMEI',enableColumnMenu : false, field : 'IMEI', cellClass : 'gridCellClass', width : 150},
             { displayName: 'App Version',enableColumnMenu : false, field : 'appVersion', cellClass : 'gridCellClass', width : 150}
           ]
         };
@@ -168,9 +166,30 @@ app.controller('userController', ['$rootScope','$scope','userService', '$state',
               data : $scope.userTransactions,             
               columnDefs: [
                 { displayName: 'Transaction ID', field: 'trxSeqID', cellClass : 'gridCellClass', width : 200},
+                { displayName: 'Trx Seq. No', field: 'trxSeqID', cellClass : 'gridCellClass', width : 200},
                 { displayName: 'Transaction Date', field: 'trxDate', cellClass : 'gridCellClass', width : 250},
                 { displayName: 'Amount', field : 'amount', cellClass : 'gridCellClass', width : 100},
-                { displayName: 'Device ID', field : 'deviceID', cellClass : 'gridCellClass', width : 200}
+                { displayName: 'Terminal Number', field : 'deviceID', cellClass : 'gridCellClass', width : 200}
+              ]
+          };
+          $scope.userTrxDetailGridOptions = {
+            enableRowSelection : true,
+            multiSelect : false,
+            enableRowHeaderSelection : false,
+            enableFiltering: true,
+              data : $scope.userTransactions,             
+              columnDefs: [
+                
+                { displayName: 'Trx Seq. No', field: 'trxSeqID', cellClass : 'gridCellClass', width : 200},
+                { displayName: 'Terminal Number', field : 'deviceID', cellClass : 'gridCellClass', width : 100},
+                { displayName: 'TT id', field : 'deviceID', cellClass : 'gridCellClass', width : 200},
+                { displayName: 'Ticket Type', field : 'deviceID', cellClass : 'gridCellClass', width : 200},
+                { displayName: 'Origin', field : 'deviceID', cellClass : 'gridCellClass', width : 200},
+                { displayName: 'Destination', field : 'deviceID', cellClass : 'gridCellClass', width : 200},
+                { displayName: 'Rider Type', field : 'deviceID', cellClass : 'gridCellClass', width : 200},
+                { displayName: 'Amount', field : 'amount', cellClass : 'gridCellClass', width : 100},
+                { displayName: 'Activation Date', field: 'trxDate', cellClass : 'gridCellClass', width : 250},
+                { displayName: 'Deactivation Date', field: 'trxDate', cellClass : 'gridCellClass', width : 250}
               ]
           };
       };
@@ -182,7 +201,7 @@ app.controller('userController', ['$rootScope','$scope','userService', '$state',
               template: '../njt-admin-portal/partials/views/components/user/userTransactionDetails.html',
               className: 'ngdialog-theme-default order-details',
               showClose : false,
-              scope:$scope   
+              scope:$scope
             });
         });
       }

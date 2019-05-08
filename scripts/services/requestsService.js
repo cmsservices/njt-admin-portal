@@ -6,7 +6,7 @@ app.factory('requestService', ['$http', '$q',
 	var requestService = {};
 	requestService.getNewImports = function() {
 		var deffered = $q.defer();
-		$http.get('mock/newImports.json').then(function(response) {
+		$http.get('resources/mock/newImports.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -15,7 +15,7 @@ app.factory('requestService', ['$http', '$q',
 	} 
 	requestService.getRefundRequests = function() {
 		var deffered = $q.defer();
-		$http.get('mock/refundRequests.json').then(function(response) {
+		$http.get('resources/mock/refundRequests.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);

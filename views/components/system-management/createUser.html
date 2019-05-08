@@ -1,0 +1,47 @@
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+
+        <h1 id="register-user-title" class="h3">Create New User</h1>
+
+        <div class="content__block">
+                <div class="content__section content__section--full">
+                    <!--<h2 class="h3">Users</h2>-->
+                    <form id="form-order-history" name="form-order-history" class="form form--basic form--compact p--all mobile__no-sides sc-box-style" aria-controls="order-history" novalidate="">
+                        <h3 id="register-user-title" class="h3">Customer Information</h3>
+                        <div class="form__set">
+                            <i class="required-note "><span class="hide ">red asterisk</span> denotes a required field</i>
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-order-historyID" class="form__label">User Template <i class="form__required">required</i></label>
+                            <select id="form-select-1" name="form-select" class="form__input select">
+                        <option value="1" checked>Please Select Role</option>
+                        <option value="2">Read only Administrative</option>
+                        <option value="2">Webportal</option>
+                    </select>
+                </div>
+
+                <div class="form__set">
+                    <label for="form-edit-lastName" class="form__label">First name<i class="form__required">required</i></label>
+                    <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                </div>
+                <div class="form__set">
+                    <label for="form-edit-lastName" class="form__label">Last name<i class="form__required">required</i></label>
+                    <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                </div>
+                <div class="form__set">
+                    <label for="form-edit-lastName" class="form__label">User name<i class="form__required">required</i></label>
+                    <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                </div>
+                <div class="form__set">
+                    <label for="form-edit-lastName" class="form__label">Phone Number</label>
+                    <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="" value="xxx-xxx-xxxx">
+                </div>
+                        <input type="submit" class="btn btn--primary m--top btn--full" name="form-order-historySearch" ng-click="getUsers();" value="Create User">
+                    </form>
+                    
+                </div>
+            </div>
+    </div>
+</main>

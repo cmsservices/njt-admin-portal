@@ -1,0 +1,572 @@
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10" ng-controller="notificationController">
+        <a id="maincontent" tabindex="-1"></a>
+
+
+        <h1 id="register-user-title" class="h2">Account Management</h1>
+        <span class="backTolink" style="cursor: pointer; float : right;" >
+        <a ui-sref="welcome.accManagement">Back to Search</a></span>
+        <uib-tabset active="activeJustified">
+            <uib-tab index="0" heading="Account Details">
+                    <h3 class="h3">Account Details</h3>
+                    
+                <div class="m--top editlogin-content sc-box-style">
+                    
+                    <form id="form-createAlert" class="form form--basic form--compact ng-pristine ng-valid" novalidate="">
+
+                        <div class="form__set">
+                            <label for="form-edit-accid" class="form__label">Account ID
+                                 </label>
+                            <input id="form-edit-accid" name="form-edit-accid" class="form__input" type="text" aria-required="true" required="" disabled="true" 
+                                value="5236225">
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-noofactive" class="form__label">No Of Active Riders
+                                </label>
+                            <input id="form-edit-noofactive" value="1255" name="form-edit-noofactive" class="form__input" type="text" aria-required="true" disabled="true" 
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-noofinactive" class="form__label">No Of Inactive Riders
+                                 </label>
+                            <input id="form-edit-noofinactive" value="0" name="form-edit-noofinactive" class="form__input" type="text" aria-required="true" required="" disabled="true">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-Status" class="form__label">Status
+                                <i class="form__required">required</i>
+                            </label>
+                            <select id="form-select-Status" name="form-select-Status" class="form__input select">
+                                <option value="active" selected="true">ACTIVE</option>
+                                <option value="inactive">INACTVE</option>
+                                
+                              </select>
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-noofinactive" class="form__label">Organization Size
+                                  </label>
+                            <input id="form-edit-noofinactive" value="0" name="form-edit-noofinactive" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-refundpolicy" class="form__label">Refund Policy Days
+                                <i class="form__required">required</i>
+                            </label>
+                            <input id="form-edit-refundpolicy" value="6" name="form-edit-refundpolicy" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-slaType" class="form__label">SLA Type
+                                <i class="form__required">required</i>
+                            </label>
+                            <select id="form-select-slaType" name="form-select-slaType" class="form__input select">
+                                <option value="select" >Select SLA Type</option>
+                                <option value="large" selected="true">Large</option>
+                                <option value="medium">Medium</option>
+                                <option value="small">Samll</option>
+                                <option value="n/a">N/A</option>
+                              </select>
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-bankAcc" class="form__label">Bank Account No
+                                <i class="form__required" >required</i>
+                            </label>
+                            <input id="form-edit-bankAcc" value="453443321" name="form-edit-bankAcc" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-bankroute" class="form__label">Bank Route No
+                                <i class="form__required">required</i>
+                            </label>
+                            <input id="form-edit-bankroute" value="3299053100" name="form-edit-bankroute" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-checkno" class="form__label">Check No
+                                <i class="form__required">required</i>
+                            </label>
+                            <input id="form-edit-checkno" value="7600277" name="form-edit-checkno" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+                        <div class="form__set">
+                            <label for="form-edit-remarks" class="form__label">Remarks
+                                 </label>
+                            <textarea id="form-edit-remarks" value="Testing" name="form-edit-remarks" class="form__input" type="text" aria-required="true" required=""></textarea>
+                        </div>
+
+                    </form>
+                    <br/>
+
+
+
+                </div>
+                <h3 class="h3">Shipping Information</h3>
+                
+                <div class="m--top editlogin-content sc-box-style">
+
+                    
+                    <form id="form-createAlert" class="form form--basic form--compact ng-pristine ng-valid" novalidate="">
+
+                        <div class="form__set">
+                            <label for="form-edit-address" class="form__label">Street Address
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="1600 Blake Street" id="form-edit-address" name="form-edit-address" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-aptsuite" class="form__label">Apt/Suite #
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="1600 Blake Street" id="form-edit-aptsuite" name="form-edit-aptsuite" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-city" class="form__label">City
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="Newark" id="form-edit-city" name="form-edit-city" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                                <label for="form-edit-state" class="form__label">State <i class="form__required">required</i></label>
+                                <select id="form-select-state" name="form-select-state" class="form__input select">
+                                    <option value="1" checked>New Jersy</option>
+                                    <option value="2">New Jersy</option>
+                                    <option value="2">Colordo</option>
+                                    <option value="2">Atlanta Georgia</option>
+                                    <option value="2">Pheladelphia</option>
+                                </select>
+                            </div>   
+
+                        <div class="form__set">
+                            <label for="form-edit-zip" class="form__label">Zipcode
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="56004" id="form-edit-zip" name="form-edit-zip" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-email" class="form__label">Email
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="abc@njt.com" id="form-edit-email" name="form-edit-email" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-phoneno" class="form__label">Phone Number(XXX-XXX-XXXX)
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="9005877422" id="form-edit-phoneno" name="form-edit-phoneno" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-phoneext" class="form__label">Phone Extension
+                                
+                            </label>
+                            <input id="form-edit-phoneext" name="form-edit-phoneext" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+
+                    </form>
+
+                    <button tabindex="0" class="btn btn--primary btn--small btn--mobile-block" style="margin: 0px;" id="getUsers"> Update Account</button>
+                    <button tabindex="0" class="btn btn--primary btn--small btn--mobile-block" style="margin: 0px;"> Suspend Account </button>
+                </div>
+            </uib-tab>
+            <uib-tab index="1" heading="Riders">
+                <div class="m--top editlogin-content " id="listOfRiderAccs">
+                    <h3 class="h3">Riders</h3>
+                    <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact " novalidate="">
+                        <div class="table-responsive">
+                            <table border="0" class="table table--striped table--header table--bordered  table--sc-transactions">
+
+                                <thead>
+
+                                    <th scope="col"> Customer ID
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Organization Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> First Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Last Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Email
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Zip
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Phone
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Status
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    
+
+                                </thead>
+                                <tbody>
+                                    <a id="orderItems"><tr>
+
+                                        <td>
+                                            102
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active</td>
+                                    </tr></a>
+                                    <a id="orderItems"><tr>
+
+                                        <td>
+                                            102
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active</td>
+                                    </tr></a>
+                                    <a id="orderItems"><tr>
+
+                                        <td>
+                                            102
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                    </tr></a>
+                                   <a id="orderItems"><tr>
+
+                                        <td>
+                                            102
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                    </tr></a>
+                                    <a id="orderItems"><tr>
+
+                                        <td>
+                                            102
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                    </tr></a>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pagination-centered" style="margin-left:350px;">
+                            <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                                <li class="disabled">
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-first">
+                                            <span>First</span>
+                                            <span> Disabled</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="disabled">
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-previous">
+                                            <span>Previous</span>
+                                            <span> Disabled</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="javascript:void(0)">1</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">3</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">4</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-next">
+                                            <span>Next</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-last">
+                                            <span>Last</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li> &nbsp; &nbsp;
+                                    <label for="form-history-limitSelect">Show:</label>
+                                    <select id="form-history-limitSelect" name="form-history-limitSelect">
+                                        <option value="10" selected="">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </form>
+
+                </div>
+            </uib-tab>
+
+        </uib-tabset>
+    </div>
+</main>
+
+<dialog id="favDialog" style="width: 80%; height: 80%;overflow: scroll;">
+    <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact " novalidate="">
+                        <div class="table-responsive">
+                            <table border="0" class="table table--striped table--header table--bordered  table--sc-transactions">
+
+                                <thead>
+
+                                    <th scope="col"> Procuct
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Pass Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Routes
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Zones
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Origin
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Destination
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Price
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Month
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Pass_Push_Date
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Pass_Activate_Date
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>
+                                            Rail
+                                        </td>
+                                        <td> ADult
+                                        </td>
+                                        <td> 
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>ALLENDALE
+                                        </td>
+                                        <td>ALLENHURST
+                                        </td>
+                                        <td>$336.00
+
+                                        </td>
+                                        <td>Apr2019</td>
+                                        <td>2019-04-27 16:50:01</td>
+                                        <td>2019-04-01 00:00:00</td>
+                                        
+
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pagination-centered" style="margin-left:350px;">
+                            <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                                <li class="disabled">
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-first">
+                                            <span>First</span>
+                                            <span> Disabled</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="disabled">
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-previous">
+                                            <span>Previous</span>
+                                            <span> Disabled</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="javascript:void(0)">1</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">3</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">4</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-next">
+                                            <span>Next</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-last">
+                                            <span>Last</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li> &nbsp; &nbsp;
+                                    <label for="form-history-limitSelect">Show:</label>
+                                    <select id="form-history-limitSelect" name="form-history-limitSelect">
+                                        <option value="10" selected="">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </form>
+                    <button id="cancel" class="btn btn--primary btn--small m--top edit-address btn--mobile-block" type="reset">Close</button>
+
+                
+
+    </dialog>
+
+<script>
+      (function() {
+        var updateButton = document.getElementById('orderItems');
+        var cancelButton = document.getElementById('cancel');
+        var favDialog = document.getElementById('favDialog');
+
+        // Update button opens a modal dialog
+        updateButton.addEventListener('click', function() {
+          favDialog.showModal();
+        });
+
+        // Form cancel button closes the dialog box
+        cancelButton.addEventListener('click', function() {
+          favDialog.close();
+        });
+      })();
+
+  </script>  

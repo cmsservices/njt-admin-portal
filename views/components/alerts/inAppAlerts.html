@@ -1,0 +1,85 @@
+<main id="createAlertPage" role="main" class="content__section content__section--seventy" ng-controller="createNotificationController">
+    <div class="xrx-margin-10">
+        <a id="maincontent" tabindex="-1"></a>
+        <h1 class="h2">Inapp Alerts</h1>
+        <div class="m--top editlogin-content sc-box-style">
+            <form id="form-createAlert" class="form form--basic form--compact" novalidate="">
+                <div class="form__set">
+                 <i class="required-note "><span class="hide ">red asterisk</span> denotes a required field</i>
+             </div>
+                <div class="form__set">
+                    <label for="notification-category" id="notification-label" class="form__label">Select Module <i class="form__required">required</i></label>
+                    <select id="notification-category" name="notification-category" class="form__input select">
+                        <option value="1" checked>Please Select a module</option>
+                        <option value="2">Schedules</option>
+                        <option value="3">Trip Planner</option>
+                        <option value="4">MyBus</option>
+                        <option value="5">Marquee</option>
+                        <option value="6">Marquee_Carousel_1</option>
+                        <option value="7">Marquee_Carousel_2</option>
+                        <option value="8">Marquee_Carousel_3</option>
+                    </select>
+                </div>
+
+                <div class="form__set">
+                    <label for="notification-title" id="notification-title-label" class="form__label">Bacjground Color<i class="form__required">required</i></label>
+                    <select id="notification-category" name="notification-category" class="form__input select">
+                        <option value="1" checked>Please Select background color</option>
+                        <option value="2">#ff8a00</option>
+                        <option value="3">#4e0351</option>
+                        <option value="4">#003595</option>
+                        <option value="5">#a40000</option>
+                        <option value="6">#13882f</option>
+                        <option value="7">#FFFF5a</option>
+                    </select>
+                </div>
+                <div class="form__set">
+                    <label for="notification-title" id="notification-title-label" class="form__label">Font Color<i class="form__required">required</i></label>
+                    <select id="notification-category" name="notification-category" class="form__input select">
+                        <option value="1" checked>Please Select font color</option>
+                        <option value="2">#000000</option>
+                        <option value="3">#ffffff</option>
+                        
+                    </select>
+                </div>
+                 <div class="form__set">
+                    <label for="form-edit-lastName" class="form__label">Tile<i class="form__required">required</i></label>
+                    <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                </div>
+
+                <div class="form__set">
+                    <label for="notification-message" id="notification-message-label" class="form__label">Notification Message <i class="form__required">required</i></label>
+                     <textarea id="notification-message" name="form-textarea" class="form__input" aria-required="true" required></textarea>
+                </div>  
+                <div class="form__set">
+                    <label for="form-edit-lastName" class="form__label">Upload<i class="form__required">required</i></label>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <button tabindex="0" class="btn btn--primary btn--small btn--mobile-block" style="margin: 0px;"> Upload </button>
+                <button tabindex="0" class="btn btn--secondary btn--small btn--mobile-block" style="margin: 0px;"> Cancel </button>
+                </div>
+                <div class="form__set">
+                <label for="form-order-historyDate-start" class="form__label">Start Date <i class="form__required">required</i></label>
+                <input id="form-order-historyDate-start" type="date"><div id="date-start-cal" class="i--calendar"></div>
+            </div>
+
+            <div class="form__set">
+                <label for="form-order-historyDate-end" class="form__label">End Date <i class="form__required">required</i></label>
+                <input id="form-order-historyDate-end" type="date"><div id="date-end-cal" class="i--calendar"></div>
+            </div>
+            <div class="form__set">
+                    <label for="form-order-historyDate-end" class="form__label">Active</label>
+                    <label  id="active-toggle" name="active-toggle">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div style="text-align: center;">
+                    <input id="create-notification-btn" class="btn btn--primary btn--small m--top editlogin btn--mobile-block" name="save" value="Update" ng-click=""> 
+                    <input id="create-notification-btn" class="btn btn--primary btn--small m--top editlogin btn--mobile-block" name="save" value="Reset" ng-click="">             
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</main>

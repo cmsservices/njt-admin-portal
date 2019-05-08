@@ -1,13 +1,17 @@
 <nav role="menu" id="nav-menu" class="nav-sidenav nav-sidenav--default no--print" >
     <div class="w3-card-2 w3-round">
         <div class="w3-accordion w3-white">
-            <button ui-sref="welcome" ng-if="loginUser.role === 'reportAdmin' || loginUser.role === 'superAdmin'" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-home" style="color:#2a69a6;" aria-hidden="true"></i> Home </button>
+            <button ng-if="loginUser.role === 'userAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('myAccount')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-users" style="color:#2a69a6;" aria-hidden="true"></i> Find MyTix Account </button>
+            <div ng-if="loginUser.role === 'userAdmin' || loginUser.role === 'superAdmin'" id="myAccount" class="w3-accordion-content ">
+                <div><a ui-sref="welcome.search">Search</a> </div>               
+            </div>
+            <button ui-sref="welcome" ng-if="false" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-home" style="color:#2a69a6;" aria-hidden="true"></i> Home </button>
 
-            <button ui-sref="welcome.njtDashboard" ng-if="loginUser.role === 'reportAdmin' || loginUser.role === 'superAdmin'" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-tachometer" style="color:#2a69a6;" aria-hidden="true"></i> NJT DashBoard </button>
+            <button ui-sref="welcome.njtDashboard" ng-if="false" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-tachometer" style="color:#2a69a6;" aria-hidden="true"></i> NJT DashBoard </button>
 
 
-             <button ng-if="loginUser.role === 'reportAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('systemManagement')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"> <i class="fa fa-gears" style="color:#2a69a6;" aria-hidden="true"></i> System Maintainance</button>
-            <div ng-if="loginUser.role === 'reportAdmin' || loginUser.role === 'superAdmin'" id="systemManagement" class="w3-accordion-content ">
+             <button ng-if="false" ng-click="expandMenu('systemManagement')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"> <i class="fa fa-gears" style="color:#2a69a6;" aria-hidden="true"></i> System Maintainance</button>
+            <div ng-if="false" id="systemManagement" class="w3-accordion-content ">
                 <div><a  ng-if="!loginUser.role === 'reportAdmin'" ui-sref="welcome.terminalHealth">Terminal System Health</a> </div> 
                 <div><a ng-if="!loginUser.role === 'reportAdmin'" ui-sref="welcome.transactions">Transactions</a> </div> 
                 <div style="display: none;"><a ui-sref="welcome.alarms" ng-click="getAllTerminals();">Alarms</a> </div> 
@@ -16,7 +20,7 @@
                 <div><a ng-if="!loginUser.role === 'reportAdmin'" ui-sref="welcome.serviceCalls">Service Calls</a> </div>
                 <div><a ng-if="!loginUser.role === 'reportAdmin'" ui-sref="welcome.supportCalender">Support Calender</a> </div>  
                 <!-- Logic for diplaying services/stations in Tree Structure -->
-                <div class="w3-accordion">
+                <div ng-if="false" class="w3-accordion">
                     <a ng-click="myAccFunc('services');getAllTerminals();" ui-sref="welcome.alarms">
                       Monitoring / Alarms <i class="fa fa-caret-down"></i>
                     </a>
@@ -37,25 +41,41 @@
                     </div>
                 </div>        
             </div>
-            <button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('approvalQueues')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-thumbs-up" style="color:#2a69a6;" aria-hidden="true"></i> Approval Queues</button>
-            <div ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" id="approvalQueues" class="w3-accordion-content ">
+            <button ng-if="false" ng-click="expandMenu('approvalQueues')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-thumbs-up" style="color:#2a69a6;" aria-hidden="true"></i> Approval Queues</button>
+            <div ng-if="false" id="approvalQueues" class="w3-accordion-content ">
                 <div><a ui-sref="welcome.importRequests">Import Requests</a> </div> 
                 <div><a ui-sref="welcome.refundRequests">Refund Requests</a> </div>  
             </div>     
-            <button ng-if="loginUser.role === 'userAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('myAccount')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-users" style="color:#2a69a6;" aria-hidden="true"></i> Manage User Portal </button>
-            <div ng-if="loginUser.role === 'userAdmin' || loginUser.role === 'superAdmin'" id="myAccount" class="w3-accordion-content ">
-                <div><a ui-sref="welcome.search">Search</a> </div>               
-            </div>
-            <button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('notifications')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-bell" style="color:#2a69a6;" aria-hidden="true"></i> Push Notifications</button>
+            
+            <button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('notifications')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-bell" style="color:#2a69a6;" aria-hidden="true"></i> Notification Management</button>
             <div ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" id="notifications" class="w3-accordion-content ">
-                <div><a ui-sref="welcome.creteAlert">Create Alert</a> </div> 
-                <div><a ui-sref="welcome.scheduleAlert">Schedule Alerts</a> </div>
-                <div><a ui-sref="welcome.alertHistory">History</a> </div>
-            </div>     
-            <button  ng-if="loginUser.role === 'superAdmin'" ng-click="expandMenu('reports')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-bar-chart" style="color:#2a69a6;" aria-hidden="true"></i> Reports</button>
-            <div   ng-if="loginUser.role === 'reportAdmin' || loginUser.role === 'superAdmin'" id="reports" class="w3-accordion-content ">
+                <div><a ui-sref="welcome.creteAlert">Notification Messages </a> </div> 
+                <!--<div><a ui-sref="welcome.scheduleAlert">Schedule Notification</a> </div>-->
+                <div><a ui-sref="welcome.alertHistory"> Notifications </a> </div>
+                 <div><a ui-sref="welcome.inappAlerts">InApp Alerts</a> </div>
+                <!--<div><a ui-sref="welcome.colorConfig"> Color Calender</a> </div>-->
+            </div>
+            <button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ui-sref="welcome.colorConfig" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-calendar" style="color:#2a69a6;" aria-hidden="true"></i> Color Calendar</button>
+
+            <button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('bulkmgmt')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround">
+                <i class="fa fa-upload" style="color:#2a69a6;" aria-hidden="true" ></i> Bulk Management</button>
+            <div ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" id="bulkmgmt" class="w3-accordion-content " c>
+                <div><a ui-sref="welcome.bulkManagement">Bulk Management </a> </div> 
+                <div><a ui-sref="welcome.accManagement">Account Management</a> </div>
+               
+            </div>      
+            <button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('systemgmt')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround">
+                <i class="fa fa-television" style="color:#2a69a6;" aria-hidden="true" ></i> System Management</button>
+            <div ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" id="systemgmt" class="w3-accordion-content " c>
+                <div><a ui-sref="welcome.createUser">Create New User </a> </div> 
+                <div><a ui-sref="welcome.userRoleMgmt">User Role Management</a> </div>
+                <div><a ng-click="openManageUpdateCacheModal()"> Update Cache</a> </div>
+                 <div><a ui-sref="welcome.users">Users</a> </div>
+            </div> 
+            <button  ng-if="false" ng-click="expandMenu('reports')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-bar-chart" style="color:#2a69a6;" aria-hidden="true"></i> Reports</button>
+            <div   ng-if="false" id="reports" class="w3-accordion-content ">
                 <div><a ui-sref="welcome.reports" ng-click="generateReports('Alarm Reports');">Alarm Reports</a> </div> 
-                <div><a ui-sref="welcome.reports"  ng-click="generateReports('Cash Reports');">Cash Reports</a> </div>
+                <div><a ui-sref="welcome.reports" ng-click="generateReports('Cash Reports');">Cash Reports</a> </div>
                 <div><a ui-sref="welcome.reports" ng-click="generateReports('Daily Reports');">Daily Reports</a> </div>
                 <div><a ui-sref="welcome.reports" ng-click="generateReports('EFT Reports');">EFT Reports</a> </div>
                 <div><a ui-sref="welcome.reports" ng-click="generateReports('Mobile Reports');">Mobile Reports</a> </div>
@@ -63,10 +83,11 @@
                 <div><a ui-sref="welcome.reports" ng-click="generateReports('Sales Reports');">Sales Reports</a> </div>
                 <div><a ui-sref="welcome.reports" ng-click="generateReports('Terminal Reports');">Terminal Reports</a> </div>
             </div> 
-            <button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('config')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-wrench" style="color:#2a69a6;" aria-hidden="true"></i> Configuration</button>
+            <!--<button ng-if="loginUser.role === 'myTixAdmin' || loginUser.role === 'superAdmin'" ng-click="expandMenu('config')" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"><i class="fa fa-wrench" style="color:#2a69a6;" aria-hidden="true"></i> Configuration</button>
             <div id="config" class="w3-accordion-content ">
                 <div><a ui-sref="welcome.colorConfig">Color Management</a> </div>                 
-            </div>
+            </div>-->
+            <button ui-sref="welcome.accountSettings" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"> <i class="fa fa-cog" style="color:#2a69a6;" aria-hidden="true"></i>Account Settings</button>
 
             <button ng-click="logout();" class="w3-btn-block w3-theme-d1 w3-left-align w3-theme-l1 menuBackGround"> <i class="fa fa-lock" style="color:#2a69a6;" aria-hidden="true"></i>  Sign Out </button>
         </div>

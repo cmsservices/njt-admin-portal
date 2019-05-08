@@ -6,7 +6,7 @@ app.factory('userService', ['$http', '$q',
 	var userService = {};
 	userService.getUserData = function() {
 		var deffered = $q.defer();
-		$http.get('mock/users.JSON').then(function(response) {
+		$http.get('resources/mock/users.JSON').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -16,7 +16,7 @@ app.factory('userService', ['$http', '$q',
 
 	userService.getEvents = function() {
 		var deffered = $q.defer();
-		$http.get('mock/events.JSON').then(function(response) {
+		$http.get('resources/mock/events.JSON').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -25,7 +25,7 @@ app.factory('userService', ['$http', '$q',
 	}
 	userService.getTicketTypes = function() {
 		var deffered = $q.defer();
-		$http.get('mock/tickets.JSON').then(function(response) {
+		$http.get('resources/mock/tickets.JSON').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -34,7 +34,7 @@ app.factory('userService', ['$http', '$q',
 	}
 	userService.getTransactions = function() {
 		var deffered = $q.defer();
-		$http.get('mock/transactionHistory.json').then(function(response) {
+		$http.get('resources/mock/transactionHistory.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -44,7 +44,7 @@ app.factory('userService', ['$http', '$q',
 
 	userService.getDevices = function() {
 		var deffered = $q.defer();
-		$http.get('mock/devices.json').then(function(response) {
+		$http.get('resources/mock/devices.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -54,7 +54,7 @@ app.factory('userService', ['$http', '$q',
 
 	userService.getUserTransactions = function() {
 		var deffered = $q.defer();
-		$http.get('mock/userTransactions.json').then(function(response) {
+		$http.get('resources/mock/userTransactions.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -63,7 +63,7 @@ app.factory('userService', ['$http', '$q',
 	}
 	userService.getTicketTransactions = function() {
 		var deffered = $q.defer();
-		$http.get('mock/ticketTransactions.JSON').then(function(response) {
+		$http.get('resources/mock/ticketTransactions.JSON').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -72,7 +72,7 @@ app.factory('userService', ['$http', '$q',
 	}
 	userService.getPaymentTransactions = function() {
 		var deffered = $q.defer();
-		$http.get('mock/paymentTransactions.json').then(function(response) {
+		$http.get('resources/mock/paymentTransactions.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -81,7 +81,7 @@ app.factory('userService', ['$http', '$q',
 	}
 	userService.getStations = function() {
 		var deffered = $q.defer();
-		$http.get('mock/trainStations.JSON').then(function(response) {
+		$http.get('resources/mock/trainStations.JSON').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);

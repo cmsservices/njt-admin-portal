@@ -1,54 +1,57 @@
 <div>
-    <h2 class="h3">Import History</h2>
+    
     <form id="form-order-history" name="form-order-history" class="form form--basic form--compact mobile__no-sides" aria-controls="order-history" novalidate="">
-        <fieldset class="content__section mobile__no-sides">
-            <legend>Search</legend>
+         <legend>Search</legend>
+         <div class="m--top editlogin-content sc-box-style">
+           
             <div class="form__set">
                 <label for="form-order-historyID" class="form__label" style="width: 20%;">Email ID</label>
-                <input id="form-order-historyID" name="form-order-historyID" class="form__input" style="margin-top: 6px;" type="text">
-                <label for="form-order-historyID" class="form__label" style="width: 20%;">Import Date:</label>
-                <input id="form-order-historyID" name="form-order-historyID" class="form__input" style="margin-top: 6px;" type="text">
-                <label for="form-order-historyID" class="form__label" style="width: 20%;">to</label>
-                <input id="form-order-historyID" name="form-order-historyID" class="form__input" style="margin-top: 6px;" type="text">
+                <input id="form-order-historyID" name="form-order-historyID" class="form__input" style="margin-top: 6px; width: 30%;" type="text" >
+            </div>
+            <div class="form__set">
+                <label for="form-order-historyID" class="form__label" style="width: 20%;">Import Date<i class="form__required">required</i></label>
+                <input id="form-order-historyDate-start" type="date"><div id="date-start-cal" class="i--calendar"></div>
+            </div>
+            <div class="form__set">
+                <label for="form-order-historyID" class="form__label" style="width: 20%;">to Date<i class="form__required">required</i></label>
+               <input id="form-order-historyDate-start" type="date"><div id="date-start-cal" class="i--calendar"></div>
             </div>
             <div class="form__set">
                 <button tabindex="0" class="btn btn--primary btn--small btn--mobile-block" style="margin: 0px;"> Search </button>
                 <button tabindex="0" class="btn btn--secondary btn--small btn--mobile-block" style="margin: 0px;"> Reset </button>
             </div>
-        </fieldset>
+        </div>
     </form>
     <br/>
     <div class="export-options export-options--right">
         <span>Export:</span>
-        <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>
+       <!-- <a href="#"><img src="resources/images/icon-file-xls.png" alt="Export XLS" border="0"></a>-->
         <a href="#"><img src="resources/images/icon-file-csv.png" alt="Export CSV" border="0"></a>
     </div>
-    <p class="font-smaller">Results 10 of 40</p>
+    <!--<p class="font-smaller">Results 10 of 40</p>-->
+    <br/>
     <br/>
     <div id="importHistory" ui-grid="importHistoryGridOptions" ui-grid-auto-resize></div>
-    <div class="pagination pagination-centered">
-        <ul class="pagination-list" role="toolbar" aria-controls="order-history">
-            <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
-            <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
-            <li class="active"><a href="javascript:void(0)">1</a></li>
-            <li><a href="javascript:void(0)">2</a></li>
-            <li><a href="javascript:void(0)">3</a></li>
-            <li><a href="javascript:void(0)">4</a></li>
-            <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
-            <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
-        </ul>
-    </div>
-    <div class="table-filter table-filter--bottom">
-        <form id="form-history-limit" class="form form--compact" aria-controls="order-history" action="">
-            <label for="form-history-limitSelect" class="form__label">Show:</label>
-            <select id="form-history-limitSelect" name="form-history-limitSelect" class="form__input select">
+    <div class="pagination pagination-centered" style="margin-left:350px;">
+                <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-first"><span>First</span><span> Disabled</span></i></a></li>
+                <li class="disabled"><a href="javascript:void(0)"><i class="pagination-i pagination-i-previous"><span>Previous</span><span> Disabled</span></i></a></li>
+                <li class="active"><a href="javascript:void(0)">1</a></li>
+                <li><a href="javascript:void(0)">2</a></li>
+                <li><a href="javascript:void(0)">3</a></li>
+                <li><a href="javascript:void(0)">4</a></li>
+                <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-next"><span>Next</span></i></a></li>
+                <li><a href="javascript:void(0)"><i class="pagination-i pagination-i-last"><span>Last</span></i></a></li>
+                <li>  &nbsp; &nbsp;<label for="form-history-limitSelect">Show:</label>
+               <select id="form-history-limitSelect" name="form-history-limitSelect">
                 <option value="10" selected="">10</option>
                 <option value="25">25</option>
                 <option value="50">50</option>
                 <option value="100">100</option>
-            </select>
-        </form>
-    </div>
+            </select> </li>
+            </ul>
+            
+        </div> 
 </div>
 
  

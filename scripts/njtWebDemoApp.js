@@ -7,19 +7,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login', {
             views: {
                 'header': {
-                  templateUrl: 'views/components/common/header.html'
+                  templateUrl: '../njt-admin-portal/partials/views/components/common/header.html'
                 },
 /*                'header-band' : {
-                    templateUrl: 'views/components/common/headerBand.html'
+                    templateUrl: '../njt-admin-portal/partials/views/components/common/headerBand.html'
                 },*/
                 'nav' : {
-                    templateUrl : 'views/components/common/login.html'
+                    templateUrl : '../njt-admin-portal/partials/views/components/common/login.html'
                 },
                 '' : {
-                    templateUrl : 'views/components/common/home.html'
+                    templateUrl : '../njt-admin-portal/partials/views/components/common/home.html'
                 },
                 'footer' : {
-                   // templateUrl : 'views/components/common/footer.html'
+                   // templateUrl : '../njt-admin-portal/partials/views/components/common/footer.html'
                 }
             },
             url : '/login'      
@@ -28,10 +28,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.forgetUsername', {
             views: {
                 'nav@': {
-                    templateUrl: 'views/components/common/login.html'              
+                    templateUrl: '../njt-admin-portal/partials/views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : 'views/components/common/forgetUserName.html' 
+                    templateUrl : '../njt-admin-portal/partials/views/components/common/forgetUserName.html' 
                 }
             },
             url : '/forgetUsername'
@@ -40,10 +40,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.forgetPassword', {
             views: {
                 'nav@': {
-                    templateUrl: 'views/components/common/login.html'              
+                    templateUrl: '../njt-admin-portal/partials/views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : 'views/components/common/forgetPassword.html' 
+                    templateUrl : '../njt-admin-portal/partials/views/components/common/forgetPassword.html' 
                 }
             },
             url : '/forgetPassword'
@@ -51,10 +51,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.securityQuestions', {
             views: {
                 'nav@': {
-                    templateUrl: 'views/components/common/login.html'              
+                    templateUrl: '../njt-admin-portal/partials/views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : 'views/components/common/securityQuestions.html' 
+                    templateUrl : '../njt-admin-portal/partials/views/components/common/securityQuestions.html' 
                 }
             },
             url : '/forgetPassword'
@@ -62,10 +62,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('login.resetPassword', {
             views: {
                 'nav@': {
-                    templateUrl: 'views/components/common/login.html'              
+                    templateUrl: '../njt-admin-portal/partials/views/components/common/login.html'              
                 },
                 '@': {
-                    templateUrl : 'views/components/common/resetPassword.html' 
+                    templateUrl : '../njt-admin-portal/partials/views/components/common/resetPassword.html' 
                 }
             },
             url : '/forgetPassword'
@@ -73,25 +73,25 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('welcome', {
             views: {
                 'header': {
-                  templateUrl: 'views/components/common/header.html'
+                  templateUrl: '../njt-admin-portal/partials/views/components/common/header.html'
                 },
                'message-container': {
-                  templateUrl: 'views/components/common/messageContainer.html'
+                  templateUrl: '../njt-admin-portal/partials/views/components/common/messageContainer.html'
                 },
 /*                'header-band' : {
-                    templateUrl: 'views/components/common/headerBand.html'
+                    templateUrl: '../njt-admin-portal/partials/views/components/common/headerBand.html'
                 },*/
                 'nav@': {
-                    templateUrl: 'views/components/common/siteMenuBar.html'              
+                    templateUrl: '../njt-admin-portal/partials/views/components/common/siteMenuBar.html'              
                 },
                 '@': {
-                    templateUrl : 'views/components/common/welcome.html' 
+                    templateUrl : '../njt-admin-portal/partials/views/components/common/welcome.html' 
                 },
                 'footer' : {
-                    //templateUrl : 'views/components/common/footer.html'
+                    //templateUrl : '../njt-admin-portal/partials/views/components/common/footer.html'
                 }
             },
-            url : '/welcome'
+            url : '/welcome/search'
         })
 
         .state('welcome.paymentProfile', {
@@ -101,9 +101,97 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : 'views/components/user/MyAccount/paymentProfile.html'
+                    templateUrl : '../njt-admin-portal/partials/views/components/user/MyAccount/paymentProfile.html'
                 }
             }
+        })
+
+        .state('welcome.createUser', {
+            url: '/createUser',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/system-management/createUser.html'           
+                 }
+             }
+        }).state('welcome.accManagement', {
+            url: '/accManagement',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/bulk-management/accManagement.html'           
+                 }
+             }
+        }).state('welcome.accDetails', {
+            url: '/accDetails',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/bulk-management/accDetails.html'           
+                 }
+             }
+        }).state('welcome.bulkManagement', {
+            url: '/bulkManagement',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/bulk-management/bulkManagement.html'           
+                 }
+             }
+        })
+        .state('welcome.userRoleMgmt', {
+            url: '/userRoleMgmt',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/system-management/userRoleManagement.html'           
+                 }
+             }
+        })
+        .state('welcome.updateCache', {
+            url: '/updateCache',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/system-management/updateCache.html'           
+                 }
+             }
+        })
+        .state('welcome.users', {
+            url: '/users',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/system-management/users.html'           
+                 }
+             }
+        })
+        .state('welcome.accountSettings', {
+            url: '/accountSettings',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/account-settings/accountSettings.html'           
+                 }
+             }
+        })
+        .state('welcome.inappAlerts', {
+            url: '/inappAlerts',                            
+             'views' : {
+                'header-band@' : {                    
+                },
+                '@': {
+                     templateUrl: '../njt-admin-portal/partials/views/components/alerts/inAppAlerts.html'           
+                 }
+             }
         })
         .state('welcome.transactionHistory', {
             url : '/transactionHistory',
@@ -112,7 +200,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : 'views/components/user/transactions.html'
+                    templateUrl : '../njt-admin-portal/partials/views/components/user/transactions.html'
                 }
             }
         })
@@ -125,7 +213,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/common/faqs.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/common/faqs.html'           
                  }
              }
         })
@@ -135,7 +223,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/njtDashboard/njtDashboard.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/njtDashboard/njtDashboard.html'           
                  }
              }
         })
@@ -148,7 +236,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/requests/importRequests.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/requests/importRequests.html'           
                  }
              }
         })
@@ -159,7 +247,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/requests/refundRequests.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/requests/refundRequests.html'           
                  }
              }
         })
@@ -170,7 +258,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/user/devices.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/devices.html'           
                  }
              }
         })
@@ -180,7 +268,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/terminalHealth.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/terminalHealth.html'           
                  }
              }
         })
@@ -190,7 +278,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/lastTransactions.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/lastTransactions.html'           
                  }
              }
         })
@@ -200,7 +288,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/lastAlarms.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/lastAlarms.html'           
                  }
              }
         })
@@ -210,7 +298,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/topMachinesNeedAttention.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/topMachinesNeedAttention.html'           
                  }
              }
         })
@@ -221,7 +309,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/tvmsNotCheckedIn.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/tvmsNotCheckedIn.html'           
                  }
              }
         })
@@ -232,7 +320,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/serviceCallsSnapShot.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/serviceCallsSnapShot.html'           
                  }
              }
         })
@@ -243,7 +331,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/supportCalender.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/supportCalender.html'           
                  }
              }
         })
@@ -254,7 +342,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/reports/reports.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/reports/reports.html'           
                  }
              }
         })  
@@ -264,7 +352,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl : 'views/components/user/userDetails.html' 
+                     templateUrl : '../njt-admin-portal/partials/views/components/user/userDetails.html' 
                 }
             },
             url : '/userDetails'
@@ -276,7 +364,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : 'views/components/user/myTickets.html'
+                    templateUrl : '../njt-admin-portal/partials/views/components/user/myTickets.html'
                 }
             }
         })   
@@ -287,7 +375,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                    templateUrl : 'views/components/user/search.html'
+                    templateUrl : '../njt-admin-portal/partials/views/components/user/search.html'
                 }
             }
         })  
@@ -298,7 +386,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/user/ticketing.html'          
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/ticketing.html'          
                  }
              }
         })
@@ -308,7 +396,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl : 'views/components/user/shopping_cart.html' 
+                     templateUrl : '../njt-admin-portal/partials/views/components/user/shopping_cart.html' 
                 }
             },
             url : '/ShoppingCart'
@@ -320,7 +408,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/user/selectShipping.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/selectShipping.html'           
                  }
              }
         })
@@ -331,7 +419,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/user/selectPayment.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/selectPayment.html'           
                  }
              }
         })
@@ -342,7 +430,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/user/review_order.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/review_order.html'           
                  }
              }
         })
@@ -353,7 +441,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/user/confirmation.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/confirmation.html'           
                  }
              }
         })
@@ -365,7 +453,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/user/manageUser.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/manageUser.html'           
                  }
              }
         }) 
@@ -375,7 +463,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/notifications/createNotification.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/notifications/createNotification.html'           
                  }
              }
         })
@@ -385,7 +473,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/alerts/scheduleAlerts.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/alerts/scheduleAlerts.html'           
                  }
              }
         })
@@ -395,7 +483,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/alerts/alertHistory.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/alerts/alertHistory.html'           
                  }
              }
         })
@@ -405,7 +493,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                 'header-band@' : {                    
                 },
                 '@': {
-                     templateUrl: 'views/components/common/colorConfig.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/common/colorConfig.html'           
                  }
              }
         })
@@ -417,7 +505,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/user/autoReload.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/user/autoReload.html'           
                  }
              }
         })   
@@ -428,7 +516,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     
                 },
                 '@': {
-                     templateUrl: 'views/components/dashboard/terminals.html'           
+                     templateUrl: '../njt-admin-portal/partials/views/components/dashboard/terminals.html'           
                  }
              }
         })   

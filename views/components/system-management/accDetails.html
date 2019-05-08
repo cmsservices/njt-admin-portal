@@ -1,0 +1,541 @@
+<main role="main" class="content__section content__section--seventy">
+    <div class="xrx-margin-10" ng-controller="notificationController">
+        <a id="maincontent" tabindex="-1"></a>
+
+
+        <h1 id="register-user-title" class="h2">Account Management</h1>
+        <uib-tabset active="activeJustified">
+            <uib-tab index="0" heading="Account Details">
+                    <h3 class="h3">Account Details</h3>
+                    
+                <div class="m--top editlogin-content sc-box-style">
+                    
+                    <form id="form-createAlert" class="form form--basic form--compact ng-pristine ng-valid" novalidate="">
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Account ID
+                                <i class="form__required">required</i>
+                            </label>
+                            <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required=""
+                                value="52365">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Status
+                                <i class="form__required">required</i>
+                            </label>
+                            <input id="form-edit-lastName" value="Active" name="form-edit-lastName" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">No Of Active Riders
+                                <i class="form__required">required</i>
+                            </label>
+                            <input id="form-edit-lastName" value="1255" name="form-edit-lastName" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">No Of Inactive Riders
+                                <i class="form__required">required</i>
+                            </label>
+                            <input id="form-edit-lastName" value="0" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+
+                    </form>
+                    <br/>
+
+
+
+                </div>
+                <h3 class="h3">Shipping Information</h3>
+                
+                <div class="m--top editlogin-content sc-box-style">
+
+                    
+                    <form id="form-createAlert" class="form form--basic form--compact ng-pristine ng-valid" novalidate="">
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Street Address 1
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="1600 Blake Street" id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Street Address 2
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="1600 Blake Street" id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">City
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="Newark" id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                                <label for="form-edit-firstName" class="form__label">State <i class="form__required">required</i></label>
+                                <select id="form-select-1" name="form-select" class="form__input select">
+                                    <option value="1" checked>New Jersy</option>
+                                    <option value="2">New Jersy</option>
+                                    <option value="2">Colordo</option>
+                                    <option value="2">Atlanta Georgia</option>
+                                    <option value="2">Pheladelphia</option>
+                                </select>
+                            </div>   
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Zipcode
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="56004" id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Email
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="abc@njt.com" id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Phone Number(XXX-XXX-XXXX)
+                                <i class="form__required">required</i>
+                            </label>
+                            <input value="9005877422" id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true"
+                                required="">
+                        </div>
+
+                        <div class="form__set">
+                            <label for="form-edit-lastName" class="form__label">Extension
+                                
+                            </label>
+                            <input id="form-edit-lastName" name="form-edit-lastName" class="form__input" type="text" aria-required="true" required="">
+                        </div>
+
+                    </form>
+
+                    <button tabindex="0" class="btn btn--primary btn--small btn--mobile-block" style="margin: 0px;" id="getUsers"> Update Account</button>
+                    <button tabindex="0" class="btn btn--primary btn--small btn--mobile-block" style="margin: 0px;"> Suspend Account </button>
+                </div>
+            </uib-tab>
+            <uib-tab index="1" heading="Riders">
+                <div class="m--top editlogin-content " id="listOfAccs">
+                    <h3 class="h3">Riders</h3>
+                    <form id="form-editlogin" name="form-editlogin" class="form form--basic form--compact " novalidate="">
+                        <div class="table-responsive">
+                            <table border="0" class="table table--striped table--header table--bordered  table--sc-transactions">
+
+                                <thead>
+
+                                    <th scope="col"> Cust ID
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Company Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> First Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Last Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Email
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Zip
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Phone
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Product
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Pass Name
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Tarrif_Type
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Routes
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Zones
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Origin
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Destination
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Price
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Month
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Pass_Push_Date
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col"> Pass_Activate_Date
+
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+                                    <th scope="col">Remark
+
+
+                                        <br/>
+                                        <br/>
+                                        <input id="form-edit-firstName" name="form-edit-firstName" type="text">
+                                    </th>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>
+                                            WW1234
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                        <td>Rail
+                                        </td>
+                                        <td>10TRIP
+                                        </td>
+                                        <td>Southern
+                                        </td>
+                                        <td>Interstate
+                                        </td>
+                                        <td>3
+                                        </td>
+                                        <td>HOBOKON
+                                        </td>
+                                        <td>BASKING RIDGE
+                                        </td>
+                                        <td>$180.00
+                                        </td>
+                                        <td>May
+                                        </td>
+                                        <td>4/25/2018</td>
+                                        <td>1/5/2018
+                                        </td>
+                                        <td></td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            WW1234
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                        <td>Rail
+                                        </td>
+                                        <td>10TRIP
+                                        </td>
+                                        <td>Southern
+                                        </td>
+                                        <td>Interstate
+                                        </td>
+                                        <td>3
+                                        </td>
+                                        <td>HOBOKON
+                                        </td>
+                                        <td>BASKING RIDGE
+                                        </td>
+                                        <td>$180.00
+                                        </td>
+                                        <td>May
+                                        </td>
+                                        <td>4/25/2018</td>
+                                        <td>1/5/2018
+                                        </td>
+                                        <td></td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            WW1234
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                        <td>Rail
+                                        </td>
+                                        <td>10TRIP
+                                        </td>
+                                        <td>Southern
+                                        </td>
+                                        <td>Interstate
+                                        </td>
+                                        <td>3
+                                        </td>
+                                        <td>HOBOKON
+                                        </td>
+                                        <td>BASKING RIDGE
+                                        </td>
+                                        <td>$180.00
+                                        </td>
+                                        <td>May
+                                        </td>
+                                        <td>4/25/2018</td>
+                                        <td>1/5/2018
+                                        </td>
+                                        <td></td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            WW1234
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                        <td>Rail
+                                        </td>
+                                        <td>10TRIP
+                                        </td>
+                                        <td>Southern
+                                        </td>
+                                        <td>Interstate
+                                        </td>
+                                        <td>3
+                                        </td>
+                                        <td>HOBOKON
+                                        </td>
+                                        <td>BASKING RIDGE
+                                        </td>
+                                        <td>$180.00
+                                        </td>
+                                        <td>May
+                                        </td>
+                                        <td>4/25/2018</td>
+                                        <td>1/5/2018
+                                        </td>
+                                        <td></td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            WW1234
+                                        </td>
+                                        <td> wageworks
+                                        </td>
+                                        <td> adam
+                                        </td>
+                                        <td>john
+                                        </td>
+                                        <td>njtdemo@test.com
+                                        </td>
+                                        <td>8873
+                                        </td>
+                                        <td>7328283009
+
+                                        </td>
+                                        <td>Active
+                                        </td>
+                                        <td>Rail
+                                        </td>
+                                        <td>10TRIP
+                                        </td>
+                                        <td>Southern
+                                        </td>
+                                        <td>Interstate
+                                        </td>
+                                        <td>3
+                                        </td>
+                                        <td>HOBOKON
+                                        </td>
+                                        <td>BASKING RIDGE
+                                        </td>
+                                        <td>$180.00
+                                        </td>
+                                        <td>May
+                                        </td>
+                                        <td>4/25/2018</td>
+                                        <td>1/5/2018
+                                        </td>
+                                        <td></td>
+
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pagination-centered" style="margin-left:350px;">
+                            <ul class="pagination-list" role="toolbar" aria-controls="order-history">
+                                <li class="disabled">
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-first">
+                                            <span>First</span>
+                                            <span> Disabled</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="disabled">
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-previous">
+                                            <span>Previous</span>
+                                            <span> Disabled</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="javascript:void(0)">1</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">3</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">4</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-next">
+                                            <span>Next</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <i class="pagination-i pagination-i-last">
+                                            <span>Last</span>
+                                        </i>
+                                    </a>
+                                </li>
+                                <li> &nbsp; &nbsp;
+                                    <label for="form-history-limitSelect">Show:</label>
+                                    <select id="form-history-limitSelect" name="form-history-limitSelect">
+                                        <option value="10" selected="">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </form>
+
+                </div>
+            </uib-tab>
+
+        </uib-tabset>
+
+
+
+
+    </div>
+</main>

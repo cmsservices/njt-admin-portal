@@ -6,7 +6,7 @@ app.factory('dashBoardService', ['$http', '$q',
 	var dashBoardService = {};
 	dashBoardService.getUserData = function() {
 		var deffered = $q.defer();
-		$http.get('mock/users.json').then(function(response) {
+		$http.get('resources/mock/users.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -15,7 +15,7 @@ app.factory('dashBoardService', ['$http', '$q',
 	}, 
 	dashBoardService.getSystemStatus = function() {
 		var deffered = $q.defer();
-		$http.get('mock/stations.json').then(function(response) {
+		$http.get('resources/mock/stations.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -24,7 +24,7 @@ app.factory('dashBoardService', ['$http', '$q',
 	}, 
 	dashBoardService.getTransactions = function() {
 		var deffered = $q.defer();
-		$http.get('mock/transactions.JSON').then(function(response) {
+		$http.get('resources/mock/transactions.JSON').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -33,7 +33,7 @@ app.factory('dashBoardService', ['$http', '$q',
 	},
 	dashBoardService.getNjtTransactions = function() {
 		var deffered = $q.defer();
-		$http.get('mock/njtTransactions.JSON').then(function(response) {
+		$http.get('resources/mock/njtTransactions.JSON').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -43,7 +43,7 @@ app.factory('dashBoardService', ['$http', '$q',
 
 	dashBoardService.getSupportCalender = function() {
 		var deffered = $q.defer();
-		$http.get('mock/supportCalender.json').then(function(response) {
+		$http.get('resources/mock/supportCalender.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -52,7 +52,7 @@ app.factory('dashBoardService', ['$http', '$q',
 	}
 	dashBoardService.getTerminals = function() {
 		var deffered = $q.defer();
-		$http.get('mock/terminals.json').then(function(response) {
+		$http.get('resources/mock/terminals.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -61,7 +61,7 @@ app.factory('dashBoardService', ['$http', '$q',
 	}
 	dashBoardService.getTerminalStatus = function() {
 		var deffered = $q.defer();
-		$http.get('mock/terminalStatus.json').then(function(response) {
+		$http.get('resources/mock/terminalStatus.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);
@@ -70,7 +70,7 @@ app.factory('dashBoardService', ['$http', '$q',
 	}
 	dashBoardService.getTerminalServiceHistory = function() {
 		var deffered = $q.defer();
-		$http.get('mock/terminalServiceHistory.json').then(function(response) {
+		$http.get('resources/mock/terminalServiceHistory.json').then(function(response) {
 			deffered.resolve(response.data);
 		},function(error) {
 			deffered.reject(error);

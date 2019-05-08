@@ -5,6 +5,9 @@
         <div class="m--top editlogin-content sc-box-style">
             <form id="form-createAlert" class="form form--basic form--compact" novalidate="">
                 <div class="form__set">
+                 <i class="required-note "><span class="hide ">red asterisk</span> denotes a required field</i>
+             </div>
+                <div class="form__set">
                     <label for="notification-category" id="notification-label" class="form__label">Category <i class="form__required">required</i></label>
                     <select id="notification-category" name="notification-category" class="form__input select">
                         <option value="1" checked>Select Category</option>
@@ -23,8 +26,10 @@
                 </div>  
 
                 <div style="text-align: center;">
-                    <input id="create-notification-btn" class="btn btn--primary btn--small m--top editlogin btn--mobile-block" name="save" value="Create" ng-click="">              
+                    <input id="create-notification-btn" class="btn btn--primary btn--small m--top editlogin btn--mobile-block" name="save" value="Create Alert" ng-click="">              
                 </div>
+                <div>
+                <p class="notes" id="create-note"> NOTE : A-Z a-z 0-9 , . - : @ characters are only allowed. </p></div>
             </form>
         </div>
     </div>
